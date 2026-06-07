@@ -1,0 +1,35 @@
+{
+  "name": "congress-tracker",
+  "version": "1.0.0",
+  "description": "Track US congressional activity - bills, votes, members, committees",
+  "main": "index.js",
+  "scripts": {
+    "fetch:bills": "node scripts/fetch-bills.js",
+    "fetch:members": "node scripts/fetch-members.js",
+    "fetch:votes": "node scripts/fetch-votes.js",
+    "backfill": "node scripts/backfill.js",
+    "update": "npm run fetch:bills && npm run fetch:members && npm run fetch:votes",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CourtGPT/congress-tracker.git"
+  },
+  "keywords": [
+    "congress",
+    "legislation",
+    "bills",
+    "voting-records",
+    "government-data",
+    "open-source"
+  ],
+  "author": "CourtGPT",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/CourtGPT/congress-tracker/issues"
+  },
+  "homepage": "https://github.com/CourtGPT/congress-tracker#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}

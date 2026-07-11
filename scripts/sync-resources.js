@@ -18,7 +18,7 @@ const RESOURCE_CONFIG = [
   { name: 'committee-prints', path: '/committee-print', incremental: true },
   { name: 'committee-meetings', path: '/committee-meeting/${congress}', congress: true },
   { name: 'hearings', path: '/hearing/${congress}', congress: true },
-  { name: 'congressional-record', path: '/congressional-record', dailyQuery: true },
+  { name: 'congressional-record', path: '/congressional-record', bootstrapOnly: true },
   { name: 'daily-congressional-record', path: '/daily-congressional-record' },
   { name: 'bound-congressional-record', path: '/bound-congressional-record', bootstrapOnly: true },
   { name: 'house-communications', path: '/house-communication/${congress}', congress: true },

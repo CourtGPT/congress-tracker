@@ -49,6 +49,16 @@ function getMetrics() {
   return { ...metrics };
 }
 
+function findCollection(payload) {
+  const direct = Object.entries(payload || {}).find(([, value]) => Array.isArray(value));
+  if (direct) return direct;
+  if (payload?.Results && typeof payload.Results === 'object') {
+    const nested = Object.entries(payload.Results).find(([, value]) => Array.isArray(value));
+    if (nested) return nested;
+  }
+  return null;
+}
+
 async function paginate(path, { apiKey = requireApiKey(), fetchImpl = fetch, maxPages = 100, query = {} } = {}) {
   const initialUrl = new URL(`${BASE_URL}${path}`);
   initialUrl.searchParams.set('limit', String(PAGE_SIZE));
@@ -59,11 +69,19 @@ async function paginate(path, { apiKey = requireApiKey(), fetchImpl = fetch, max
   const items = [];
   for (let page = 0; page < maxPages && url; page += 1) {
     const payload = await requestJson(url, { apiKey, fetchImpl });
-    const collection = Object.entries(payload).find(([, value]) => Array.isArray(value));
+    const collection = findCollection(payload);
     if (!collection) throw new Error(`Congress.gov response for ${path} did not contain a collection`);
     items.push(...collection[1]);
     const next = payload.pagination?.next;
-    url = next ? (next.startsWith('http') ? next : `${BASE_URL}${next}`) : '';
+    if (next) {
+      url = next.startsWith('http') ? next : `${BASE_URL}${next}`;
+    } else if (payload.Results && Number(payload.Results.TotalCount) > Number(payload.Results.IndexStart) + Number(payload.Results.SetSize) - 1) {
+      const nextUrl = new URL(url);
+      nextUrl.searchParams.set('offset', String(Number(payload.Results.IndexStart) + Number(payload.Results.SetSize) - 1));
+      url = nextUrl.toString();
+    } else {
+      url = '';
+    }
   }
   return items;
 }
@@ -76,4 +94,4 @@ function stableSort(records, keys = ['id', 'bioguideId', 'url', 'number']) {
   });
 }
 
-module.exports = { BASE_URL, PAGE_SIZE, getMetrics, paginate, requestJson, requireApiKey, resetMetrics, stableSort };
+module.exports = { BASE_URL, PAGE_SIZE, findCollection, getMetrics, paginate, requestJson, requireApiKey, resetMetrics, stableSort };

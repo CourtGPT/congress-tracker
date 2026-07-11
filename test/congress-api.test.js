@@ -25,6 +25,20 @@ test('paginates through Congress.gov next links', async () => {
   assert.match(urls[0], /limit=250/);
 });
 
+test('paginates nested Congressional Record result sets', async () => {
+  const urls = [];
+  const fetchImpl = async (url) => {
+    urls.push(url);
+    const offset = new URL(url).searchParams.get('offset');
+    return response(200, offset
+      ? { Results: { IndexStart: 21, SetSize: 20, TotalCount: 21, Issues: [{ issueNumber: '2' }] } }
+      : { Results: { IndexStart: 1, SetSize: 20, TotalCount: 21, Issues: [{ issueNumber: '1' }] } });
+  };
+  const result = await paginate('/congressional-record', { apiKey: 'test-key', fetchImpl });
+  assert.deepEqual(result, [{ issueNumber: '1' }, { issueNumber: '2' }]);
+  assert.match(urls[1], /offset=20/);
+});
+
 test('retries rate-limited responses', async () => {
   let attempts = 0;
   const fetchImpl = async () => {

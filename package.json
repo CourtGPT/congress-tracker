@@ -10,6 +10,7 @@
     "fetch:votes": "node scripts/fetch-votes.js",
     "backfill": "node scripts/backfill.js",
     "update": "node scripts/update.js",
+    "sync:local": "bash scripts/run-local-sync.sh",
     "validate": "node scripts/validate.js",
     "test": "node --test test/*.test.js"
   },

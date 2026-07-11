@@ -87,7 +87,17 @@ The synchronizer covers the Congress.gov API's public top-level collections: bil
 
 ## Automation
 
-GitHub Actions checks Congress.gov every hour at minute 0 and supports manual `hourly` or `full` dispatches. The workflow uses the `CONGRESS_API_KEY` repository secret, follows pagination with bounded retries, uses a six-hour overlap window for incremental resources, merges updates into the existing database, normalizes records deterministically, validates every resource export, and opens or updates a pull request only when generated data changes. A no-change run creates no commit.
+The canonical updater runs locally every hour. `scripts/run-local-sync.sh` loads `.env.local`, refuses to run over uncommitted work, pulls `main`, uses a six-hour overlap window for incremental resources, merges updates into the existing database, normalizes records deterministically, validates every resource export, and pushes a commit to `main` only when generated data changes. If no snapshot exists, the first invocation automatically performs the full bootstrap. A no-change run creates no commit.
+
+The GitHub Actions workflow is retained as a manual recovery path only; it is not scheduled.
+
+To configure the local runner:
+
+```bash
+cp .env.local.example .env.local
+# edit .env.local and set CONGRESS_API_KEY
+npm run sync:local
+```
 
 The generated database is stored in `data/resources/` and covers bills, amendments, summaries, laws, Congresses, members, House votes, committees, committee reports/prints/meetings, hearings, Congressional Records, communications, requirements, nominations, CRS reports, and treaties. Current-Congress collections use `CONGRESS` (default `119`); historical bootstrap is available through manual `full` mode and the backfill command.
 

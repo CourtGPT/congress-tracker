@@ -74,7 +74,7 @@ cp .env.local.example .env.local
 # Edit .env.local and set CONGRESS_API_KEY.
 ```
 
-The default configuration synchronizes all configured top-level collections. Use `CONGRESS_RESOURCES` only for a targeted recovery run, for example:
+The default configuration synchronizes all configured top-level collections. Congress.gov exposes bill summaries through bill-specific detail routes rather than a standalone top-level `/summaries` collection, so this repository does not claim an unsupported summaries export. Use `CONGRESS_RESOURCES` only for a targeted recovery run, for example:
 
 ```bash
 CONGRESS_RESOURCES=bills npm run update

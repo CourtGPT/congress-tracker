@@ -9,7 +9,6 @@ const BILL_TYPES = ['hr', 's', 'hjres', 'sjres', 'hconres', 'sconres', 'hres', '
 const RESOURCE_CONFIG = [
   { name: 'bills', paths: BILL_TYPES.map((type) => `/bill/${'${congress}'}/${type}`), incremental: true },
   { name: 'amendments', path: '/amendment', incremental: true },
-  { name: 'summaries', path: '/summaries', incremental: true },
   { name: 'laws', path: '/law/${congress}', congress: true },
   { name: 'congresses', path: '/congress', bootstrapOnly: true },
   { name: 'members', path: '/member', incremental: true },

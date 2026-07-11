@@ -21,6 +21,9 @@ on:
         description: 'Incremental overlap window in hours'
         required: false
         default: '6'
+      resources:
+        description: 'Comma-separated resources to sync; blank means all 21 collections'
+        required: false
 
 permissions:
   contents: write
@@ -39,6 +42,7 @@ jobs:
       CONGRESS: ${{ inputs.congress || '119' }}
       CONGRESS_SYNC_MODE: ${{ inputs.sync_mode || 'hourly' }}
       CONGRESS_LOOKBACK_HOURS: ${{ inputs.lookback_hours || '6' }}
+      CONGRESS_RESOURCES: ${{ inputs.resources }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4

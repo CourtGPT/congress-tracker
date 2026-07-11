@@ -1,32 +1,40 @@
-#!/usr/bin/env node
-
-/**
- * Fetch bills from Congress.gov API
- * Usage: CONGRESS_API_KEY=xxx node scripts/fetch-bills.js --congress=119
- */
-
 const fs = require('fs');
 const path = require('path');
+const { paginate, requireApiKey, stableSort } = require('./lib/congress-api');
 
-const API_KEY = process.env.CONGRESS_API_KEY;
-const BASE_URL = 'https://api.congress.gov/v3';
-
-async function fetchBills(congress = 119) {
-  console.log(`📥 Fetching bills for Congress ${congress}...`);
-  
-  if (!API_KEY) {
-    console.error('❌ CONGRESS_API_KEY environment variable not set');
-    process.exit(1);
-  }
-
-  // TODO: Implement bill fetching logic
-  console.log('✅ Placeholder: Bill fetching will be implemented');
-  console.log('🔑 API Key:', API_KEY.substring(0, 8) + '...');
+function writeJson(filePath, value) {
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`);
 }
 
-// Parse command line arguments
-const args = process.argv.slice(2);
-const congressArg = args.find(arg => arg.startsWith('--congress='));
-const congress = congressArg ? parseInt(congressArg.split('=')[1]) : 119;
+async function fetchBills(congress = Number(process.env.CONGRESS || 119), { apiKey = requireApiKey(), fetchImpl = fetch } = {}) {
+  const records = await paginate(`/bill/${congress}`, { apiKey, fetchImpl });
+  if (!records.length) throw new Error(`Congress.gov returned no bills for Congress ${congress}`);
+  const byType = new Map();
+  for (const bill of records) {
+    const type = String(bill.type || 'unknown').toLowerCase();
+    const normalized = {
+      billNumber: `${bill.type || 'UNKNOWN'} ${bill.number || ''}`.trim(),
+      congress,
+      title: bill.title || '',
+      introducedDate: bill.introducedDate || null,
+      latestAction: bill.latestAction || null,
+      updateDate: bill.updateDate || bill.lastModified || null,
+      url: bill.url || `https://www.congress.gov/bill/${congress}th-congress/${String(bill.type || '').toLowerCase()}/${bill.number}`,
+      source: 'Congress.gov API',
+    };
+    if (!byType.has(type)) byType.set(type, []);
+    byType.get(type).push(normalized);
+  }
+  const counts = {};
+  for (const [type, values] of byType.entries()) {
+    const sorted = stableSort(values, ['billNumber', 'url']);
+    writeJson(path.join(__dirname, '..', 'data', 'congress', String(congress), 'bills', `${type}.json`), sorted);
+    counts[type] = sorted.length;
+  }
+  return counts;
+}
 
-fetchBills(congress).catch(console.error);
+if (require.main === module) fetchBills().then((counts) => console.log(`Fetched ${JSON.stringify(counts)}`)).catch((error) => { console.error(error.message); process.exitCode = 1; });
+
+module.exports = { fetchBills };

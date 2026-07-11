@@ -1,0 +1,33 @@
+const fs = require('fs');
+const path = require('path');
+
+const DATA_DIR = path.join(__dirname, '..', 'data');
+
+function readArray(filePath) {
+  const value = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  if (!Array.isArray(value) || value.length === 0) throw new Error(`${filePath} must contain a non-empty JSON array`);
+  return value;
+}
+
+function validate(dataDir = DATA_DIR) {
+  const resourceDir = path.join(dataDir, 'resources');
+  if (!fs.existsSync(resourceDir)) throw new Error(`Missing resource directory: ${resourceDir}`);
+  const files = fs.readdirSync(resourceDir).filter((file) => file.endsWith('.json')).sort();
+  if (files.length < 10) throw new Error(`Expected comprehensive resource export, found ${files.length} files`);
+  for (const file of files) readArray(path.join(resourceDir, file));
+  const metadataPath = path.join(dataDir, 'metadata.json');
+  if (!fs.existsSync(metadataPath)) throw new Error('Missing data/metadata.json');
+  return { resourceFiles: files.length };
+}
+
+if (require.main === module) {
+  try {
+    const result = validate();
+    console.log(`Validated ${result.resourceFiles} resource files`);
+  } catch (error) {
+    console.error(error.message);
+    process.exitCode = 1;
+  }
+}
+
+module.exports = { validate };

@@ -1,6 +1,6 @@
 # Congress Tracker
 
-Track US congressional activity - bills, votes, members, and committees. Data sourced from the official [Congress.gov API](https://api.congress.gov) with daily automated updates.
+Track US congressional activity across the official [Congress.gov API](https://api.congress.gov) with hourly incremental updates.
 
 ## Overview
 
@@ -19,34 +19,26 @@ This repository maintains a comprehensive database of US congressional activity 
 congress-tracker/
 ├── README.md
 ├── data/
-│   ├── congress/
-│   │   ├── 118/                    # 118th Congress (2023-2024)
-│   │   │   ├── bills/
-│   │   │   │   ├── hr/             # House bills
-│   │   │   │   ├── s/              # Senate bills
-│   │   │   │   └── hjres/          # Joint resolutions
-│   │   │   ├── members.json
-│   │   │   ├── committees.json
-│   │   │   └── votes.json
-│   │   └── 119/                    # 119th Congress (2025-2026)
-│   └── amendments/
+│   ├── resources/                  # Canonical JSON exports from Congress.gov
+│   └── metadata.json               # Source, API version, and resource counts
 ├── schema/
 ├── scripts/
 │   ├── fetch-bills.js
 │   ├── fetch-members.js
 │   ├── fetch-votes.js
-│   └── backfill.js              # Historical backfill
+│   ├── fetch-committees.js
+│   ├── sync-resources.js        # All top-level Congress.gov collections
+│   ├── update.js
+│   └── backfill.js              # Historical bills/votes backfill
 └── .github/workflows/
-    └── daily-update.yml         # Daily automated updates
+    └── update.yml               # Hourly automated update PRs
 ```
 
 ## Current Coverage
 
-- **Historical Backfill**: Last 5 years (114th-119th Congress)
-- **Current Congress**: 119th (2025-2026)
-- **Total Bills Tracked**: ~50,000+
-- **Members**: 537 (435 House + 100 Senate + 2 Delegates)
-- **Committees**: 228 (117 House + 83 Senate + 28 Joint)
+- **Historical Backfill**: Explicit command for requested Congress ranges
+- **Current Congress**: Configurable with `CONGRESS` (default 119)
+- **Coverage**: Generated from the current Congress.gov API response at each successful run
 
 ## Data Format
 
@@ -86,26 +78,18 @@ congress-tracker/
 
 ```bash
 git clone https://github.com/CourtGPT/congress-tracker.git
-cd congress-tracker/data/congress/119/bills/hr
+cd congress-tracker/data/resources
 ```
 
 ### API Endpoints
 
-The Congress.gov API provides access to:
-- Bills and resolutions
-- Member profiles
-- Committee information
-- Roll call votes
-- Bill text and summaries
-- Amendments
+The synchronizer covers the Congress.gov API's public top-level collections: bills and resolutions, amendments, summaries, laws, Congresses, members, House votes, committees, committee reports/prints/meetings, hearings, Congressional Records, House/Senate communications, House requirements, nominations, CRS reports, and treaties.
 
 ## Automation
 
-Daily automated updates via GitHub Actions:
-1. Fetch new bills and updates from Congress.gov API
-2. Update member and committee information
-3. Process roll call votes
-4. Commit changes with timestamp
+GitHub Actions checks Congress.gov every hour at minute 0 and supports manual `hourly` or `full` dispatches. The workflow uses the `CONGRESS_API_KEY` repository secret, follows pagination with bounded retries, uses a six-hour overlap window for incremental resources, merges updates into the existing database, normalizes records deterministically, validates every resource export, and opens or updates a pull request only when generated data changes. A no-change run creates no commit.
+
+The generated database is stored in `data/resources/` and covers bills, amendments, summaries, laws, Congresses, members, House votes, committees, committee reports/prints/meetings, hearings, Congressional Records, communications, requirements, nominations, CRS reports, and treaties. Current-Congress collections use `CONGRESS` (default `119`); historical bootstrap is available through manual `full` mode and the backfill command.
 
 ## Historical Backfill
 

@@ -19,3 +19,4 @@ Thumbs.db
 # API keys (should never be committed)
 .env
 .env.local
+.local-sync.lock

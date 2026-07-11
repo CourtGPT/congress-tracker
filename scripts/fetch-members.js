@@ -1,26 +1,27 @@
-#!/usr/bin/env node
-
-/**
- * Fetch members from Congress.gov API
- * Usage: CONGRESS_API_KEY=xxx node scripts/fetch-members.js
- */
-
 const fs = require('fs');
 const path = require('path');
+const { paginate, requireApiKey, stableSort } = require('./lib/congress-api');
 
-const API_KEY = process.env.CONGRESS_API_KEY;
-const BASE_URL = 'https://api.congress.gov/v3';
-
-async function fetchMembers() {
-  console.log('📥 Fetching Congress members...');
-  
-  if (!API_KEY) {
-    console.error('❌ CONGRESS_API_KEY environment variable not set');
-    process.exit(1);
-  }
-
-  // TODO: Implement member fetching logic
-  console.log('✅ Placeholder: Member fetching will be implemented');
+async function fetchMembers({ apiKey = requireApiKey(), fetchImpl = fetch } = {}) {
+  const members = await paginate('/member', { apiKey, fetchImpl });
+  if (!members.length) throw new Error('Congress.gov returned no members');
+  const normalized = stableSort(members.map((member) => ({
+    bioguideId: member.bioguideId || member.memberId || '',
+    name: member.name || member.directOrderName || '',
+    party: member.partyName || null,
+    state: member.state || null,
+    district: member.district || null,
+    chamber: member.chamber || null,
+    servedSince: member.startYear || null,
+    url: member.url || null,
+    source: 'Congress.gov API',
+  })), ['bioguideId', 'name']);
+  const output = path.join(__dirname, '..', 'data', 'members.json');
+  fs.mkdirSync(path.dirname(output), { recursive: true });
+  fs.writeFileSync(output, `${JSON.stringify(normalized, null, 2)}\n`);
+  return normalized.length;
 }
 
-fetchMembers().catch(console.error);
+if (require.main === module) fetchMembers().then((count) => console.log(`Fetched ${count} members`)).catch((error) => { console.error(error.message); process.exitCode = 1; });
+
+module.exports = { fetchMembers };

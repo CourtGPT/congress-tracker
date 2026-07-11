@@ -1,33 +1,35 @@
 #!/usr/bin/env node
 
-/**
- * Backfill historical Congress data
- * Usage: CONGRESS_API_KEY=xxx node scripts/backfill.js --start=114 --end=119
- */
-
-const fs = require('fs');
-const path = require('path');
-
-const API_KEY = process.env.CONGRESS_API_KEY;
+const { requireApiKey } = require('./lib/congress-api');
+const { fetchBills } = require('./fetch-bills');
+const { fetchVotes } = require('./fetch-votes');
 
 async function backfill(startCongress, endCongress) {
-  console.log(`📥 Backfilling Congress ${startCongress} to ${endCongress}...`);
-  
-  if (!API_KEY) {
-    console.error('❌ CONGRESS_API_KEY environment variable not set');
-    process.exit(1);
+  const apiKey = requireApiKey();
+  if (!Number.isInteger(startCongress) || !Number.isInteger(endCongress) || startCongress < 1 || endCongress < startCongress) {
+    throw new Error('Backfill range must be positive integers with --start <= --end');
   }
-
-  // TODO: Implement backfill logic
-  console.log('✅ Placeholder: Backfill will be implemented');
+  const counts = {};
+  for (let congress = startCongress; congress <= endCongress; congress += 1) {
+    counts[congress] = {
+      bills: await fetchBills(congress, { apiKey }),
+      votes: await fetchVotes(congress, { apiKey }),
+    };
+  }
+  return counts;
 }
 
-// Parse command line arguments
 const args = process.argv.slice(2);
-const startArg = args.find(arg => arg.startsWith('--start='));
-const endArg = args.find(arg => arg.startsWith('--end='));
+const startArg = args.find((arg) => arg.startsWith('--start='));
+const endArg = args.find((arg) => arg.startsWith('--end='));
+const start = startArg ? Number(startArg.split('=')[1]) : 114;
+const end = endArg ? Number(endArg.split('=')[1]) : 119;
 
-const start = startArg ? parseInt(startArg.split('=')[1]) : 114;
-const end = endArg ? parseInt(endArg.split('=')[1]) : 119;
+if (require.main === module) {
+  backfill(start, end).then((counts) => console.log(`Backfilled Congress ${start} through ${end}: ${JSON.stringify(counts)}`)).catch((error) => {
+    console.error(error.message);
+    process.exitCode = 1;
+  });
+}
 
-backfill(start, end).catch(console.error);
+module.exports = { backfill };

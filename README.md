@@ -1,129 +1,134 @@
 # Congress Tracker
 
-Track US congressional activity across the official [Congress.gov API](https://api.congress.gov) with hourly incremental updates.
+Congress.gov data in deterministic JSON: legislation, members, committees, votes, hearings, chronology, and source-linked relationships.
 
-## Overview
+## Source and Limits
 
-This repository maintains a comprehensive database of US congressional activity in structured JSON format. Track legislation from introduction to enactment, monitor voting records, and stay informed about committee activities.
-
-## Data Sources
-
-- **Primary**: [Congress.gov API](https://api.congress.gov/)
-- **Rate Limit**: 5,000 requests/hour
-- **Update Frequency**: Daily (00:00 UTC)
-- **License**: Public Domain (US Government work)
+- **Source:** [Congress.gov API v3](https://api.congress.gov/)
+- **API key:** `CONGRESS_API_KEY` is required and is never stored in generated data or logs.
+- **Rate limit:** Congress.gov documents a 5,000-request/hour limit. The client paginates at 250 records, retries 429 and transient 5xx responses, honors `Retry-After`, and reports request/retry counts.
+- **Congress:** `CONGRESS` defaults to `119`.
+- **Incremental overlap:** `CONGRESS_LOOKBACK_HOURS` defaults to `6` so a missed hourly run can recover recently updated records.
+- **License:** Public Domain for US Government work.
 
 ## Repository Structure
 
-```
+```text
 congress-tracker/
-├── README.md
 ├── data/
-│   ├── resources/                  # Canonical JSON exports from Congress.gov
-│   └── metadata.json               # Source, API version, and resource counts
-├── schema/
+│   ├── resources/                  # Source-aligned Congress.gov JSON arrays
+│   ├── derived/index.json          # Chronology and relationship index
+│   └── metadata.json               # Source, Congress, counts, and metrics
 ├── scripts/
-│   ├── fetch-bills.js
-│   ├── fetch-members.js
-│   ├── fetch-votes.js
-│   ├── fetch-committees.js
-│   ├── sync-resources.js        # All top-level Congress.gov collections
-│   ├── update.js
-│   └── backfill.js              # Historical bills/votes backfill
-└── .github/workflows/
-    └── update.yml               # Hourly automated update PRs
+│   ├── sync-resources.js           # Top-level Congress.gov collections
+│   ├── sync-bill-relations.js      # Sponsor/cosponsor detail cache
+│   ├── build-index.js              # Derived entity, relation, and timeline index
+│   ├── verify-data.js              # Semantic cross-resource verification
+│   ├── validate.js                 # Structural plus semantic validation
+│   ├── run-local-sync.sh           # Hourly local publishing entry point
+│   └── backfill.js                 # Explicit historical bills/votes backfill
+├── test/
+└── .github/workflows/update.yml   # Manual recovery workflow; not scheduled
 ```
 
-## Current Coverage
+## JSON Contract
 
-- **Historical Backfill**: Explicit command for requested Congress ranges
-- **Current Congress**: Configurable with `CONGRESS` (default 119)
-- **Coverage**: Generated from the current Congress.gov API response at each successful run
+### Source-aligned resources
 
-## Data Format
+Every file in `data/resources/` is a non-empty JSON array from one Congress.gov collection. Records retain Congress.gov fields; the pipeline only canonicalizes object-key and record ordering. Examples include `bills.json`, `members.json`, `committees.json`, `house-votes.json`, `hearings.json`, and `bill-relations.json`.
 
-### Bill
+`bill-relations.json` contains normalized detail links with fields such as:
+
 ```json
 {
-  "billNumber": "H.R. 1",
+  "billId": "119:hr:1",
+  "memberId": "M000001",
+  "memberName": "Member, One",
+  "role": "cosponsor",
   "congress": 119,
-  "title": "For the People Act of 2025",
-  "sponsor": "Rep. Smith, John",
-  "cosponsors": 42,
-  "committees": "House Judiciary",
-  "latestAction": "Referred to the House Committee on the Judiciary",
-  "introducedDate": "2025-01-15",
-  "status": "Introduced",
-  "url": "https://www.congress.gov/bill/119th-congress/house-bill/1",
-  "policyArea": "Government Operations and Politics"
+  "billUrl": "https://api.congress.gov/v3/bill/119/hr/1?format=json",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1/cosponsors"
 }
 ```
 
-### Member
-```json
-{
-  "bioguideId": "S001234",
-  "name": "Smith, John",
-  "party": "Democratic",
-  "state": "CA",
-  "district": "12",
-  "chamber": "House",
-  "servedSince": 2019
-}
-```
+Hourly runs fetch sponsor and cosponsor details for bills changed within the overlap window. A complete historical relation backfill is intentionally explicit because fetching two detail endpoints per bill can exceed the hourly API budget. Run it in bounded batches with `CONGRESS_RELATIONS_MODE=full`, `CONGRESS_RELATIONS_MAX_BILLS`, and an increasing `CONGRESS_RELATIONS_OFFSET`.
 
-## Usage
+### Derived index
 
-### Download Latest Data
+`data/derived/index.json` is consumer-oriented and does not duplicate complete source records. It contains:
 
-```bash
-git clone https://github.com/CourtGPT/congress-tracker.git
-cd congress-tracker/data/resources
-```
+- `entities`: compact members, bills, committees, votes, and hearings keyed by stable IDs.
+- `relationships`: typed links such as `sponsored`, `cosponsored`, `referred_to`, `voted_on`, and `scheduled_for` when Congress.gov exposes enough source data.
+- `timeline`: introduction, update, action, vote, hearing, and other dated events sorted chronologically with stable tie-breakers.
+- `source`, `generatedAt`, and `counts` for provenance and inspection.
 
-### API Endpoints
+All derived IDs are strings. Dates are normalized to ISO 8601 UTC timestamps. Missing optional values are `null`, not fabricated. Every relationship retains a Congress.gov or Congress.gov API source URL.
 
-The synchronizer covers the Congress.gov API's public top-level collections: bills and resolutions, amendments, summaries, laws, Congresses, members, House votes, committees, committee reports/prints/meetings, hearings, Congressional Records, House/Senate communications, House requirements, nominations, CRS reports, and treaties.
+Members and representative information are the records returned by Congress.gov, including bioguide IDs, names, party, state, district, chamber, and source links when provided. The verifier rejects duplicate identities, cross-Congress records, chamber/type mismatches, invalid source URLs, impossible date order, and relationships that point to unknown entities.
 
-## Automation
-
-The canonical updater runs locally every hour. `scripts/run-local-sync.sh` loads `.env.local`, refuses to run over uncommitted work, pulls `main`, uses a six-hour overlap window for incremental resources, merges updates into the existing database, normalizes records deterministically, validates every resource export, and pushes a commit to `main` only when generated data changes. If no snapshot exists, the first invocation automatically performs the full bootstrap. A no-change run creates no commit.
-
-The GitHub Actions workflow is retained as a manual recovery path only; it is not scheduled.
-
-To configure the local runner:
+## Setup
 
 ```bash
+npm ci
 cp .env.local.example .env.local
-# edit .env.local and set CONGRESS_API_KEY
-npm run sync:local
+# Edit .env.local and set CONGRESS_API_KEY.
 ```
 
-The generated database is stored in `data/resources/` and covers bills, amendments, summaries, laws, Congresses, members, House votes, committees, committee reports/prints/meetings, hearings, Congressional Records, communications, requirements, nominations, CRS reports, and treaties. Current-Congress collections use `CONGRESS` (default `119`); historical bootstrap is available through manual `full` mode and the backfill command.
-
-## Historical Backfill
-
-Run the backfill script to populate historical data:
+The default configuration synchronizes all configured top-level collections. Use `CONGRESS_RESOURCES` only for a targeted recovery run, for example:
 
 ```bash
-npm install
-CONGRESS_API_KEY=your_key node scripts/backfill.js --start=114 --end=119
+CONGRESS_RESOURCES=bills npm run update
 ```
 
-## Contributing
+## Commands
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+```bash
+npm test              # API, merge, relation, index, and verification fixtures
+npm run validate      # JSON shape plus semantic cross-resource checks
+npm run verify        # Semantic verification only
+npm run build:index   # Rebuild data/derived/index.json from local resources
+npm run update        # Fetch, derive, and verify without the publishing wrapper
+npm run sync:local   # Full hourly-safe sync and generated-data publication
+```
 
-## Related Projects
+For a non-publishing rehearsal:
 
-- [us-code](https://github.com/CourtGPT/us-code) - United States Code
-- [house-documents](https://github.com/CourtGPT/house-documents) - House XML documents
-- [caselaw-access](https://github.com/CourtGPT/caselaw-access) - Case law dataset
+```bash
+CONGRESS_DRY_RUN=1 npm run sync:local
+```
 
-## About CourtGPT
+For a bounded historical sponsor/cosponsor batch:
 
-[CourtGPT](https://courtgpt.ai) - Open-source legal data tools. Follow us on [X @courtgpt](https://x.com/courtgpt).
+```bash
+CONGRESS_RELATIONS_MODE=full \
+CONGRESS_RELATIONS_MAX_BILLS=250 \
+CONGRESS_RELATIONS_OFFSET=0 \
+npm run update
+```
 
----
+Increase the offset by 250 for the next batch. Review request metrics and run `npm run verify` after each batch.
 
-**Disclaimer**: This data is provided for informational and research purposes. Official congressional information is available at [Congress.gov](https://congress.gov).
+## Hourly Operation
+
+The canonical publisher is `scripts/run-local-sync.sh`. It:
+
+1. Loads `.env.local` and validates the API key, Congress, and lookback settings.
+2. Refuses to run over uncommitted work or a non-`main` branch.
+3. Pulls `origin/main` fast-forward-only.
+4. Automatically performs a full resource bootstrap when the snapshot is incomplete.
+5. Runs tests, resource sync, incremental bill relations, index generation, and semantic verification.
+6. Commits and pushes only `data/` when generated data changed, unless `CONGRESS_DRY_RUN=1` is set.
+
+The Codex automation is the single recurring scheduler and must remain `ACTIVE` with `FREQ=HOURLY;INTERVAL=1`. The GitHub Actions workflow is manual recovery only. A successful run reports either that new Congress.gov data was published or that data was unchanged. A failed run reports the failing stage and preserves its stderr for review; no API key is printed.
+
+## Recovery
+
+- Missing key: set `CONGRESS_API_KEY` in `.env.local`; the runner fails before network work.
+- Incomplete snapshot: remove the resource filter and rerun; the runner selects full bootstrap automatically.
+- Failed validation: inspect the bounded verification errors, correct the data or configuration, then rerun from a clean worktree.
+- Rate limiting: keep the six-hour overlap, allow retries to finish, and use targeted resources or bounded relation batches when recovering.
+- Historical bills and votes: use `node scripts/backfill.js --start=114 --end=119` with a valid key.
+
+## Disclaimer
+
+This dataset is for informational and research purposes. Review the linked [Congress.gov](https://www.congress.gov/) source record for authoritative details.

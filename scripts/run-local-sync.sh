@@ -22,6 +22,19 @@ fi
 
 : "${CONGRESS_API_KEY:?Set CONGRESS_API_KEY in the environment or .env.local}"
 
+export CONGRESS="${CONGRESS:-119}"
+export CONGRESS_LOOKBACK_HOURS="${CONGRESS_LOOKBACK_HOURS:-6}"
+export CONGRESS_SYNC_MODE="${CONGRESS_SYNC_MODE:-hourly}"
+
+if ! [[ "${CONGRESS}" =~ ^[1-9][0-9]*$ ]]; then
+  echo "CONGRESS must be a positive integer" >&2
+  exit 1
+fi
+if ! [[ "${CONGRESS_LOOKBACK_HOURS}" =~ ^[1-9][0-9]*$ ]]; then
+  echo "CONGRESS_LOOKBACK_HOURS must be a positive integer" >&2
+  exit 1
+fi
+
 if [[ -n "$(git status --porcelain)" ]]; then
   echo "Refusing to sync with uncommitted changes in ${ROOT_DIR}" >&2
   exit 1
@@ -32,19 +45,19 @@ if [[ "$(git branch --show-current)" != "main" ]]; then
   exit 1
 fi
 
+echo "[sync] pulling origin/main"
 git pull --ff-only origin main
 
-export CONGRESS="${CONGRESS:-119}"
-export CONGRESS_LOOKBACK_HOURS="${CONGRESS_LOOKBACK_HOURS:-6}"
-export CONGRESS_SYNC_MODE="${CONGRESS_SYNC_MODE:-hourly}"
-
-if [[ ! -f data/resources/bills.json && "${CONGRESS_SYNC_MODE}" == "hourly" ]]; then
-  echo "No bill snapshot found; running the one-time full bootstrap"
+if [[ -z "${CONGRESS_RESOURCES:-}" && "${CONGRESS_SYNC_MODE}" == "hourly" && ( ! -f data/metadata.json || ! -f data/resources/members.json || ! -f data/derived/index.json ) ]]; then
+  echo "Incomplete snapshot found; running the one-time full bootstrap"
   export CONGRESS_SYNC_MODE=full
 fi
 
+echo "[sync] running tests"
 npm test
+echo "[sync] synchronizing resources, relations, index, and verification"
 npm run update
+echo "[sync] validating generated data"
 npm run validate
 
 if git status --porcelain -- data | grep -q .; then

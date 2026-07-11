@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { verifyData } = require('./verify-data');
 
 const DATA_DIR = path.join(__dirname, '..', 'data');
 
@@ -26,7 +27,9 @@ function validate(dataDir = DATA_DIR) {
   for (const file of files) readArray(path.join(resourceDir, file));
   const metadataPath = path.join(dataDir, 'metadata.json');
   if (!fs.existsSync(metadataPath)) throw new Error('Missing data/metadata.json');
-  return { resourceFiles: files.length };
+  const result = verifyData({ dataDir, congress: Number(process.env.CONGRESS || 119), selectedResources });
+  if (result.errors.length) throw new Error(`Semantic verification failed:\n${result.errors.join('\n')}`);
+  return { resourceFiles: files.length, checked: result.checked };
 }
 
 if (require.main === module) {

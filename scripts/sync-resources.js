@@ -57,6 +57,13 @@ function loadRecords(outputPath) {
   return value;
 }
 
+function writeAtomic(outputPath, value) {
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  const temporaryPath = `${outputPath}.${process.pid}.tmp`;
+  fs.writeFileSync(temporaryPath, `${JSON.stringify(value, null, 2)}\n`);
+  fs.renameSync(temporaryPath, outputPath);
+}
+
 function mergeRecords(existing, incoming) {
   const merged = new Map(existing.map((record) => [resourceKey(record), record]));
   for (const record of incoming) merged.set(resourceKey(record), record);
@@ -88,8 +95,7 @@ async function syncResource(config, { congress, apiKey, fetchImpl = fetch, mode 
     : records;
   if (!scopedRecords.length && !existing.length) throw new Error(`Congress.gov returned no records for ${config.name}`);
   const merged = mergeRecords(existing, scopedRecords);
-  fs.mkdirSync(dataDir, { recursive: true });
-  fs.writeFileSync(outputPath, `${JSON.stringify(merged.map(canonical), null, 2)}\n`);
+  writeAtomic(outputPath, merged.map(canonical));
   return { name: config.name, count: merged.length, fetched: scopedRecords.length, skipped: false };
 }
 

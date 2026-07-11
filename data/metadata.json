@@ -5,9 +5,44 @@
   "congress": 119,
   "lookbackHours": 6,
   "resources": [
-    "bills"
+    "bills",
+    "committee-prints",
+    "committee-reports",
+    "committees",
+    "congresses",
+    "house-votes",
+    "members"
   ],
   "counts": {
-    "bills": 17335
+    "bills": 17335,
+    "committee-prints": 1876,
+    "committee-reports": 19676,
+    "committees": 817,
+    "congresses": 119,
+    "house-votes": 595,
+    "members": 2693
+  },
+  "derived": {
+    "index": {
+      "entities": {
+        "members": 2693,
+        "bills": 17335,
+        "committees": 817,
+        "votes": 0,
+        "hearings": 0
+      },
+      "relationships": 0,
+      "timeline": 34659
+    },
+    "billRelations": {
+      "bills": 0,
+      "relations": 0,
+      "fetched": 0,
+      "skipped": true
+    }
+  },
+  "requestMetrics": {
+    "requests": 97,
+    "retries": 0
   }
 }

@@ -1,5 +1,6 @@
 const BASE_URL = 'https://api.congress.gov/v3';
 const PAGE_SIZE = 250;
+const metrics = { requests: 0, retries: 0 };
 
 function requireApiKey(env = process.env) {
   if (!env.CONGRESS_API_KEY) throw new Error('CONGRESS_API_KEY environment variable is required');
@@ -16,6 +17,7 @@ async function requestJson(url, { apiKey, fetchImpl = fetch, maxRetries = 3, tim
     const requestUrl = new URL(url);
     if (!requestUrl.searchParams.has('api_key')) requestUrl.searchParams.set('api_key', apiKey);
     if (!requestUrl.searchParams.has('format')) requestUrl.searchParams.set('format', 'json');
+    metrics.requests += 1;
     const response = await fetchImpl(requestUrl.toString(), {
       headers: { accept: 'application/json' },
       signal: AbortSignal.timeout(timeoutMs),
@@ -33,8 +35,18 @@ async function requestJson(url, { apiKey, fetchImpl = fetch, maxRetries = 3, tim
     const retryAfter = Number(response.headers?.get?.('retry-after') || 0);
     const delay = retryAfter > 0 ? retryAfter * 1000 : Math.min(1000 * (2 ** attempt), 8000);
     attempt += 1;
+    metrics.retries += 1;
     await sleep(delay);
   }
+}
+
+function resetMetrics() {
+  metrics.requests = 0;
+  metrics.retries = 0;
+}
+
+function getMetrics() {
+  return { ...metrics };
 }
 
 async function paginate(path, { apiKey = requireApiKey(), fetchImpl = fetch, maxPages = 100, query = {} } = {}) {
@@ -64,4 +76,4 @@ function stableSort(records, keys = ['id', 'bioguideId', 'url', 'number']) {
   });
 }
 
-module.exports = { BASE_URL, PAGE_SIZE, paginate, requestJson, requireApiKey, stableSort };
+module.exports = { BASE_URL, PAGE_SIZE, getMetrics, paginate, requestJson, requireApiKey, resetMetrics, stableSort };

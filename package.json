@@ -10,8 +10,10 @@
     "fetch:votes": "node scripts/fetch-votes.js",
     "backfill": "node scripts/backfill.js",
     "update": "node scripts/update.js",
+    "build:index": "node scripts/build-index.js",
     "sync:local": "bash scripts/run-local-sync.sh",
     "validate": "node scripts/validate.js",
+    "verify": "node scripts/verify-data.js",
     "test": "node --test test/*.test.js"
   },
   "repository": {

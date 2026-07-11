@@ -1,0 +1,41 @@
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const { RESOURCE_CONFIG, syncResource } = require('../scripts/sync-resources');
+
+function response(payload) {
+  return {
+    ok: true,
+    status: 200,
+    headers: { get: () => null },
+    json: async () => payload,
+  };
+}
+
+test('merges overlapping incremental resource windows deterministically', async () => {
+  const dataDir = fs.mkdtempSync(path.join(os.tmpdir(), 'congress-resources-'));
+  const urls = [];
+  const fetchImpl = async (url) => {
+    urls.push(url);
+    return response({ bills: [{ url: 'https://api.congress.gov/v3/bill/119/hr/1', number: '1', updateDate: '2026-07-11T10:00:00Z', title: 'Updated' }] });
+  };
+  const config = RESOURCE_CONFIG.find((resource) => resource.name === 'bills');
+  await syncResource(config, { congress: 119, apiKey: 'test-key', fetchImpl, dataDir, mode: 'full', lookbackHours: 6 });
+  const second = await syncResource(config, { congress: 119, apiKey: 'test-key', fetchImpl, dataDir, mode: 'hourly', lookbackHours: 6 });
+  const records = JSON.parse(fs.readFileSync(path.join(dataDir, 'bills.json'), 'utf8'));
+  assert.equal(second.count, 1);
+  assert.equal(records[0].title, 'Updated');
+  assert.ok(urls.some((url) => /fromDateTime=/.test(url)));
+  assert.ok(urls.every((url) => /limit=250/.test(url)));
+});
+
+test('skips bootstrap-only resources during hourly runs after bootstrap', async () => {
+  const dataDir = fs.mkdtempSync(path.join(os.tmpdir(), 'congress-bootstrap-'));
+  const config = RESOURCE_CONFIG.find((resource) => resource.name === 'congresses');
+  fs.writeFileSync(path.join(dataDir, 'congresses.json'), '[{"name":"119th Congress"}]\n');
+  const result = await syncResource(config, { congress: 119, apiKey: 'test-key', fetchImpl: async () => { throw new Error('network should not be called'); }, dataDir, mode: 'hourly' });
+  assert.equal(result.skipped, true);
+  assert.equal(result.count, 1);
+});

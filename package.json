@@ -6,10 +6,12 @@
   "scripts": {
     "fetch:bills": "node scripts/fetch-bills.js",
     "fetch:members": "node scripts/fetch-members.js",
+    "fetch:committees": "node scripts/fetch-committees.js",
     "fetch:votes": "node scripts/fetch-votes.js",
     "backfill": "node scripts/backfill.js",
-    "update": "npm run fetch:bills && npm run fetch:members && npm run fetch:votes",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update": "node scripts/update.js",
+    "validate": "node scripts/validate.js",
+    "test": "node --test test/*.test.js"
   },
   "repository": {
     "type": "git",

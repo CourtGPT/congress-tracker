@@ -1,0 +1,13 @@
+{
+  "source": "Congress.gov API",
+  "sourceUrl": "https://api.congress.gov/",
+  "apiVersion": "v3",
+  "congress": 119,
+  "lookbackHours": 6,
+  "resources": [
+    "bills"
+  ],
+  "counts": {
+    "bills": 17335
+  }
+}

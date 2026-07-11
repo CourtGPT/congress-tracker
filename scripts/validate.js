@@ -13,7 +13,16 @@ function validate(dataDir = DATA_DIR) {
   const resourceDir = path.join(dataDir, 'resources');
   if (!fs.existsSync(resourceDir)) throw new Error(`Missing resource directory: ${resourceDir}`);
   const files = fs.readdirSync(resourceDir).filter((file) => file.endsWith('.json')).sort();
-  if (files.length < 10) throw new Error(`Expected comprehensive resource export, found ${files.length} files`);
+  const selectedResources = process.env.CONGRESS_RESOURCES
+    ? new Set(process.env.CONGRESS_RESOURCES.split(',').map((name) => name.trim()).filter(Boolean))
+    : null;
+  const minimumFiles = selectedResources ? selectedResources.size : 10;
+  if (files.length < minimumFiles) throw new Error(`Expected ${minimumFiles} resource exports, found ${files.length} files`);
+  if (selectedResources) {
+    for (const name of selectedResources) {
+      if (!files.includes(`${name}.json`)) throw new Error(`Missing selected resource export: ${name}`);
+    }
+  }
   for (const file of files) readArray(path.join(resourceDir, file));
   const metadataPath = path.join(dataDir, 'metadata.json');
   if (!fs.existsSync(metadataPath)) throw new Error('Missing data/metadata.json');

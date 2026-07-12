@@ -83,6 +83,11 @@
       "requests": 94,
       "retries": 0
     },
+    "laws": {
+      "count": 102,
+      "changed": 0,
+      "outputDir": "/Users/d/Library/Application Support/CourtGPT/congress-tracker-sync/repo/data/congress/119/legislation/laws"
+    },
     "sync": {
       "bound-congressional-record": {
         "count": 20229,

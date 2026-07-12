@@ -26,6 +26,8 @@ congress-tracker/
 │   ├── verify-data.js              # Semantic cross-resource verification
 │   ├── validate.js                 # Structural plus semantic validation
 │   ├── run-local-sync.sh           # Local publishing entry point
+│   ├── run-local-us-code-sync.sh   # Weekly OLRC publishing entry point
+│   ├── sync-us-code.sh              # Download and parse the current OLRC release
 │   ├── install-local-scheduler.sh  # Install the macOS launchd agent
 │   └── backfill.js                 # Explicit historical bills/votes backfill
 ├── test/
@@ -75,7 +77,9 @@ cp .env.local.example .env.local
 # Edit .env.local and set CONGRESS_API_KEY.
 ```
 
-The default configuration synchronizes all stable JSON collections in the active catalog. Congress.gov exposes bill summaries and CRS reports through routes that do not return stable JSON collections for this client; the historical Congressional Record routes also exceeded the bounded bootstrap window. Those routes are intentionally excluded rather than represented by fabricated or partial exports. Use `CONGRESS_RESOURCES` only for a targeted recovery run, for example:
+The default configuration synchronizes all stable JSON collections in the active catalog, including amendments, CRS reports, and the historical bound Congressional Record. The bound Congressional Record is bootstrap-only because it is a large historical collection. Congress.gov currently reports 93,290 raw bound-record rows, including repeated identical source URLs; the exporter keeps one canonical record per source URL and records the fetched-versus-exported counts in `data/metadata.json`. Bill summaries remain per-bill detail resources rather than a top-level collection; the live pipeline queues them through the bill-detail crawler. The `/congressional-record` route is inspected against `daily-congressional-record` before being exported separately so equivalent issues are not duplicated.
+
+Use `CONGRESS_RESOURCES` only for a targeted recovery run, for example:
 
 ```bash
 CONGRESS_RESOURCES=bills npm run update
@@ -120,13 +124,13 @@ The canonical publisher is `scripts/run-local-sync.sh`. It:
 5. Runs tests, resource sync, incremental bill relations, index generation, and semantic verification.
 6. Commits and pushes only `data/` when generated data changed, unless `CONGRESS_DRY_RUN=1` is set.
 
-The macOS `launchd` user agent is the only recurring scheduler. Codex automation is not required. GitHub Actions is manual recovery only. Install the system agent with:
+The macOS `launchd` user agents are the only recurring schedulers. Congress.gov runs hourly; the large OLRC U.S. Code snapshot runs weekly on Sunday at 01:00 local time. Both use the protected runtime clone and shared lock. Codex automation is not required. GitHub Actions is manual recovery only. Install the system agents with:
 
 ```bash
 npm run scheduler:install
 ```
 
-The installer creates a dedicated runtime clone under `~/Library/Application Support/CourtGPT/congress-tracker-sync`, outside macOS Desktop privacy restrictions. The agent runs at load and every hour from that clone, reads its `0600` `.env.local`, writes logs to `/tmp/courtgpt-congress-sync.log` and `/tmp/courtgpt-congress-sync.error.log`, and pushes only validated data changes. Inspect it with `launchctl print gui/$(id -u)/com.courtgpt.congress-sync`.
+The installer creates a dedicated runtime clone under `~/Library/Application Support/CourtGPT/congress-tracker-sync`, outside macOS Desktop privacy restrictions. The agents read their `0600` `.env.local`, write logs to `/tmp/courtgpt-congress-sync.log` and `/tmp/courtgpt-us-code-sync.log`, and push only validated data changes. Inspect them with `launchctl print gui/$(id -u)/com.courtgpt.congress-sync` and `launchctl print gui/$(id -u)/com.courtgpt.us-code-sync`.
 
 ## Recovery
 

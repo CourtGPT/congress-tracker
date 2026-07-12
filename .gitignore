@@ -15,6 +15,7 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+.cache/
 
 # API keys (should never be committed)
 .env

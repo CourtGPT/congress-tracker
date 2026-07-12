@@ -39,6 +39,18 @@ test('paginates nested Congressional Record result sets', async () => {
   assert.match(urls[1], /offset=20/);
 });
 
+test('paginates large collections concurrently by stable offsets', async () => {
+  const offsets = [];
+  const fetchImpl = async (url) => {
+    const offset = Number(new URL(url).searchParams.get('offset') || 0);
+    offsets.push(offset);
+    return response(200, { records: [{ offset }], pagination: { count: 501 } });
+  };
+  const result = await paginate('/bound-congressional-record', { apiKey: 'test-key', fetchImpl, concurrency: 3, maxPages: 10 });
+  assert.deepEqual(result, [{ offset: 0 }, { offset: 250 }, { offset: 500 }]);
+  assert.deepEqual(offsets.sort((a, b) => a - b), [0, 250, 500]);
+});
+
 test('retries rate-limited responses', async () => {
   let attempts = 0;
   const fetchImpl = async () => {

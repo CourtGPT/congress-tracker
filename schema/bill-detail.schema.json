@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/CourtGPT/congress-tracker/schema/bill-detail.schema.json",
+  "title": "Congress.gov bill detail record",
+  "description": "Per-bill detail payload written to data/resources/bills-detail/{congress}-{type}-{number}.json. Validated by scripts/lib/bill-detail-validate.js so the contract is enforced even when the schema file is consumed as a human-readable reference.",
+  "type": "object",
+  "required": [
+    "billId",
+    "congress",
+    "type",
+    "typeCode",
+    "number",
+    "title",
+    "originChamber",
+    "originChamberCode",
+    "introducedDate",
+    "latestAction",
+    "updateDate",
+    "updateDateIncludingText",
+    "actions",
+    "sponsors",
+    "cosponsors",
+    "committees",
+    "relatedBills",
+    "amendments",
+    "summaries",
+    "textVersions",
+    "cboCostEstimates",
+    "policyArea",
+    "subjects",
+    "laws",
+    "sourceUrl"
+  ],
+  "properties": {
+    "billId": { "type": "string", "pattern": "^[0-9]+-[a-z]+-[0-9]+$" },
+    "congress": { "type": "integer", "minimum": 1 },
+    "type": { "type": "string", "pattern": "^[A-Z]+$" },
+    "typeCode": { "type": "string", "pattern": "^[a-z]+$" },
+    "number": { "type": "string", "pattern": "^[0-9]+$" }
+  }
+}

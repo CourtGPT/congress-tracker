@@ -8,6 +8,7 @@ const BILL_TYPES = ['hr', 's', 'hjres', 'sjres', 'hconres', 'sconres', 'hres', '
 
 const RESOURCE_CONFIG = [
   { name: 'bills', paths: BILL_TYPES.map((type) => `/bill/${'${congress}'}/${type}`), incremental: true },
+  { name: 'amendments', paths: ['/amendment/${congress}/hamdt', '/amendment/${congress}/samdt'], congress: true, incremental: true },
   { name: 'laws', path: '/law/${congress}', congress: true },
   { name: 'congresses', path: '/congress', bootstrapOnly: true },
   { name: 'members', path: '/member', incremental: true },
@@ -18,6 +19,8 @@ const RESOURCE_CONFIG = [
   { name: 'committee-meetings', path: '/committee-meeting/${congress}', congress: true },
   { name: 'hearings', path: '/hearing/${congress}', congress: true },
   { name: 'daily-congressional-record', path: '/daily-congressional-record' },
+  { name: 'crs-reports', path: '/crsreport', incremental: true },
+  { name: 'bound-congressional-record', path: '/bound-congressional-record', bootstrapOnly: true, concurrency: 6 },
   { name: 'house-communications', path: '/house-communication/${congress}', congress: true },
   { name: 'house-requirements', path: '/house-requirement', bootstrapOnly: true },
   { name: 'senate-communications', path: '/senate-communication/${congress}', congress: true },
@@ -86,7 +89,7 @@ async function syncResource(config, { congress, apiKey, fetchImpl = fetch, mode 
   const routes = config.paths || [config.path];
   const records = [];
   for (const route of routes) {
-    records.push(...await paginate(replaceCongress(route, congress), { apiKey, fetchImpl, query, maxPages }));
+    records.push(...await paginate(replaceCongress(route, congress), { apiKey, fetchImpl, query, maxPages, concurrency: config.concurrency }));
   }
   const scopedRecords = config.congress || config.name === 'bills'
     ? records.filter((record) => record.congress === undefined || String(record.congress) === String(congress))

@@ -30,6 +30,9 @@ else
 fi
 install -m 600 "${ROOT_DIR}/.env.local" "${RUNTIME_REPO}/.env.local"
 
+echo "Installing runtime dependencies"
+npm --prefix "${RUNTIME_REPO}" ci --no-audit --no-fund
+
 mkdir -p "${HOME}/Library/LaunchAgents"
 launchctl bootout "${DOMAIN}/${LABEL}" 2>/dev/null || true
 cp "${PLIST_SOURCE}" "${PLIST_TARGET}"

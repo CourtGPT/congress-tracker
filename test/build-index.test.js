@@ -50,3 +50,10 @@ test('produces deterministic output for a fixed generation timestamp', () => {
   const second = buildIndex({ dataDir, congress: 119, generatedAt: '2026-07-11T00:00:00Z' });
   assert.deepEqual(second, first);
 });
+
+test('preserves the generation timestamp when source content is unchanged', () => {
+  const dataDir = fixtureDataDir();
+  const first = buildIndex({ dataDir, congress: 119, generatedAt: '2026-07-11T00:00:00Z' });
+  const second = buildIndex({ dataDir, congress: 119, generatedAt: '2026-07-11T01:00:00Z' });
+  assert.equal(second.generatedAt, first.generatedAt);
+});

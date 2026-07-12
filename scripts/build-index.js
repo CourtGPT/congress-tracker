@@ -51,7 +51,8 @@ function committeeId(record) {
 }
 
 function voteId(record, congress) {
-  const number = record?.rollNumber || record?.number || record?.id;
+  if (record?.identifier !== undefined && record?.identifier !== null) return `${record?.congress || congress}:${record.identifier}`;
+  const number = record?.rollCallNumber || record?.rollNumber || record?.number || record?.id;
   return number === undefined || number === null ? null : `${record?.congress || congress}:${number}`;
 }
 
@@ -129,8 +130,8 @@ function buildIndex({ dataDir = DEFAULT_DATA_DIR, congress = Number(process.env.
     const id = voteId(vote, congress);
     if (!id) continue;
     const bill = vote.bill ? billIdentity(vote.bill) : billIdentity({ url: vote.billUrl });
-    entities.votes[id] = { id, congress: vote.congress ?? congress, rollNumber: String(vote.rollNumber || vote.number || id.split(':').pop()), date: isoDate(vote.date || vote.voteDate), description: vote.description || vote.title || vote.name || null, sourceUrl: sourceUrl(vote) };
-    addTimeline(timeline, { date: vote.date || vote.voteDate, type: 'vote', subjectId: id, relatedIds: [bill?.billId], title: vote.description || vote.title || null, sourceUrl: sourceUrl(vote) });
+    entities.votes[id] = { id, congress: vote.congress ?? congress, rollNumber: String(vote.rollCallNumber || vote.rollNumber || vote.number || id.split(':').pop()), date: isoDate(vote.startDate || vote.date || vote.voteDate), result: vote.result || null, voteType: vote.voteType || null, description: vote.description || vote.title || vote.name || null, sourceUrl: sourceUrl(vote) };
+    addTimeline(timeline, { date: vote.startDate || vote.date || vote.voteDate, type: 'vote', subjectId: id, relatedIds: [bill?.billId], title: vote.description || vote.title || null, sourceUrl: sourceUrl(vote) });
     if (bill) relationships.push({ type: 'voted_on', from: id, to: bill.billId, congress: Number(vote.congress || congress), sourceUrl: sourceUrl(vote) });
   }
 
@@ -159,6 +160,11 @@ function buildIndex({ dataDir = DEFAULT_DATA_DIR, congress = Number(process.env.
     relationships: output.relationships.length,
     timeline: output.timeline.length,
   };
+  if (fs.existsSync(outputPath)) {
+    const previous = JSON.parse(fs.readFileSync(outputPath, 'utf8'));
+    const comparable = (value) => JSON.stringify({ ...value, generatedAt: null });
+    if (comparable(previous) === comparable(output)) output.generatedAt = previous.generatedAt;
+  }
   writeAtomic(outputPath, output);
   return output;
 }

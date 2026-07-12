@@ -47,7 +47,6 @@ async function update() {
     resources: snapshot.names,
     counts: snapshot.counts,
     derived: { index: index.counts, billRelations: relations },
-    requestMetrics: getMetrics(),
   });
   const verification = verifyData({ dataDir, congress, selectedResources });
   if (verification.errors.length) throw new Error(`Semantic verification failed:\n${verification.errors.join('\n')}`);

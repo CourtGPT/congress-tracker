@@ -8,7 +8,6 @@ const BILL_TYPES = ['hr', 's', 'hjres', 'sjres', 'hconres', 'sconres', 'hres', '
 
 const RESOURCE_CONFIG = [
   { name: 'bills', paths: BILL_TYPES.map((type) => `/bill/${'${congress}'}/${type}`), incremental: true },
-  { name: 'amendments', path: '/amendment', incremental: true },
   { name: 'laws', path: '/law/${congress}', congress: true },
   { name: 'congresses', path: '/congress', bootstrapOnly: true },
   { name: 'members', path: '/member', incremental: true },
@@ -18,14 +17,11 @@ const RESOURCE_CONFIG = [
   { name: 'committee-prints', path: '/committee-print', incremental: true },
   { name: 'committee-meetings', path: '/committee-meeting/${congress}', congress: true },
   { name: 'hearings', path: '/hearing/${congress}', congress: true },
-  { name: 'congressional-record', path: '/congressional-record', bootstrapOnly: true },
   { name: 'daily-congressional-record', path: '/daily-congressional-record' },
-  { name: 'bound-congressional-record', path: '/bound-congressional-record', bootstrapOnly: true },
   { name: 'house-communications', path: '/house-communication/${congress}', congress: true },
   { name: 'house-requirements', path: '/house-requirement', bootstrapOnly: true },
   { name: 'senate-communications', path: '/senate-communication/${congress}', congress: true },
   { name: 'nominations', path: '/nomination/${congress}', congress: true, incremental: true },
-  { name: 'crs-reports', path: '/crsreport', incremental: true },
   { name: 'treaties', path: '/treaty/${congress}', congress: true, incremental: true },
 ];
 

@@ -20,7 +20,7 @@ on:
         required: false
         default: '6'
       resources:
-        description: 'Comma-separated resources to sync; blank means all 21 collections'
+        description: 'Comma-separated resources to sync; blank means all configured collections'
         required: false
 
 permissions:

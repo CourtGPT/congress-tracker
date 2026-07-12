@@ -590,27 +590,6 @@
   {
     "congress": 119,
     "latestAction": {
-      "actionDate": "2026-05-19",
-      "text": "Became Public Law No: 119-93."
-    },
-    "laws": [
-      {
-        "number": "119-93",
-        "type": "Public Law"
-      }
-    ],
-    "number": "2815",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Cape Fox Land Entitlement Finalization Act of 2025",
-    "type": "HR",
-    "updateDate": "2026-06-22",
-    "updateDateIncludingText": "2026-06-22",
-    "url": "https://api.congress.gov/v3/bill/119/hr/2815?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
       "actionDate": "2025-01-29",
       "text": "Became Public Law No: 119-1."
     },
@@ -758,27 +737,6 @@
   {
     "congress": 119,
     "latestAction": {
-      "actionDate": "2026-05-28",
-      "text": "Became Public Law No: 119-94."
-    },
-    "laws": [
-      {
-        "number": "119-94",
-        "type": "Public Law"
-      }
-    ],
-    "number": "3497",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Medal of Sacrifice Act",
-    "type": "HR",
-    "updateDate": "2026-06-24",
-    "updateDateIncludingText": "2026-06-24",
-    "url": "https://api.congress.gov/v3/bill/119/hr/3497?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
       "actionDate": "2026-02-06",
       "text": "Became Public Law No: 119-76."
     },
@@ -859,27 +817,6 @@
     "updateDate": "2026-06-26",
     "updateDateIncludingText": "2026-06-26",
     "url": "https://api.congress.gov/v3/bill/119/s/2878?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2026-05-19",
-      "text": "Became Public Law No: 119-92."
-    },
-    "laws": [
-      {
-        "number": "119-92",
-        "type": "Public Law"
-      }
-    ],
-    "number": "2066",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Investing in All of America Act of 2025",
-    "type": "HR",
-    "updateDate": "2026-06-29",
-    "updateDateIncludingText": "2026-06-29",
-    "url": "https://api.congress.gov/v3/bill/119/hr/2066?format=json"
   },
   {
     "congress": 119,
@@ -1032,90 +969,6 @@
     "congress": 119,
     "latestAction": {
       "actionDate": "2025-05-09",
-      "text": "Became Public Law No: 119-6."
-    },
-    "laws": [
-      {
-        "number": "119-6",
-        "type": "Public Law"
-      }
-    ],
-    "number": "20",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Consumer Gas-fired Instantaneous Water Heaters\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/20?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-05-09",
-      "text": "Became Public Law No: 119-7."
-    },
-    "laws": [
-      {
-        "number": "119-7",
-        "type": "Public Law"
-      }
-    ],
-    "number": "24",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Walk-In Coolers and Walk-In Freezers\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/24?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-04-10",
-      "text": "Became Public Law No: 119-5."
-    },
-    "laws": [
-      {
-        "number": "119-5",
-        "type": "Public Law"
-      }
-    ],
-    "number": "25",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service relating to \"Gross Proceeds Reporting by Brokers That Regularly Provide Services Effectuating Digital Asset Sales\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/25?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-03-14",
-      "text": "Became Public Law No: 119-2."
-    },
-    "laws": [
-      {
-        "number": "119-2",
-        "type": "Public Law"
-      }
-    ],
-    "number": "35",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/35?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-05-09",
       "text": "Became Public Law No: 119-8."
     },
     "laws": [
@@ -1262,174 +1115,6 @@
   {
     "congress": 119,
     "latestAction": {
-      "actionDate": "2025-12-11",
-      "text": "Became Public Law No: 119-48."
-    },
-    "laws": [
-      {
-        "number": "119-48",
-        "type": "Public Law"
-      }
-    ],
-    "number": "104",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"Miles City Field Office Record of Decision and Approved Resource Management Plan Amendment\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/104?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-12-11",
-      "text": "Became Public Law No: 119-49."
-    },
-    "laws": [
-      {
-        "number": "119-49",
-        "type": "Public Law"
-      }
-    ],
-    "number": "105",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"North Dakota Field Office Record of Decision and Approved Resource Management Plan\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/105?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-12-11",
-      "text": "Became Public Law No: 119-50."
-    },
-    "laws": [
-      {
-        "number": "119-50",
-        "type": "Public Law"
-      }
-    ],
-    "number": "106",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"Central Yukon Record of Decision and Approved Resource Management Plan\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/106?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-12-11",
-      "text": "Became Public Law No: 119-51."
-    },
-    "laws": [
-      {
-        "number": "119-51",
-        "type": "Public Law"
-      }
-    ],
-    "number": "130",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Buffalo Field Office Record of Decision and Approved Resource Management Plan Amendment.",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/130?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-12-11",
-      "text": "Became Public Law No: 119-52."
-    },
-    "laws": [
-      {
-        "number": "119-52",
-        "type": "Public Law"
-      }
-    ],
-    "number": "131",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Coastal Plain Oil and Gas Leasing Program Record of Decision.",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/131?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-12-02",
-      "text": "Became Public Law No: 119-46."
-    },
-    "laws": [
-      {
-        "number": "119-46",
-        "type": "Public Law"
-      }
-    ],
-    "number": "133",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Requesting the Secretary of the Interior to authorize unique and one-time arrangements for displays on the National Mall and the Washington Monument during the period beginning on December 31, 2025, and ending on January 5, 2026.",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/133?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2026-04-27",
-      "text": "Became Public Law No: 119-85."
-    },
-    "laws": [
-      {
-        "number": "119-85",
-        "type": "Public Law"
-      }
-    ],
-    "number": "140",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/140?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2026-02-18",
-      "text": "Became Public Law No: 119-78."
-    },
-    "laws": [
-      {
-        "number": "119-78",
-        "type": "Public Law"
-      }
-    ],
-    "number": "142",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Disapproving the action of the District of Columbia Council in approving the D.C. Income and Franchise Tax Conformity and Revision Temporary Amendment Act of 2025.",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/142?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
       "actionDate": "2025-12-19",
       "text": "Became Public Law No: 119-61."
     },
@@ -1535,27 +1220,6 @@
   {
     "congress": 119,
     "latestAction": {
-      "actionDate": "2025-09-05",
-      "text": "Became Public Law No: 119-35."
-    },
-    "laws": [
-      {
-        "number": "119-35",
-        "type": "Public Law"
-      }
-    ],
-    "number": "2170",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "To name the Department of Veterans Affairs community-based outpatient clinic in Toms River, New Jersey, the Leonard G. 'Bud' Lomell, VA Clinic, and for other purposes.",
-    "type": "HR",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hr/2170?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
       "actionDate": "2025-12-18",
       "text": "Became Public Law No: 119-60."
     },
@@ -1573,27 +1237,6 @@
     "updateDate": "2026-07-10",
     "updateDateIncludingText": "2026-07-10",
     "url": "https://api.congress.gov/v3/bill/119/s/1071?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-07-04",
-      "text": "Became Public Law No: 119-21."
-    },
-    "laws": [
-      {
-        "number": "119-21",
-        "type": "Public Law"
-      }
-    ],
-    "number": "1",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/1?format=json"
   },
   {
     "congress": 119,
@@ -1657,48 +1300,6 @@
     "updateDate": "2026-07-11",
     "updateDateIncludingText": "2026-07-11",
     "url": "https://api.congress.gov/v3/bill/119/hr/43?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-12-26",
-      "text": "Became Public Law No: 119-62."
-    },
-    "laws": [
-      {
-        "number": "119-62",
-        "type": "Public Law"
-      }
-    ],
-    "number": "187",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "MAPWaters Act of 2025",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/187?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2026-01-20",
-      "text": "Became Public Law No: 119-70."
-    },
-    "laws": [
-      {
-        "number": "119-70",
-        "type": "Public Law"
-      }
-    ],
-    "number": "224",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Disabled Veterans Housing Support Act",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/224?format=json"
   },
   {
     "congress": 119,
@@ -1913,174 +1514,6 @@
   {
     "congress": 119,
     "latestAction": {
-      "actionDate": "2025-12-12",
-      "text": "Became Public Law No: 119-56."
-    },
-    "laws": [
-      {
-        "number": "119-56",
-        "type": "Public Law"
-      }
-    ],
-    "number": "1912",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Veteran Fraud Reimbursement Act of 2025",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/1912?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-03-15",
-      "text": "Became Public Law No: 119-4."
-    },
-    "laws": [
-      {
-        "number": "119-4",
-        "type": "Public Law"
-      }
-    ],
-    "number": "1968",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Full-Year Continuing Appropriations and Extensions Act, 2025",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/1968?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-07-15",
-      "text": "Became Public Law No: 119-25."
-    },
-    "laws": [
-      {
-        "number": "119-25",
-        "type": "Public Law"
-      }
-    ],
-    "number": "2215",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Salem Maritime National Historical Park Redesignation and Boundary Study Act",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/2215?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-11-25",
-      "text": "Became Public Law No: 119-40."
-    },
-    "laws": [
-      {
-        "number": "119-40",
-        "type": "Public Law"
-      }
-    ],
-    "number": "2316",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Wetlands Conservation and Access Improvement Act of 2025",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/2316?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-12-01",
-      "text": "Became Public Law No: 119-44."
-    },
-    "laws": [
-      {
-        "number": "119-44",
-        "type": "Public Law"
-      }
-    ],
-    "number": "2483",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "SUPPORT for Patients and Communities Reauthorization Act of 2025",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/2483?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-09-05",
-      "text": "Became Public Law No: 119-36."
-    },
-    "laws": [
-      {
-        "number": "119-36",
-        "type": "Public Law"
-      }
-    ],
-    "number": "2808",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Homebuyers Privacy Protection Act",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/2808?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2026-03-26",
-      "text": "Became Private Law No: 119-1."
-    },
-    "laws": [
-      {
-        "number": "119-1",
-        "type": "Private Law"
-      }
-    ],
-    "number": "3377",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "To authorize the President to award the Medal of Honor to James Capers, Jr., for acts of valor as a member of the Marine Corps during the Vietnam War.",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/3377?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2026-06-09",
-      "text": "Became Public Law No: 119-96."
-    },
-    "laws": [
-      {
-        "number": "119-96",
-        "type": "Public Law"
-      }
-    ],
-    "number": "3490",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Gerald E. Connolly Esophageal Cancer Awareness Act of 2025",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/3490?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
       "actionDate": "2026-01-20",
       "text": "Became Public Law No: 119-72."
     },
@@ -2123,6 +1556,573 @@
   {
     "congress": 119,
     "latestAction": {
+      "actionDate": "2025-05-09",
+      "text": "Became Public Law No: 119-6."
+    },
+    "laws": [
+      {
+        "number": "119-6",
+        "type": "Public Law"
+      }
+    ],
+    "number": "20",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Consumer Gas-fired Instantaneous Water Heaters\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/20?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-05-09",
+      "text": "Became Public Law No: 119-7."
+    },
+    "laws": [
+      {
+        "number": "119-7",
+        "type": "Public Law"
+      }
+    ],
+    "number": "24",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Walk-In Coolers and Walk-In Freezers\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/24?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-04-10",
+      "text": "Became Public Law No: 119-5."
+    },
+    "laws": [
+      {
+        "number": "119-5",
+        "type": "Public Law"
+      }
+    ],
+    "number": "25",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service relating to \"Gross Proceeds Reporting by Brokers That Regularly Provide Services Effectuating Digital Asset Sales\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/25?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-03-14",
+      "text": "Became Public Law No: 119-2."
+    },
+    "laws": [
+      {
+        "number": "119-2",
+        "type": "Public Law"
+      }
+    ],
+    "number": "35",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/35?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-11",
+      "text": "Became Public Law No: 119-48."
+    },
+    "laws": [
+      {
+        "number": "119-48",
+        "type": "Public Law"
+      }
+    ],
+    "number": "104",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"Miles City Field Office Record of Decision and Approved Resource Management Plan Amendment\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/104?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-11",
+      "text": "Became Public Law No: 119-49."
+    },
+    "laws": [
+      {
+        "number": "119-49",
+        "type": "Public Law"
+      }
+    ],
+    "number": "105",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"North Dakota Field Office Record of Decision and Approved Resource Management Plan\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/105?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-11",
+      "text": "Became Public Law No: 119-50."
+    },
+    "laws": [
+      {
+        "number": "119-50",
+        "type": "Public Law"
+      }
+    ],
+    "number": "106",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"Central Yukon Record of Decision and Approved Resource Management Plan\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/106?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-11",
+      "text": "Became Public Law No: 119-51."
+    },
+    "laws": [
+      {
+        "number": "119-51",
+        "type": "Public Law"
+      }
+    ],
+    "number": "130",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Buffalo Field Office Record of Decision and Approved Resource Management Plan Amendment.",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/130?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-11",
+      "text": "Became Public Law No: 119-52."
+    },
+    "laws": [
+      {
+        "number": "119-52",
+        "type": "Public Law"
+      }
+    ],
+    "number": "131",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Coastal Plain Oil and Gas Leasing Program Record of Decision.",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/131?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-02",
+      "text": "Became Public Law No: 119-46."
+    },
+    "laws": [
+      {
+        "number": "119-46",
+        "type": "Public Law"
+      }
+    ],
+    "number": "133",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Requesting the Secretary of the Interior to authorize unique and one-time arrangements for displays on the National Mall and the Washington Monument during the period beginning on December 31, 2025, and ending on January 5, 2026.",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/133?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-04-27",
+      "text": "Became Public Law No: 119-85."
+    },
+    "laws": [
+      {
+        "number": "119-85",
+        "type": "Public Law"
+      }
+    ],
+    "number": "140",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/140?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-02-18",
+      "text": "Became Public Law No: 119-78."
+    },
+    "laws": [
+      {
+        "number": "119-78",
+        "type": "Public Law"
+      }
+    ],
+    "number": "142",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Disapproving the action of the District of Columbia Council in approving the D.C. Income and Franchise Tax Conformity and Revision Temporary Amendment Act of 2025.",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/142?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-07-04",
+      "text": "Became Public Law No: 119-21."
+    },
+    "laws": [
+      {
+        "number": "119-21",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-26",
+      "text": "Became Public Law No: 119-62."
+    },
+    "laws": [
+      {
+        "number": "119-62",
+        "type": "Public Law"
+      }
+    ],
+    "number": "187",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "MAPWaters Act of 2025",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/187?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-01-20",
+      "text": "Became Public Law No: 119-70."
+    },
+    "laws": [
+      {
+        "number": "119-70",
+        "type": "Public Law"
+      }
+    ],
+    "number": "224",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Disabled Veterans Housing Support Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/224?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-12",
+      "text": "Became Public Law No: 119-56."
+    },
+    "laws": [
+      {
+        "number": "119-56",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1912",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Veteran Fraud Reimbursement Act of 2025",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1912?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-03-15",
+      "text": "Became Public Law No: 119-4."
+    },
+    "laws": [
+      {
+        "number": "119-4",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1968",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Full-Year Continuing Appropriations and Extensions Act, 2025",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1968?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-05-19",
+      "text": "Became Public Law No: 119-92."
+    },
+    "laws": [
+      {
+        "number": "119-92",
+        "type": "Public Law"
+      }
+    ],
+    "number": "2066",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Investing in All of America Act of 2025",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/2066?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-09-05",
+      "text": "Became Public Law No: 119-35."
+    },
+    "laws": [
+      {
+        "number": "119-35",
+        "type": "Public Law"
+      }
+    ],
+    "number": "2170",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "To name the Department of Veterans Affairs community-based outpatient clinic in Toms River, New Jersey, the Leonard G. 'Bud' Lomell, VA Clinic, and for other purposes.",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/2170?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-07-15",
+      "text": "Became Public Law No: 119-25."
+    },
+    "laws": [
+      {
+        "number": "119-25",
+        "type": "Public Law"
+      }
+    ],
+    "number": "2215",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Salem Maritime National Historical Park Redesignation and Boundary Study Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/2215?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-11-25",
+      "text": "Became Public Law No: 119-40."
+    },
+    "laws": [
+      {
+        "number": "119-40",
+        "type": "Public Law"
+      }
+    ],
+    "number": "2316",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Wetlands Conservation and Access Improvement Act of 2025",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/2316?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-01",
+      "text": "Became Public Law No: 119-44."
+    },
+    "laws": [
+      {
+        "number": "119-44",
+        "type": "Public Law"
+      }
+    ],
+    "number": "2483",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "SUPPORT for Patients and Communities Reauthorization Act of 2025",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/2483?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-09-05",
+      "text": "Became Public Law No: 119-36."
+    },
+    "laws": [
+      {
+        "number": "119-36",
+        "type": "Public Law"
+      }
+    ],
+    "number": "2808",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Homebuyers Privacy Protection Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/2808?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-05-19",
+      "text": "Became Public Law No: 119-93."
+    },
+    "laws": [
+      {
+        "number": "119-93",
+        "type": "Public Law"
+      }
+    ],
+    "number": "2815",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Cape Fox Land Entitlement Finalization Act of 2025",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/2815?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-03-26",
+      "text": "Became Private Law No: 119-1."
+    },
+    "laws": [
+      {
+        "number": "119-1",
+        "type": "Private Law"
+      }
+    ],
+    "number": "3377",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "To authorize the President to award the Medal of Honor to James Capers, Jr., for acts of valor as a member of the Marine Corps during the Vietnam War.",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/3377?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-06-09",
+      "text": "Became Public Law No: 119-96."
+    },
+    "laws": [
+      {
+        "number": "119-96",
+        "type": "Public Law"
+      }
+    ],
+    "number": "3490",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Gerald E. Connolly Esophageal Cancer Awareness Act of 2025",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/3490?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-05-28",
+      "text": "Became Public Law No: 119-94."
+    },
+    "laws": [
+      {
+        "number": "119-94",
+        "type": "Public Law"
+      }
+    ],
+    "number": "3497",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Medal of Sacrifice Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/3497?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
       "actionDate": "2026-04-18",
       "text": "Became Public Law No: 119-84."
     },
@@ -2137,8 +2137,8 @@
     "originChamberCode": "H",
     "title": "To amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through April 30, 2026, and for other purposes.",
     "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
     "url": "https://api.congress.gov/v3/bill/119/hr/8322?format=json"
   }
 ]

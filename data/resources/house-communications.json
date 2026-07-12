@@ -2393,6 +2393,17 @@
       "name": "Executive Communication"
     },
     "congress": 119,
+    "number": 221,
+    "updateDate": "2026-04-19",
+    "url": "https://api.congress.gov/v3/house-communication/119/ec/221?format=json"
+  },
+  {
+    "chamber": "House",
+    "communicationType": {
+      "code": "EC",
+      "name": "Executive Communication"
+    },
+    "congress": 119,
     "number": 222,
     "updateDate": "2026-04-19",
     "url": "https://api.congress.gov/v3/house-communication/119/ec/222?format=json"
@@ -5124,6 +5135,17 @@
     "number": 470,
     "updateDate": "2026-04-19",
     "url": "https://api.congress.gov/v3/house-communication/119/ec/470?format=json"
+  },
+  {
+    "chamber": "House",
+    "communicationType": {
+      "code": "EC",
+      "name": "Executive Communication"
+    },
+    "congress": 119,
+    "number": 471,
+    "updateDate": "2026-04-19",
+    "url": "https://api.congress.gov/v3/house-communication/119/ec/471?format=json"
   },
   {
     "chamber": "House",
@@ -13363,6 +13385,17 @@
     "number": 1224,
     "updateDate": "2026-04-19",
     "url": "https://api.congress.gov/v3/house-communication/119/ec/1224?format=json"
+  },
+  {
+    "chamber": "House",
+    "communicationType": {
+      "code": "EC",
+      "name": "Executive Communication"
+    },
+    "congress": 119,
+    "number": 1225,
+    "updateDate": "2026-04-19",
+    "url": "https://api.congress.gov/v3/house-communication/119/ec/1225?format=json"
   },
   {
     "chamber": "House",
@@ -24349,6 +24382,17 @@
       "name": "Executive Communication"
     },
     "congress": 119,
+    "number": 2228,
+    "updateDate": "2026-04-19",
+    "url": "https://api.congress.gov/v3/house-communication/119/ec/2228?format=json"
+  },
+  {
+    "chamber": "House",
+    "communicationType": {
+      "code": "EC",
+      "name": "Executive Communication"
+    },
+    "congress": 119,
     "number": 2229,
     "updateDate": "2026-04-19",
     "url": "https://api.congress.gov/v3/house-communication/119/ec/2229?format=json"
@@ -29830,6 +29874,17 @@
     "number": 2733,
     "updateDate": "2026-04-19",
     "url": "https://api.congress.gov/v3/house-communication/119/ec/2733?format=json"
+  },
+  {
+    "chamber": "House",
+    "communicationType": {
+      "code": "EC",
+      "name": "Executive Communication"
+    },
+    "congress": 119,
+    "number": 2734,
+    "updateDate": "2026-04-19",
+    "url": "https://api.congress.gov/v3/house-communication/119/ec/2734?format=json"
   },
   {
     "chamber": "House",
@@ -35330,6 +35385,17 @@
     "number": 3240,
     "updateDate": "2026-04-19",
     "url": "https://api.congress.gov/v3/house-communication/119/ec/3240?format=json"
+  },
+  {
+    "chamber": "House",
+    "communicationType": {
+      "code": "EC",
+      "name": "Executive Communication"
+    },
+    "congress": 119,
+    "number": 3241,
+    "updateDate": "2026-04-19",
+    "url": "https://api.congress.gov/v3/house-communication/119/ec/3241?format=json"
   },
   {
     "chamber": "House",
@@ -43547,6 +43613,17 @@
     "number": 3809,
     "updateDate": "2026-06-16",
     "url": "https://api.congress.gov/v3/house-communication/119/ec/3809?format=json"
+  },
+  {
+    "chamber": "House",
+    "communicationType": {
+      "code": "EC",
+      "name": "Executive Communication"
+    },
+    "congress": 119,
+    "number": 3810,
+    "updateDate": "2026-06-16",
+    "url": "https://api.congress.gov/v3/house-communication/119/ec/3810?format=json"
   },
   {
     "chamber": "House",

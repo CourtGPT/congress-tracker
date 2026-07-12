@@ -1,0 +1,42 @@
+{
+  "lawId": "119-65",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-65",
+  "title": "Save Our Seas 2.0 Amendments Act",
+  "bill": {
+    "type": "S",
+    "number": "216",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2025-12-26",
+    "text": "Became Public Law No: 119-65."
+  },
+  "updateDate": "2026-01-06",
+  "updateDateIncludingText": "2026-01-06",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/216?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-26",
+      "text": "Became Public Law No: 119-65."
+    },
+    "laws": [
+      {
+        "number": "119-65",
+        "type": "Public Law"
+      }
+    ],
+    "number": "216",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Save Our Seas 2.0 Amendments Act",
+    "type": "S",
+    "updateDate": "2026-01-06",
+    "updateDateIncludingText": "2026-01-06",
+    "url": "https://api.congress.gov/v3/bill/119/s/216?format=json"
+  }
+}

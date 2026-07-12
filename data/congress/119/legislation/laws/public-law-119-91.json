@@ -1,0 +1,42 @@
+{
+  "lawId": "119-91",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-91",
+  "title": "Sloan Canyon Conservation and Lateral Pipeline Act",
+  "bill": {
+    "type": "HR",
+    "number": "972",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2026-05-19",
+    "text": "Became Public Law No: 119-91."
+  },
+  "updateDate": "2026-05-26",
+  "updateDateIncludingText": "2026-05-26",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/972?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-05-19",
+      "text": "Became Public Law No: 119-91."
+    },
+    "laws": [
+      {
+        "number": "119-91",
+        "type": "Public Law"
+      }
+    ],
+    "number": "972",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Sloan Canyon Conservation and Lateral Pipeline Act",
+    "type": "HR",
+    "updateDate": "2026-05-26",
+    "updateDateIncludingText": "2026-05-26",
+    "url": "https://api.congress.gov/v3/bill/119/hr/972?format=json"
+  }
+}

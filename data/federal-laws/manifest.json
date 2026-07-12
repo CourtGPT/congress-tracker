@@ -12,7 +12,11 @@
     "sourceUrl": "https://uscode.house.gov/download/download.shtml",
     "releasePoint": "119-100",
     "titleCount": 58,
-    "sectionCount": 66025
+    "sectionCount": 59146,
+    "publicLaw": "Public Law 119-100",
+    "releaseDate": "06/26/2026",
+    "hierarchyNodeCount": 761609,
+    "hierarchyLayout": "tree/<title>/<native-node>/index.json"
   },
   "note": "Public laws and codified U.S. Code are intentionally stored as separate source families."
 }

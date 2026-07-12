@@ -1,0 +1,42 @@
+{
+  "lawId": "119-41",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-41",
+  "title": "Bottles and Breastfeeding Equipment Screening Enhancement Act",
+  "bill": {
+    "type": "S",
+    "number": "260",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2025-11-25",
+    "text": "Became Public Law No: 119-41."
+  },
+  "updateDate": "2026-06-09",
+  "updateDateIncludingText": "2026-06-09",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/260?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-11-25",
+      "text": "Became Public Law No: 119-41."
+    },
+    "laws": [
+      {
+        "number": "119-41",
+        "type": "Public Law"
+      }
+    ],
+    "number": "260",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Bottles and Breastfeeding Equipment Screening Enhancement Act",
+    "type": "S",
+    "updateDate": "2026-06-09",
+    "updateDateIncludingText": "2026-06-09",
+    "url": "https://api.congress.gov/v3/bill/119/s/260?format=json"
+  }
+}

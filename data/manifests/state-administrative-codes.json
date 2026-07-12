@@ -1,0 +1,12 @@
+{
+  "$schema": "https://courtgpt.github.io/legal-data-schemas/source-manifest.schema.json",
+  "manifest_id": "us-administrative-code-sources",
+  "generated_at": "2026-07-12T00:00:00Z",
+  "scope": "50 states, DC, and U.S. territories",
+  "authority_policy": "Candidate URLs require a live probe, count check, current-through signal, and terms review before ingestion.",
+  "fallback_policy": "Justia and other secondary sites may support discovery and citation cross-checks only; they are never authoritative replacement text.",
+  "captcha_policy": "No CAPTCHA bypass, solver, stealth browser, cookie injection, or access-control circumvention is permitted.",
+  "records": [],
+  "summary": {"records": 0, "candidate": 0, "verified": 0, "blocked": 0, "missing": 0, "unverified": 0},
+  "source_matrix": "See pioneer-model-training/data/state-administrative-code-sources.json until each candidate passes live verification."
+}

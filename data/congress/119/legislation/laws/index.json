@@ -1,0 +1,825 @@
+{
+  "schemaVersion": 1,
+  "congress": 119,
+  "source": "https://api.congress.gov/",
+  "sourceResource": "law",
+  "generatedAt": "2026-07-12T21:58:44.916Z",
+  "records": [
+    {
+      "lawId": "119-1",
+      "lawType": "Private Law",
+      "path": "data/congress/119/legislation/laws/private-law-119-1.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/3377?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:2f59e25c38d69c9ea3f2805804dc50335e48a857136e626527570d1669c539e2"
+    },
+    {
+      "lawId": "119-2",
+      "lawType": "Private Law",
+      "path": "data/congress/119/legislation/laws/private-law-119-2.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7194?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:1e2b3c689ef0458caafb3167caad7e8e20353a57807b331800d39882d02ff718"
+    },
+    {
+      "lawId": "119-1",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-1.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5?format=json",
+      "updateDate": "2026-06-22",
+      "contentHash": "sha256:11660b25479bb6530f70b28e3d62ef9d4d1d5ce2a8c74bceacc5002d7681f0b2"
+    },
+    {
+      "lawId": "119-2",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-2.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/35?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:e9181d7aa849dbb401431ac7f9167cb9aaec8bd0fdc848ddac369758a6403f5d"
+    },
+    {
+      "lawId": "119-3",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-3.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/sjres/11?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:874c3332649ea22254e1579e0032254e43a47169f40af695955fc36cd7bcbdcd"
+    },
+    {
+      "lawId": "119-4",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-4.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1968?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:762dcab71eb96d8ca5356dcedc60e095cf0a096fac4d09a074b5f26b62ec0bd4"
+    },
+    {
+      "lawId": "119-5",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-5.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/25?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:2535112e5529cd95a658d3e562587f46d14b19c8451ad9fa0d0eb4d42a2bb6f6"
+    },
+    {
+      "lawId": "119-6",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-6.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/20?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:ad8c5150eb85abfb51e31dde4c1cc5a9f7619703543c5fe661b6e3554fa68477"
+    },
+    {
+      "lawId": "119-7",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-7.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/24?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:08be15eda130873d393a40a6d33f9312d330f178ed990f3dbf0f53edd178dc54"
+    },
+    {
+      "lawId": "119-8",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-8.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/42?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:c2a79448a3254d9737dd8cdeb262ecabf6ed5011293cdd3901ba6749ce9b1374"
+    },
+    {
+      "lawId": "119-9",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-9.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/75?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:f1e997fee7a56008b305079b7e6e27abda18a1c198460494926a12d3aa491703"
+    },
+    {
+      "lawId": "119-10",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-10.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/sjres/18?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:5387f6ca0aacb8baa746265728c1796d1797cf874315a9c01667ccc08cf15890"
+    },
+    {
+      "lawId": "119-11",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-11.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/sjres/28?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:536aa3f19f3ad35c47e9142a3ce213560abeee2eba22b490a3efa96c944d8cc9"
+    },
+    {
+      "lawId": "119-12",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-12.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/146?format=json",
+      "updateDate": "2026-06-16",
+      "contentHash": "sha256:58ef5c68a66a7504761a66f2f95d30bf4ff7646453700901e9c33fa3e582052f"
+    },
+    {
+      "lawId": "119-13",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-13.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/60?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:f64520b73f4aa19634a47a0724424a9645dbfb2edfa67c535513d4b966463345"
+    },
+    {
+      "lawId": "119-14",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-14.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/61?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:3c9036e61eb33efb07b8be3061c677ef8607a0fa5d5cb7b0e84a587755e2a23c"
+    },
+    {
+      "lawId": "119-15",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-15.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/87?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:60afefcd99b9c7e200778580809ba4ac95bab40556f1b6f31d6de04c7afb0521"
+    },
+    {
+      "lawId": "119-16",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-16.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/88?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:fba8b2b3e1f7dd550b2186328dca839d3215f16e9a800ddcf2bde1f0f6758617"
+    },
+    {
+      "lawId": "119-17",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-17.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/89?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:30455f411ef99855d3d766fc8195df9866e95bd3fada322542687ea0d743350b"
+    },
+    {
+      "lawId": "119-18",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-18.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/160?format=json",
+      "updateDate": "2026-07-07",
+      "contentHash": "sha256:c7a050ce4737df3e7c8ffbd3bf2c94b42fcfc9f5b67ba8b34555ecaf0ea5c870"
+    },
+    {
+      "lawId": "119-19",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-19.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/sjres/13?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:64bfee651e024cf83c5ee953d91baaa5e4e67e7570e1fb3d01effa08b321dc10"
+    },
+    {
+      "lawId": "119-20",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-20.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/sjres/31?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:bb40c68c5197a7645a0a29f153538cfb0a462f10c9bfa7e8bc96bdef5e387687"
+    },
+    {
+      "lawId": "119-21",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-21.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:b7469641ce96bffc6c5c0f09757101a5242f5b5d5f1d0dcadc04ef4cd3e6a8ce"
+    },
+    {
+      "lawId": "119-22",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-22.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/42?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:f8befa7c220bd6dda856ef2a6725f5c3bd4dc36f804861916fc29ac00e900db7"
+    },
+    {
+      "lawId": "119-23",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-23.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/43?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:f0a716eb5891ff4856d9c195c4f1c6314886eca377457a782458bc3533030c7e"
+    },
+    {
+      "lawId": "119-24",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-24.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/618?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:594f9ffbf890ea5ebc977374c20934120459331e3db04c3d43a05d4ec90281a2"
+    },
+    {
+      "lawId": "119-25",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-25.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/2215?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:2c5cd625c905b64f2f713e584f7cb75fa341edf8ed92709603f37280153d91b2"
+    },
+    {
+      "lawId": "119-26",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-26.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/331?format=json",
+      "updateDate": "2026-03-12",
+      "contentHash": "sha256:e758b8b6fc854dd8aa43cca75ef1987f2f9529b192b435bea4f34dd1382280b5"
+    },
+    {
+      "lawId": "119-27",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-27.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/1582?format=json",
+      "updateDate": "2026-03-12",
+      "contentHash": "sha256:3090d5c93300efe13e9f63e3bf69463b6afc56104d37ecef4f2b539dcc344706"
+    },
+    {
+      "lawId": "119-28",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-28.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/4?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:ca102c7476d193c8b4420f302ead286534e82319a392b87ee330a96b7c4ebbdd"
+    },
+    {
+      "lawId": "119-29",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-29.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/517?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:f873263b219d21c63b9a047978cbff7a763c2a68f1ed9a371e2df655348d1b0e"
+    },
+    {
+      "lawId": "119-30",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-30.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/1596?format=json",
+      "updateDate": "2026-06-15",
+      "contentHash": "sha256:911ea4c294d524282870ab005e23ad9a5a4a7127753db482431e437ef45953ea"
+    },
+    {
+      "lawId": "119-31",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-31.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1815?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:4f0f837fc5531f0a9f687166f0e85c9021b68e926c33ea7e40995604ec344fa8"
+    },
+    {
+      "lawId": "119-32",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-32.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/201?format=json",
+      "updateDate": "2026-07-08",
+      "contentHash": "sha256:9f34714eb4d34e14270c37a4463a7e4fb6c3f59b525184fa1e6eef4f059cf3fe"
+    },
+    {
+      "lawId": "119-33",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-33.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/423?format=json",
+      "updateDate": "2026-04-10",
+      "contentHash": "sha256:d834ac61e5d40386f72542144090d58c297b9ec6aa321042e1021d431d55fd0f"
+    },
+    {
+      "lawId": "119-34",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-34.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1316?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:5e8bcf234eac964163d7801b2001f804a586c907cf690eb2c32327e3a405ab77"
+    },
+    {
+      "lawId": "119-35",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-35.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/2170?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:f06b79a45887d0e9bd1ef42722a25aa31092190b02e99b726a202d481676087a"
+    },
+    {
+      "lawId": "119-36",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-36.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/2808?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:cb15e956431564294ce657004ddd85260cc4d5ae557485fccc8cb58bbf959b32"
+    },
+    {
+      "lawId": "119-37",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-37.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/5371?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:2e4307e0fcd9a8a59c2b334943a8a180c19bcb32699b442f5ac77cc1580c4d16"
+    },
+    {
+      "lawId": "119-38",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-38.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/4405?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:93793bc1a4fc3064457d5d224fccd3077e16bc6849d80a638eb7ee14c7131322"
+    },
+    {
+      "lawId": "119-39",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-39.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/998?format=json",
+      "updateDate": "2026-07-11",
+      "contentHash": "sha256:313c8da6eb52d7efe6640a0aec19c02ee7c9ce0434f632769f63c2e196d54293"
+    },
+    {
+      "lawId": "119-40",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-40.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/2316?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:d5d1045020e6280d196e80d8bd1c94a13cc0c8581c828b3c2e8e071a6e291542"
+    },
+    {
+      "lawId": "119-41",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-41.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/260?format=json",
+      "updateDate": "2026-06-09",
+      "contentHash": "sha256:a80d6c11e347b3f88cabf15f65726c85362748985897bfc1e48ef90155371f9e"
+    },
+    {
+      "lawId": "119-42",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-42.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/2392?format=json",
+      "updateDate": "2026-05-18",
+      "contentHash": "sha256:68c5ea4f4735fba897d1e018d50217d89271ae3a8743f94e842348e410b45003"
+    },
+    {
+      "lawId": "119-43",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-43.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/695?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:f524a8925efb30c790e88e75d395c9ed893fd064380e963a1da23bc2b787b0db"
+    },
+    {
+      "lawId": "119-44",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-44.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/2483?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:3c837019d4d03bd291d1656eccad7d0a2d80dc86ab60c82facbd9d4b2241f1d7"
+    },
+    {
+      "lawId": "119-45",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-45.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1512?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:bf5d778978004342f78759c56362f46da4b3b9f8cde7d04e4a5d54490098ec03"
+    },
+    {
+      "lawId": "119-46",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-46.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/133?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:02fd36007472af94990ff0fd3e607083e6c26e1691cfa8c332479ca64b9c6594"
+    },
+    {
+      "lawId": "119-47",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-47.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/sjres/80?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:cce23f65866235ffc8aed082c5f0da43b705f0883df28e0e4e956cbe92915563"
+    },
+    {
+      "lawId": "119-48",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-48.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/104?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:edd5eca13a375e658fbec0a0acc6282493198a1db0a87d6f1ab9b9d785ddfde2"
+    },
+    {
+      "lawId": "119-49",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-49.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/105?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:1917c4d36510dcd826a10c807ccf1d0d62548f0522729225db2169bad3aed3db"
+    },
+    {
+      "lawId": "119-50",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-50.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/106?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:8b7ac545f1604bc66a3d91e1add1d82b6c5f0752fbc6cc78e745a8578f9a1756"
+    },
+    {
+      "lawId": "119-51",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-51.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/130?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:bbb05ce5db4b938a12a0a4de6941a3270599e1ed306326dc2dde9213ba04ab05"
+    },
+    {
+      "lawId": "119-52",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-52.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/131?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:4519eb56868a8c6c5a25cdf3973be87e4246e1bb5aae134313e1f7f3b0ac0757"
+    },
+    {
+      "lawId": "119-53",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-53.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/452?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:5c7a133ec0cc41f5745cf6e7c7fd1b197b12bfec895102f1406ffe5d31d6b9bd"
+    },
+    {
+      "lawId": "119-54",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-54.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/970?format=json",
+      "updateDate": "2026-07-11",
+      "contentHash": "sha256:423a9b9b22728b8f92aea658458152da4a6470ad32aacd42a4d8427ad6608449"
+    },
+    {
+      "lawId": "119-55",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-55.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/983?format=json",
+      "updateDate": "2026-07-11",
+      "contentHash": "sha256:eb154c55814d1f69f0c1fdb67bf1c30133ae9dfd4c7bb3d7d8e3a228048c7fa8"
+    },
+    {
+      "lawId": "119-56",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-56.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1912?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:f12108171042830fba2f127c612e7bb45af402f686c264e2f27cda86beaa044a"
+    },
+    {
+      "lawId": "119-57",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-57.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/616?format=json",
+      "updateDate": "2026-05-27",
+      "contentHash": "sha256:5b7a67f0be918ab82a2d3d30b4cc863ef8deea5b475b05a318ff38466f1d48b4"
+    },
+    {
+      "lawId": "119-58",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-58.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/356?format=json",
+      "updateDate": "2026-04-10",
+      "contentHash": "sha256:937cd572002605589fcde9d92da92ef8f2b3de0c6c5c06231fa65372d890c792"
+    },
+    {
+      "lawId": "119-59",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-59.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/2283?format=json",
+      "updateDate": "2026-06-16",
+      "contentHash": "sha256:731b99cf638f38c509bfc435564632663f4480382d38a0d496d83324cb24fcfc"
+    },
+    {
+      "lawId": "119-60",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-60.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/1071?format=json",
+      "updateDate": "2026-07-10",
+      "contentHash": "sha256:ce5c44272dd4606cb28cbfc256f4bf4fe17c33f3edff1363f53bcf050d263df6"
+    },
+    {
+      "lawId": "119-61",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-61.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/165?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:83664b6ba2f7d0b92f92b6b2b691a7ca2a7ba26a27b811207dc985bfbbeada1e"
+    },
+    {
+      "lawId": "119-62",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-62.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/187?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:a731ddcf116bb25aec6280967a00c05a7ebc03f95d684d9f5b0d130195b0cdf2"
+    },
+    {
+      "lawId": "119-63",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-63.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/410?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:51394d066c09c3f5b0f45d3c48ecbe669cdaeb52d13362c47d847b2d794b0463"
+    },
+    {
+      "lawId": "119-64",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-64.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1491?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:939c6e5ba43d43a74124c314bdaedd6b3c4b6fac327cf91b65b1def3c5ab1871"
+    },
+    {
+      "lawId": "119-65",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-65.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/216?format=json",
+      "updateDate": "2026-01-06",
+      "contentHash": "sha256:9201fe7d51580832045de5f45e77eaadd16023c417652819f6920cece4ed88cb"
+    },
+    {
+      "lawId": "119-66",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-66.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/284?format=json",
+      "updateDate": "2026-06-29",
+      "contentHash": "sha256:ec3899ea2ac64b1133d81b47a3454a0e5ddd0752587d40cdac2ed05fa460ae01"
+    },
+    {
+      "lawId": "119-67",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-67.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/2878?format=json",
+      "updateDate": "2026-06-26",
+      "contentHash": "sha256:59da9692f29e950189c1015eb45ae4e2530912e87eab8bffb202ea27e26abf6b"
+    },
+    {
+      "lawId": "119-68",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-68.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1043?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:4b51d6e5c19b41d52d9b6fe32494a224a817e5ade02f9ee01f49d33e3284a72e"
+    },
+    {
+      "lawId": "119-69",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-69.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/222?format=json",
+      "updateDate": "2026-06-16",
+      "contentHash": "sha256:7cd048d2dbfcaca799a353df4eacd0072ec5a8d087b4bd396486687a4c2069f5"
+    },
+    {
+      "lawId": "119-70",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-70.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/224?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:13d5360ae6e98db6e7e50d33ae0082c478cdfe75134309c4e6f168129cdb5bdc"
+    },
+    {
+      "lawId": "119-71",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-71.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1823?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:e0b49d1b6974c0449f32353d5060cef8c007677a0f9ea58542062c0708f72c2e"
+    },
+    {
+      "lawId": "119-72",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-72.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/4446?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:06cac17b16c84477cc9848bca9aeaa85f357482842aa20a6ae65576f22422f84"
+    },
+    {
+      "lawId": "119-73",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-73.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/4323?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:ffa0702779fe4ed7af5fe3e8a621a28c35375ca53b59c9254157f7636fb766d1"
+    },
+    {
+      "lawId": "119-74",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-74.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/6938?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:79b9732b9f76aa8c425c6aead574b44d11b0b5438eea9e98e46ffaaf07e3840f"
+    },
+    {
+      "lawId": "119-75",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-75.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7148?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:465efc8d1d3835d332ec0b9076a48fb0b909cd1e3f422815b17abcc4a2cea3ba"
+    },
+    {
+      "lawId": "119-76",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-76.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/3424?format=json",
+      "updateDate": "2026-06-24",
+      "contentHash": "sha256:664729542288fa09f02365da8ae042095ab74b510b6c03a49da902366bcf512f"
+    },
+    {
+      "lawId": "119-77",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-77.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/269?format=json",
+      "updateDate": "2026-06-25",
+      "contentHash": "sha256:eeb6d156a77b02621b6666b8262e64ccbe458f45e6a3faca3a6b22c5c72aafa8"
+    },
+    {
+      "lawId": "119-78",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-78.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/142?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:7696e47329d0d838c2d6090251a0bf6f4220bd98aa994974d7daabcf5472b28e"
+    },
+    {
+      "lawId": "119-79",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-79.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/3705?format=json",
+      "updateDate": "2026-06-29",
+      "contentHash": "sha256:8ca2fea74c8b83c80e18aabc945da3cdbefde400071c64728837ab959d0a0cc6"
+    },
+    {
+      "lawId": "119-80",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-80.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/4138?format=json",
+      "updateDate": "2026-04-08",
+      "contentHash": "sha256:5d994d0dcabb2f4523031677b52ffb6302bcbbe4573a227c114f1422b3596af6"
+    },
+    {
+      "lawId": "119-81",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-81.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7211?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:bc229ca3097bf3cae74f31aaf7a20c9f4d26da7aecf1ab39454d1aedfb683f66"
+    },
+    {
+      "lawId": "119-82",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-82.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/1884?format=json",
+      "updateDate": "2026-05-27",
+      "contentHash": "sha256:0cd2cf2ddefb5c063e53809da8e287129f0e7e63ce8f5391d29f351365f28530"
+    },
+    {
+      "lawId": "119-83",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-83.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/3971?format=json",
+      "updateDate": "2026-06-22",
+      "contentHash": "sha256:52af6a805a35d6fdb2ba907612d7aa0ffb51412febd403483a53990efb0b39a1"
+    },
+    {
+      "lawId": "119-84",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-84.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8322?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:1294a33696d0be48bbb1df541eb695a7eda9c3ca4864e8db71c3ff70e497fa15"
+    },
+    {
+      "lawId": "119-85",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-85.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/140?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:9e89fc1224c9232fe62d2c89ffc0e90752ba52e9a2ce9b0876e30d5195c0c329"
+    },
+    {
+      "lawId": "119-86",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-86.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7147?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:94d09d0b97cb956526892075a824634b179393df7513d421720251dbc87dc40b"
+    },
+    {
+      "lawId": "119-87",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-87.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/4465?format=json",
+      "updateDate": "2026-05-13",
+      "contentHash": "sha256:67a109d09199f1616425f4d757f1be9ff3b143f103bc28e49c7fa2069ffe8b12"
+    },
+    {
+      "lawId": "119-88",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-88.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/723?format=json",
+      "updateDate": "2026-06-22",
+      "contentHash": "sha256:f630f1ea13f11d99bf9ed43b1fa6618ef2c350f95f21e045fc96037508bba188"
+    },
+    {
+      "lawId": "119-89",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-89.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/98?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:ab02e4d788ac209a31cce958c47041dbbeaf2989c475e8b5152dae82019ef3ab"
+    },
+    {
+      "lawId": "119-90",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-90.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/1020?format=json",
+      "updateDate": "2026-06-16",
+      "contentHash": "sha256:630495eabcedc16610105692fcb490765bca3dc15adbb6e0b2571f5295eb8584"
+    },
+    {
+      "lawId": "119-91",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-91.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/972?format=json",
+      "updateDate": "2026-05-26",
+      "contentHash": "sha256:0705da036f897007ffc2bc1416b0568e9e8c16ec6c3865027641d4157209aaf8"
+    },
+    {
+      "lawId": "119-92",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-92.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/2066?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:b85cd866b221293beac4b743875d9f815b92c46847bd0aa27e825af84c7d1204"
+    },
+    {
+      "lawId": "119-93",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-93.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/2815?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:74dc2f75b054a1a8d87cef0f2ec737311a16564c872ff4c79134a7b6e6c50e51"
+    },
+    {
+      "lawId": "119-94",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-94.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/3497?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:5ad6d05638dad039ae2b8210c38b9b99bd77fe22efc4bcc26037d5b63b9df438"
+    },
+    {
+      "lawId": "119-95",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-95.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/4530?format=json",
+      "updateDate": "2026-06-30",
+      "contentHash": "sha256:5620187cb4a1f6388e11b250d09829c0a314abb18fdb75e8e463479c70bbff35"
+    },
+    {
+      "lawId": "119-96",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-96.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/3490?format=json",
+      "updateDate": "2026-07-12",
+      "contentHash": "sha256:a28a89b74cfd82377daeaf3a2e1a64e87fc739e407e9e1a020faea1d7e065303"
+    },
+    {
+      "lawId": "119-97",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-97.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/2393?format=json",
+      "updateDate": "2026-06-23",
+      "contentHash": "sha256:dfebe22e57845db972177551ba0deacabd99e8d232303b324bdf5b9cd4acd49f"
+    },
+    {
+      "lawId": "119-98",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-98.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/2?format=json",
+      "updateDate": "2026-06-25",
+      "contentHash": "sha256:1c63c8a6f72fcbe8e0a54380ac630df04ff315a83832b7df8d7e418c4c43261b"
+    },
+    {
+      "lawId": "119-99",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-99.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/254?format=json",
+      "updateDate": "2026-06-22",
+      "contentHash": "sha256:a57cb9d9558967f9f01be0bb6be65051e266a3d94904db1b0cbe118ed72da04d"
+    },
+    {
+      "lawId": "119-100",
+      "lawType": "Public Law",
+      "path": "data/congress/119/legislation/laws/public-law-119-100.json",
+      "sourceUrl": "https://api.congress.gov/v3/bill/119/s/1003?format=json",
+      "updateDate": "2026-06-30",
+      "contentHash": "sha256:80fcecaf84592feb57a238c88665cf759b2f2bf00a5081d0c507c8c792d5f7ec"
+    }
+  ]
+}

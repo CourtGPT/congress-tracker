@@ -1,0 +1,42 @@
+{
+  "lawId": "119-36",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-36",
+  "title": "Homebuyers Privacy Protection Act",
+  "bill": {
+    "type": "HR",
+    "number": "2808",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2025-09-05",
+    "text": "Became Public Law No: 119-36."
+  },
+  "updateDate": "2026-07-12",
+  "updateDateIncludingText": "2026-07-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/2808?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-09-05",
+      "text": "Became Public Law No: 119-36."
+    },
+    "laws": [
+      {
+        "number": "119-36",
+        "type": "Public Law"
+      }
+    ],
+    "number": "2808",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Homebuyers Privacy Protection Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/2808?format=json"
+  }
+}

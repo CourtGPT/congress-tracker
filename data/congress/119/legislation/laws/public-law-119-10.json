@@ -1,0 +1,42 @@
+{
+  "lawId": "119-10",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-10",
+  "title": "A joint resolution disapproving the rule submitted by the Bureau of Consumer Financial Protection relating to \"Overdraft Lending: Very Large Financial Institutions\".",
+  "bill": {
+    "type": "SJRES",
+    "number": "18",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2025-05-09",
+    "text": "Became Public Law No: 119-10."
+  },
+  "updateDate": "2026-07-12",
+  "updateDateIncludingText": "2026-07-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/sjres/18?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-05-09",
+      "text": "Became Public Law No: 119-10."
+    },
+    "laws": [
+      {
+        "number": "119-10",
+        "type": "Public Law"
+      }
+    ],
+    "number": "18",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "A joint resolution disapproving the rule submitted by the Bureau of Consumer Financial Protection relating to \"Overdraft Lending: Very Large Financial Institutions\".",
+    "type": "SJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/sjres/18?format=json"
+  }
+}

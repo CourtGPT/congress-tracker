@@ -7,6 +7,8 @@ const INPUT_DIR = process.env.US_CODE_XML_DIR || path.join(ROOT_DIR, '.cache', '
 const OUTPUT_DIR = process.env.US_CODE_OUTPUT_DIR || path.join(ROOT_DIR, 'data', 'federal-laws', 'us-code');
 const METADATA_PATH = process.env.US_CODE_METADATA_PATH || path.join(OUTPUT_DIR, 'metadata.json');
 const RELEASE_PATH = process.env.US_CODE_RELEASE_PATH || path.join(ROOT_DIR, '.cache', 'us-code', 'release.json');
+const FEDERAL_MANIFEST_PATH = process.env.US_CODE_FEDERAL_MANIFEST_PATH || path.join(ROOT_DIR, 'data', 'federal-laws', 'manifest.json');
+const HIERARCHY_TYPES = ['title', 'subtitle', 'chapter', 'subchapter', 'part', 'subpart', 'section', 'courtRule', 'subsection', 'paragraph', 'subparagraph', 'clause', 'subclause', 'item', 'subitem'];
 
 function scalar(node) {
   if (node === undefined || node === null) return '';
@@ -24,6 +26,147 @@ function findAll(node, key, result = []) {
     if (name !== '$' && name !== '_') for (const child of Array.isArray(value) ? value : [value]) findAll(child, key, result);
   }
   return result;
+}
+
+function nodeNumber(node, identifier) {
+  const numNode = first(node, 'num');
+  const value = numNode?.$?.value || cleanText(numNode);
+  if (value) return value;
+  return String(identifier || '').split('/').filter(Boolean).pop() || null;
+}
+
+function nodeSlug(type, number, heading) {
+  const rawNumber = String(number || 'unnumbered');
+  const numberPart = type === 'title' && /^\d+$/u.test(rawNumber) ? rawNumber.padStart(2, '0') : slugify(rawNumber);
+  const headingPart = type === 'title' ? slugify(String(heading || '')).slice(0, 80) : (!number ? slugify(String(heading || '')).slice(0, 48) : '');
+  return [type, numberPart, headingPart].filter(Boolean).join('-');
+}
+
+function childDirNames(children) {
+  const seen = new Map();
+  return (children || []).map((child) => {
+    const base = nodeSlug(child.type, child.number, child.heading);
+    const occurrence = (seen.get(base) || 0) + 1;
+    seen.set(base, occurrence);
+    return occurrence === 1 ? base : `${base}-duplicate-${occurrence}`;
+  });
+}
+
+function directNotes(node) {
+  const wrappedNotes = (node.notes || []).flatMap((wrapper) => wrapper.note || []);
+  return [...(node.note || []), ...wrappedNotes].map(cleanText).filter(Boolean);
+}
+
+function buildNativeTree(type, node, sourceRelease, titleNumber, parentIdentifier = null) {
+  const identifier = node.$?.identifier || parentIdentifier || `/us/usc/t${Number(titleNumber)}`;
+  const number = nodeNumber(node, identifier);
+  const heading = cleanText(first(node, 'heading')) || null;
+  const notes = directNotes(node);
+  const children = [];
+  const childTypes = type === 'section' || type === 'courtRule'
+    ? HIERARCHY_TYPES.slice(HIERARCHY_TYPES.indexOf('subsection'))
+    : HIERARCHY_TYPES;
+  for (const childType of childTypes) {
+    for (const child of node[childType] || []) {
+      children.push(buildNativeTree(childType, child, sourceRelease, titleNumber, identifier));
+    }
+  }
+  const isSection = type === 'section' || type === 'courtRule';
+  return {
+    type,
+    nativeType: type,
+    number,
+    heading,
+    label: heading ? `${number || ''} ${heading}`.trim() : number,
+    identifier,
+    parentIdentifier,
+    sourceUrl: `https://uscode.house.gov/view.xhtml?req=${encodeURIComponent(identifier)}`,
+    sourceRelease,
+    text: cleanText(first(node, 'content')) || null,
+    notes,
+    amendments: isSection ? notes.filter((note) => /amend|public law|stat\./iu.test(note)) : [],
+    effectiveDate: null,
+    children,
+  };
+}
+
+function flattenSections(tree, titleNumber, ancestors = []) {
+  const currentPath = [...ancestors, { type: tree.type, number: tree.number, heading: tree.heading, identifier: tree.identifier }];
+  const sections = [];
+  if (tree.type === 'section' || tree.type === 'courtRule') {
+    sections.push({
+      section: tree.number,
+      sectionName: tree.heading || `Section ${tree.number}`,
+      text: tree.text || '',
+      notes: tree.notes,
+      amendments: tree.amendments,
+      effectiveDate: tree.effectiveDate,
+      sourceUrl: tree.sourceUrl,
+      sourceRelease: tree.sourceRelease,
+      title: titleNumber,
+      hierarchyPath: currentPath,
+    });
+  }
+  for (const child of tree.children || []) sections.push(...flattenSections(child, titleNumber, currentPath));
+  return sections;
+}
+
+function countTreeNodes(tree) {
+  return 1 + (tree.children || []).reduce((count, child) => count + countTreeNodes(child), 0);
+}
+
+function writeNativeTree(tree, baseDir) {
+  const rootDir = path.join(baseDir, nodeSlug(tree.type, tree.number, tree.heading));
+  function writeNode(node, nodeDir) {
+    fs.mkdirSync(nodeDir, { recursive: true });
+    const childRefs = (node.children || []).map((child) => ({
+      type: child.type,
+      number: child.number,
+      heading: child.heading,
+      identifier: child.identifier,
+      path: path.join(childDirNames(node.children)[(node.children || []).indexOf(child)], 'index.json'),
+    }));
+    const isSection = node.type === 'section' || node.type === 'courtRule';
+    const index = isSection ? node : { ...node, children: childRefs };
+    fs.writeFileSync(path.join(nodeDir, 'index.json'), `${JSON.stringify(index)}\n`);
+    if (!isSection) {
+      for (const [index, child] of (node.children || []).entries()) writeNode(child, path.join(nodeDir, childDirNames(node.children)[index]));
+    }
+  }
+  writeNode(tree, rootDir);
+  return path.relative(baseDir, path.join(rootDir, 'index.json'));
+}
+
+function compactTree(tree) {
+  return {
+    type: tree.type,
+    nativeType: tree.nativeType,
+    number: tree.number,
+    heading: tree.heading,
+    label: tree.label,
+    identifier: tree.identifier,
+    parentIdentifier: tree.parentIdentifier,
+    sourceUrl: tree.sourceUrl,
+    sourceRelease: tree.sourceRelease,
+    children: (tree.children || []).map((child, index) => ({
+      type: child.type,
+      number: child.number,
+      heading: child.heading,
+      identifier: child.identifier,
+      path: path.join(childDirNames(tree.children)[index], 'index.json'),
+    })),
+  };
+}
+
+function compactSectionIndex(section) {
+  return {
+    section: section.section,
+    sectionName: section.sectionName,
+    sourceUrl: section.sourceUrl,
+    sourceRelease: section.sourceRelease,
+    title: section.title,
+    hierarchyPath: section.hierarchyPath,
+  };
 }
 function collectSections(node, sourceRelease, titleNumber) {
   const sections = [];
@@ -51,9 +194,10 @@ async function parseXmlFile(xmlPath, release) {
   const titleNumber = String(first(meta, 'docNumber') || path.basename(xmlPath).match(/usc([0-9]+[A-Za-z]?)\.xml$/u)?.[1] || '').padStart(2, '0');
   const titleName = cleanText(first(titleNode, 'heading')) || cleanText(first(meta, 'dc:title')) || `Title ${titleNumber}`;
   const identifier = titleNode.$?.identifier || document.$?.identifier || `/us/usc/t${Number(titleNumber)}`;
-  const sections = collectSections(document, release.releasePoint, titleNumber);
+  const structure = buildNativeTree('title', titleNode, release.releasePoint, titleNumber);
+  const sections = flattenSections(structure, titleNumber);
   if (!sections.length && !titleNumber.toLowerCase().endsWith('a')) throw new Error(`No sections found in ${xmlPath}`);
-  return { title: titleNumber, titleName, sourceRelease: release.releasePoint, sourceUrl: `https://uscode.house.gov/view.xhtml?req=${encodeURIComponent(identifier)}`, sections };
+  return { title: titleNumber, titleName, sourceRelease: release.releasePoint, sourceUrl: `https://uscode.house.gov/view.xhtml?req=${encodeURIComponent(identifier)}`, structure, sections, hierarchyNodeCount: countTreeNodes(structure) };
 }
 
 async function parseXML({ inputDir = INPUT_DIR, outputDir = OUTPUT_DIR, metadataPath = METADATA_PATH, releasePath = RELEASE_PATH } = {}) {
@@ -63,20 +207,48 @@ async function parseXML({ inputDir = INPUT_DIR, outputDir = OUTPUT_DIR, metadata
   const stagingDir = `${outputDir}.staging`;
   fs.rmSync(stagingDir, { recursive: true, force: true });
   fs.mkdirSync(stagingDir, { recursive: true });
+  const treeDir = path.join(stagingDir, 'tree');
+  fs.mkdirSync(treeDir, { recursive: true });
   const titles = [];
   for (const xmlFile of xmlFiles) {
     const title = await parseXmlFile(xmlFile, release);
-    fs.writeFileSync(path.join(stagingDir, `title-${title.title}-${slugify(title.titleName)}.json`), `${JSON.stringify(title, null, 2)}\n`);
+    title.hierarchyPath = writeNativeTree(title.structure, treeDir);
+    const { sections, ...titleMetadata } = title;
+    const compactTitle = {
+      ...titleMetadata,
+      sectionCount: sections.length,
+      hierarchyNodeCount: title.hierarchyNodeCount,
+      structure: compactTree(title.structure),
+    };
+    fs.writeFileSync(path.join(stagingDir, `title-${title.title}-${slugify(title.titleName)}.json`), `${JSON.stringify(compactTitle, null, 2)}\n`);
     titles.push(title);
   }
   fs.mkdirSync(path.dirname(metadataPath), { recursive: true });
-  const metadata = { ...release, titleCount: titles.length, sectionCount: titles.reduce((count, title) => count + title.sections.length, 0), parser: 'scripts/parse-us-code.js' };
+  const metadata = { ...release, titleCount: titles.length, sectionCount: titles.reduce((count, title) => count + title.sections.length, 0), hierarchyNodeCount: titles.reduce((count, title) => count + title.hierarchyNodeCount, 0), hierarchyLayout: 'tree/<title>/<native-node>/index.json', parser: 'scripts/parse-us-code.js' };
   fs.writeFileSync(path.join(stagingDir, 'metadata.json'), `${JSON.stringify(metadata, null, 2)}\n`);
   fs.rmSync(outputDir, { recursive: true, force: true });
   fs.renameSync(stagingDir, outputDir);
   if (metadataPath !== path.join(outputDir, 'metadata.json')) fs.copyFileSync(path.join(outputDir, 'metadata.json'), metadataPath);
+  if (fs.existsSync(FEDERAL_MANIFEST_PATH)) {
+    const manifest = JSON.parse(fs.readFileSync(FEDERAL_MANIFEST_PATH, 'utf8'));
+    manifest.usCode = {
+      ...(manifest.usCode || {}),
+      path: path.relative(ROOT_DIR, outputDir),
+      metadata: path.relative(ROOT_DIR, path.join(outputDir, 'metadata.json')),
+      source: release.source,
+      sourceUrl: release.sourcePage,
+      releasePoint: release.releasePoint,
+      publicLaw: release.publicLaw,
+      releaseDate: release.releaseDate,
+      titleCount: metadata.titleCount,
+      sectionCount: metadata.sectionCount,
+      hierarchyNodeCount: metadata.hierarchyNodeCount,
+      hierarchyLayout: metadata.hierarchyLayout,
+    };
+    fs.writeFileSync(FEDERAL_MANIFEST_PATH, `${JSON.stringify(manifest, null, 2)}\n`);
+  }
   return metadata;
 }
 
 if (require.main === module) parseXML().then((result) => console.log(`Parsed ${result.titleCount} titles and ${result.sectionCount} sections`)).catch((error) => { console.error(error.message); process.exitCode = 1; });
-module.exports = { collectSections, parseXML, parseXmlFile };
+module.exports = { buildNativeTree, collectSections, flattenSections, parseXML, parseXmlFile, writeNativeTree };

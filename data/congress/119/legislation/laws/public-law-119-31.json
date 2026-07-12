@@ -1,0 +1,42 @@
+{
+  "lawId": "119-31",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-31",
+  "title": "VA Home Loan Program Reform Act",
+  "bill": {
+    "type": "HR",
+    "number": "1815",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2025-07-30",
+    "text": "Became Public Law No: 119-31."
+  },
+  "updateDate": "2026-07-12",
+  "updateDateIncludingText": "2026-07-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1815?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-07-30",
+      "text": "Became Public Law No: 119-31."
+    },
+    "laws": [
+      {
+        "number": "119-31",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1815",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "VA Home Loan Program Reform Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1815?format=json"
+  }
+}

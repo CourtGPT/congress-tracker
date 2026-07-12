@@ -1,0 +1,42 @@
+{
+  "lawId": "119-76",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-76",
+  "title": "Bankruptcy Administration Improvement Act of 2025",
+  "bill": {
+    "type": "S",
+    "number": "3424",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2026-02-06",
+    "text": "Became Public Law No: 119-76."
+  },
+  "updateDate": "2026-06-24",
+  "updateDateIncludingText": "2026-06-24",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/3424?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-02-06",
+      "text": "Became Public Law No: 119-76."
+    },
+    "laws": [
+      {
+        "number": "119-76",
+        "type": "Public Law"
+      }
+    ],
+    "number": "3424",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Bankruptcy Administration Improvement Act of 2025",
+    "type": "S",
+    "updateDate": "2026-06-24",
+    "updateDateIncludingText": "2026-06-24",
+    "url": "https://api.congress.gov/v3/bill/119/s/3424?format=json"
+  }
+}

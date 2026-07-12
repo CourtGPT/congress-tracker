@@ -3,6 +3,7 @@ const path = require('path');
 const { verifyData } = require('./verify-data');
 const { validateBillDetail } = require('./lib/bill-detail-validate');
 const { validateFederalLaws } = require('./validate-federal-laws');
+const { validateIndividualLaws } = require('./validate-individual-laws');
 
 const DATA_DIR = path.join(__dirname, '..', 'data');
 
@@ -43,17 +44,18 @@ function validate(dataDir = DATA_DIR) {
   const detailResult = validateBillDetails(path.join(resourceDir, 'bills-detail'));
   if (detailResult.errors.length) throw new Error(`Bill-detail validation failed:\n${detailResult.errors.join('\n')}`);
   const federalLawResult = validateFederalLaws(path.join(dataDir, 'federal-laws'));
+  const individualLawResult = validateIndividualLaws(dataDir, Number(process.env.CONGRESS || 119));
   const metadataPath = path.join(dataDir, 'metadata.json');
   if (!fs.existsSync(metadataPath)) throw new Error('Missing data/metadata.json');
   const result = verifyData({ dataDir, congress: Number(process.env.CONGRESS || 119), selectedResources });
   if (result.errors.length) throw new Error(`Semantic verification failed:\n${result.errors.join('\n')}`);
-  return { resourceFiles: files.length, detailFiles: detailResult.files, federalLawResult, checked: result.checked };
+  return { resourceFiles: files.length, detailFiles: detailResult.files, federalLawResult, individualLawResult, checked: result.checked };
 }
 
 if (require.main === module) {
   try {
     const result = validate();
-    console.log(`Validated ${result.resourceFiles} resource files (${result.detailFiles} bill-detail files), ${result.federalLawResult.titleCount} U.S. Code titles, and ${result.federalLawResult.sectionCount} sections`);
+    console.log(`Validated ${result.resourceFiles} resource files (${result.detailFiles} bill-detail files), ${result.individualLawResult.count} individual Congress laws, ${result.federalLawResult.titleCount} U.S. Code titles, and ${result.federalLawResult.sectionCount} sections`);
   } catch (error) {
     console.error(error.message);
     process.exitCode = 1;

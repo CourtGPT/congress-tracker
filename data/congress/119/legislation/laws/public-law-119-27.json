@@ -1,0 +1,42 @@
+{
+  "lawId": "119-27",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-27",
+  "title": "GENIUS Act",
+  "bill": {
+    "type": "S",
+    "number": "1582",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2025-07-18",
+    "text": "Became Public Law No: 119-27."
+  },
+  "updateDate": "2026-03-12",
+  "updateDateIncludingText": "2026-03-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/1582?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-07-18",
+      "text": "Became Public Law No: 119-27."
+    },
+    "laws": [
+      {
+        "number": "119-27",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1582",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "GENIUS Act",
+    "type": "S",
+    "updateDate": "2026-03-12",
+    "updateDateIncludingText": "2026-03-12",
+    "url": "https://api.congress.gov/v3/bill/119/s/1582?format=json"
+  }
+}

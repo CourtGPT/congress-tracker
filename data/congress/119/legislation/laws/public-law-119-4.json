@@ -1,0 +1,42 @@
+{
+  "lawId": "119-4",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-4",
+  "title": "Full-Year Continuing Appropriations and Extensions Act, 2025",
+  "bill": {
+    "type": "HR",
+    "number": "1968",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2025-03-15",
+    "text": "Became Public Law No: 119-4."
+  },
+  "updateDate": "2026-07-12",
+  "updateDateIncludingText": "2026-07-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1968?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-03-15",
+      "text": "Became Public Law No: 119-4."
+    },
+    "laws": [
+      {
+        "number": "119-4",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1968",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Full-Year Continuing Appropriations and Extensions Act, 2025",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1968?format=json"
+  }
+}

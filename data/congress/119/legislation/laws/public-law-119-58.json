@@ -1,0 +1,42 @@
+{
+  "lawId": "119-58",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-58",
+  "title": "Secure Rural Schools Reauthorization Act of 2025",
+  "bill": {
+    "type": "S",
+    "number": "356",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2025-12-18",
+    "text": "Became Public Law No: 119-58."
+  },
+  "updateDate": "2026-04-10",
+  "updateDateIncludingText": "2026-04-10",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/356?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-18",
+      "text": "Became Public Law No: 119-58."
+    },
+    "laws": [
+      {
+        "number": "119-58",
+        "type": "Public Law"
+      }
+    ],
+    "number": "356",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Secure Rural Schools Reauthorization Act of 2025",
+    "type": "S",
+    "updateDate": "2026-04-10",
+    "updateDateIncludingText": "2026-04-10",
+    "url": "https://api.congress.gov/v3/bill/119/s/356?format=json"
+  }
+}

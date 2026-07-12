@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://courtgpt.github.io/legal-data-schemas/source-manifest.schema.json",
+  "title": "CourtGPT legal source manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["jurisdiction", "instrument", "source_name", "source_url", "authority", "status", "parser", "freshness"],
+  "properties": {
+    "jurisdiction": {"type": "string", "minLength": 2},
+    "instrument": {"enum": ["state_code", "administrative_code", "us_code", "public_law", "session_law", "regulation", "court_rule"]},
+    "source_name": {"type": "string", "minLength": 1},
+    "source_url": {"type": ["string", "null"], "format": "uri-reference"},
+    "official_source_urls": {"type": "array", "items": {"type": "string", "format": "uri-reference"}},
+    "fallback_urls": {"type": "array", "items": {"type": "string", "format": "uri-reference"}},
+    "authority": {"enum": ["official", "official_mirror", "secondary", "unknown"]},
+    "status": {"enum": ["verified", "candidate", "blocked", "missing", "stale", "unverified"]},
+    "parser": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "output_format"],
+      "properties": {
+        "method": {"type": "string"},
+        "version": {"type": ["string", "null"]},
+        "output_format": {"enum": ["json", "jsonl", "xml", "html", "pdf", "api", "pending"]},
+        "preserves_native_hierarchy": {"type": "boolean"}
+      }
+    },
+    "freshness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cadence", "current_through_signal"],
+      "properties": {
+        "cadence": {"type": "string"},
+        "current_through_signal": {"type": ["string", "null"]},
+        "last_verified_at": {"type": ["string", "null"], "format": "date-time"},
+        "last_release": {"type": ["string", "null"]}
+      }
+    },
+    "access": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "requires_authentication": {"type": "boolean"},
+        "captcha_or_bot_gate": {"type": "boolean"},
+        "terms_review_required": {"type": "boolean"}
+      }
+    },
+    "notes": {"type": "array", "items": {"type": "string"}}
+  }
+}

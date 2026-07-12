@@ -1,0 +1,42 @@
+{
+  "lawId": "119-2",
+  "lawType": "Private Law",
+  "congress": 119,
+  "number": "119-2",
+  "title": "Nicholas Dockery Medal of Honor Act",
+  "bill": {
+    "type": "HR",
+    "number": "7194",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2026-03-26",
+    "text": "Became Private Law No: 119-2."
+  },
+  "updateDate": "2026-07-12",
+  "updateDateIncludingText": "2026-07-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7194?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-03-26",
+      "text": "Became Private Law No: 119-2."
+    },
+    "laws": [
+      {
+        "number": "119-2",
+        "type": "Private Law"
+      }
+    ],
+    "number": "7194",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Nicholas Dockery Medal of Honor Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/7194?format=json"
+  }
+}

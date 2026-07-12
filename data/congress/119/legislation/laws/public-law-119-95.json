@@ -1,0 +1,42 @@
+{
+  "lawId": "119-95",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-95",
+  "title": "A bill to amend chapters 83 and 84 of title 5, United States Code, to authorize an increase of the retirement age for members of the Capitol Police.",
+  "bill": {
+    "type": "S",
+    "number": "4530",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2026-05-29",
+    "text": "Became Public Law No: 119-95."
+  },
+  "updateDate": "2026-06-30",
+  "updateDateIncludingText": "2026-06-30",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/4530?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-05-29",
+      "text": "Became Public Law No: 119-95."
+    },
+    "laws": [
+      {
+        "number": "119-95",
+        "type": "Public Law"
+      }
+    ],
+    "number": "4530",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "A bill to amend chapters 83 and 84 of title 5, United States Code, to authorize an increase of the retirement age for members of the Capitol Police.",
+    "type": "S",
+    "updateDate": "2026-06-30",
+    "updateDateIncludingText": "2026-06-30",
+    "url": "https://api.congress.gov/v3/bill/119/s/4530?format=json"
+  }
+}

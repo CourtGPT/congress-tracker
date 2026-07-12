@@ -1,0 +1,42 @@
+{
+  "lawId": "119-84",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-84",
+  "title": "To amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through April 30, 2026, and for other purposes.",
+  "bill": {
+    "type": "HR",
+    "number": "8322",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2026-04-18",
+    "text": "Became Public Law No: 119-84."
+  },
+  "updateDate": "2026-07-12",
+  "updateDateIncludingText": "2026-07-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8322?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-04-18",
+      "text": "Became Public Law No: 119-84."
+    },
+    "laws": [
+      {
+        "number": "119-84",
+        "type": "Public Law"
+      }
+    ],
+    "number": "8322",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "To amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through April 30, 2026, and for other purposes.",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/8322?format=json"
+  }
+}

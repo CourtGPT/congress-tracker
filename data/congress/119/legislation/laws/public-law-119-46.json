@@ -1,0 +1,42 @@
+{
+  "lawId": "119-46",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-46",
+  "title": "Requesting the Secretary of the Interior to authorize unique and one-time arrangements for displays on the National Mall and the Washington Monument during the period beginning on December 31, 2025, and ending on January 5, 2026.",
+  "bill": {
+    "type": "HJRES",
+    "number": "133",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2025-12-02",
+    "text": "Became Public Law No: 119-46."
+  },
+  "updateDate": "2026-07-12",
+  "updateDateIncludingText": "2026-07-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/133?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-02",
+      "text": "Became Public Law No: 119-46."
+    },
+    "laws": [
+      {
+        "number": "119-46",
+        "type": "Public Law"
+      }
+    ],
+    "number": "133",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Requesting the Secretary of the Interior to authorize unique and one-time arrangements for displays on the National Mall and the Washington Monument during the period beginning on December 31, 2025, and ending on January 5, 2026.",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/133?format=json"
+  }
+}

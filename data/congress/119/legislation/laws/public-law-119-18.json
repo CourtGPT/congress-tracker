@@ -1,0 +1,42 @@
+{
+  "lawId": "119-18",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-18",
+  "title": "Aerial Firefighting Enhancement Act of 2025",
+  "bill": {
+    "type": "S",
+    "number": "160",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2025-06-12",
+    "text": "Became Public Law No: 119-18."
+  },
+  "updateDate": "2026-07-07",
+  "updateDateIncludingText": "2026-07-07",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/160?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-06-12",
+      "text": "Became Public Law No: 119-18."
+    },
+    "laws": [
+      {
+        "number": "119-18",
+        "type": "Public Law"
+      }
+    ],
+    "number": "160",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Aerial Firefighting Enhancement Act of 2025",
+    "type": "S",
+    "updateDate": "2026-07-07",
+    "updateDateIncludingText": "2026-07-07",
+    "url": "https://api.congress.gov/v3/bill/119/s/160?format=json"
+  }
+}

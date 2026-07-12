@@ -1,0 +1,42 @@
+{
+  "lawId": "119-79",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-79",
+  "title": "Semiquincentennial Congressional Time Capsule Act",
+  "bill": {
+    "type": "S",
+    "number": "3705",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2026-02-18",
+    "text": "Became Public Law No: 119-79."
+  },
+  "updateDate": "2026-06-29",
+  "updateDateIncludingText": "2026-06-29",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/3705?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-02-18",
+      "text": "Became Public Law No: 119-79."
+    },
+    "laws": [
+      {
+        "number": "119-79",
+        "type": "Public Law"
+      }
+    ],
+    "number": "3705",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Semiquincentennial Congressional Time Capsule Act",
+    "type": "S",
+    "updateDate": "2026-06-29",
+    "updateDateIncludingText": "2026-06-29",
+    "url": "https://api.congress.gov/v3/bill/119/s/3705?format=json"
+  }
+}

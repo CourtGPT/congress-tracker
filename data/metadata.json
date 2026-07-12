@@ -55,11 +55,9 @@
       "timeline": 35254
     },
     "billRelations": {
-      "bills": 282,
+      "bills": 0,
       "relations": 2213,
-      "fetched": 2100,
-      "skipped": false,
-      "offset": 0
+      "skipped": true
     }
   }
 }

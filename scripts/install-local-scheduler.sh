@@ -12,7 +12,6 @@ mkdir -p "${HOME}/Library/LaunchAgents"
 launchctl bootout "${DOMAIN}/${LABEL}" 2>/dev/null || true
 cp "${PLIST_SOURCE}" "${PLIST_TARGET}"
 launchctl bootstrap "${DOMAIN}" "${PLIST_TARGET}"
-launchctl kickstart -k "${DOMAIN}/${LABEL}"
 
 echo "Installed ${LABEL} as a macOS user agent"
 echo "Status: launchctl print ${DOMAIN}/${LABEL}"

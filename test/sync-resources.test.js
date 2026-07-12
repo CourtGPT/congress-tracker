@@ -39,3 +39,18 @@ test('skips bootstrap-only resources during hourly runs after bootstrap', async 
   assert.equal(result.skipped, true);
   assert.equal(result.count, 1);
 });
+
+test('preserves committee report parts that share a source URL', async () => {
+  const dataDir = fs.mkdtempSync(path.join(os.tmpdir(), 'congress-committee-reports-'));
+  const config = RESOURCE_CONFIG.find((resource) => resource.name === 'committee-reports');
+  const fetchImpl = async () => response({ reports: [
+    { url: 'https://api.congress.gov/v3/committee-report/119/HRPT/106', cmte_rpt_id: 298918, part: 1, citation: 'H. Rept. 119-106,Book 1' },
+    { url: 'https://api.congress.gov/v3/committee-report/119/HRPT/106', cmte_rpt_id: 304230, part: 2, citation: 'H. Rept. 119-106,Book 2' },
+  ] });
+
+  const result = await syncResource(config, { congress: 119, apiKey: 'test-key', fetchImpl, dataDir, mode: 'full' });
+  const records = JSON.parse(fs.readFileSync(path.join(dataDir, 'committee-reports.json'), 'utf8'));
+
+  assert.equal(result.count, 2);
+  assert.deepEqual(records.map((record) => record.part), [1, 2]);
+});

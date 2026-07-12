@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.courtgpt.congress-sync</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/d/Desktop/monorepo/public-repos/congress-tracker/scripts/run-local-sync.sh</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/d/Desktop/monorepo/public-repos/congress-tracker</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+  </dict>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StartInterval</key>
+  <integer>3600</integer>
+  <key>ThrottleInterval</key>
+  <integer>300</integer>
+  <key>ProcessType</key>
+  <string>Background</string>
+  <key>StandardOutPath</key>
+  <string>/tmp/courtgpt-congress-sync.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/courtgpt-congress-sync.error.log</string>
+</dict>
+</plist>

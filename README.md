@@ -25,7 +25,8 @@ congress-tracker/
 │   ├── build-index.js              # Derived entity, relation, and timeline index
 │   ├── verify-data.js              # Semantic cross-resource verification
 │   ├── validate.js                 # Structural plus semantic validation
-│   ├── run-local-sync.sh           # Hourly local publishing entry point
+│   ├── run-local-sync.sh           # Local publishing entry point
+│   ├── install-local-scheduler.sh  # Install the macOS launchd agent
 │   └── backfill.js                 # Explicit historical bills/votes backfill
 ├── test/
 └── .github/workflows/update.yml   # Manual recovery workflow; not scheduled
@@ -74,7 +75,7 @@ cp .env.local.example .env.local
 # Edit .env.local and set CONGRESS_API_KEY.
 ```
 
-The default configuration synchronizes all configured top-level collections. Congress.gov exposes bill summaries through bill-specific detail routes rather than a standalone top-level `/summaries` collection, so this repository does not claim an unsupported summaries export. Use `CONGRESS_RESOURCES` only for a targeted recovery run, for example:
+The default configuration synchronizes all stable JSON collections in the active catalog. Congress.gov exposes bill summaries and CRS reports through routes that do not return stable JSON collections for this client; the historical Congressional Record routes also exceeded the bounded bootstrap window. Those routes are intentionally excluded rather than represented by fabricated or partial exports. Use `CONGRESS_RESOURCES` only for a targeted recovery run, for example:
 
 ```bash
 CONGRESS_RESOURCES=bills npm run update
@@ -119,7 +120,13 @@ The canonical publisher is `scripts/run-local-sync.sh`. It:
 5. Runs tests, resource sync, incremental bill relations, index generation, and semantic verification.
 6. Commits and pushes only `data/` when generated data changed, unless `CONGRESS_DRY_RUN=1` is set.
 
-The Codex automation is the single recurring scheduler and must remain `ACTIVE` with `FREQ=HOURLY;INTERVAL=1`. The GitHub Actions workflow is manual recovery only. A successful run reports either that new Congress.gov data was published or that data was unchanged. A failed run reports the failing stage and preserves its stderr for review; no API key is printed.
+The macOS `launchd` user agent is the only recurring scheduler. Codex automation is not required. GitHub Actions is manual recovery only. Install the system agent with:
+
+```bash
+npm run scheduler:install
+```
+
+The agent runs at load and every hour, reads `.env.local`, writes logs to `/tmp/courtgpt-congress-sync.log` and `/tmp/courtgpt-congress-sync.error.log`, and pushes only validated data changes. Inspect it with `launchctl print gui/$(id -u)/com.courtgpt.congress-sync`.
 
 ## Recovery
 

@@ -1,0 +1,42 @@
+{
+  "lawId": "119-8",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-8",
+  "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program for Appliance Standards: Certification Requirements, Labeling Requirements, and Enforcement Provisions for Certain Consumer Products and Commercial Equipment\".",
+  "bill": {
+    "type": "HJRES",
+    "number": "42",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2025-05-09",
+    "text": "Became Public Law No: 119-8."
+  },
+  "updateDate": "2026-07-12",
+  "updateDateIncludingText": "2026-07-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hjres/42?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-05-09",
+      "text": "Became Public Law No: 119-8."
+    },
+    "laws": [
+      {
+        "number": "119-8",
+        "type": "Public Law"
+      }
+    ],
+    "number": "42",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program for Appliance Standards: Certification Requirements, Labeling Requirements, and Enforcement Provisions for Certain Consumer Products and Commercial Equipment\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/42?format=json"
+  }
+}

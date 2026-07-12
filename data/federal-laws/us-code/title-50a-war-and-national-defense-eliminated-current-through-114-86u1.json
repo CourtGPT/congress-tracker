@@ -3,5 +3,19 @@
   "titleName": "WAR AND NATIONAL DEFENSE [ELIMINATED] Current through 114–86u1",
   "sourceRelease": "119-100",
   "sourceUrl": "https://uscode.house.gov/view.xhtml?req=%2Fus%2Fusc%2FtNaN",
-  "sections": []
+  "structure": {
+    "type": "title",
+    "nativeType": "title",
+    "number": "50a",
+    "heading": "WAR AND NATIONAL DEFENSE [ELIMINATED] Current through 114–86u1",
+    "label": "50a WAR AND NATIONAL DEFENSE [ELIMINATED] Current through 114–86u1",
+    "identifier": "/us/usc/tNaN",
+    "parentIdentifier": null,
+    "sourceUrl": "https://uscode.house.gov/view.xhtml?req=%2Fus%2Fusc%2FtNaN",
+    "sourceRelease": "119-100",
+    "children": []
+  },
+  "hierarchyNodeCount": 1,
+  "hierarchyPath": "title-50a-war-and-national-defense-eliminated-current-through-114-86u1/index.json",
+  "sectionCount": 0
 }

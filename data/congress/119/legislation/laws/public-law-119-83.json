@@ -1,0 +1,42 @@
+{
+  "lawId": "119-83",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-83",
+  "title": "Small Business Innovation and Economic Security Act",
+  "bill": {
+    "type": "S",
+    "number": "3971",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2026-04-13",
+    "text": "Became Public Law No: 119-83."
+  },
+  "updateDate": "2026-06-22",
+  "updateDateIncludingText": "2026-06-22",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/3971?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-04-13",
+      "text": "Became Public Law No: 119-83."
+    },
+    "laws": [
+      {
+        "number": "119-83",
+        "type": "Public Law"
+      }
+    ],
+    "number": "3971",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Small Business Innovation and Economic Security Act",
+    "type": "S",
+    "updateDate": "2026-06-22",
+    "updateDateIncludingText": "2026-06-22",
+    "url": "https://api.congress.gov/v3/bill/119/s/3971?format=json"
+  }
+}

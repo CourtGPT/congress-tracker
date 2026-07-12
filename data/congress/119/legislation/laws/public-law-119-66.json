@@ -1,0 +1,42 @@
+{
+  "lawId": "119-66",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-66",
+  "title": "Congressional Award Program Reauthorization Act",
+  "bill": {
+    "type": "S",
+    "number": "284",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2025-12-26",
+    "text": "Became Public Law No: 119-66."
+  },
+  "updateDate": "2026-06-29",
+  "updateDateIncludingText": "2026-06-29",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/284?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-26",
+      "text": "Became Public Law No: 119-66."
+    },
+    "laws": [
+      {
+        "number": "119-66",
+        "type": "Public Law"
+      }
+    ],
+    "number": "284",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Congressional Award Program Reauthorization Act",
+    "type": "S",
+    "updateDate": "2026-06-29",
+    "updateDateIncludingText": "2026-06-29",
+    "url": "https://api.congress.gov/v3/bill/119/s/284?format=json"
+  }
+}

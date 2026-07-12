@@ -16,8 +16,18 @@ Thumbs.db
 *.tmp
 *.temp
 .cache/
+.serena/
 
 # API keys (should never be committed)
 .env
 .env.local
 .local-sync.lock
+
+# Proprietary state/territory law data must never enter this public repository.
+data/state-codes/
+data/state-administrative-codes/
+data/private-state-laws/
+private-state-law-output/
+*.sqlite
+*.sqlite3
+*.db

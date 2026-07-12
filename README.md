@@ -11,13 +11,21 @@ Congress.gov data in deterministic JSON: legislation, members, committees, votes
 - **Incremental overlap:** `CONGRESS_LOOKBACK_HOURS` defaults to `6` so a missed hourly run can recover recently updated records.
 - **License:** Public Domain for US Government work.
 
+The shared legal-data contract is documented in [`schema/legal-node.schema.json`](schema/legal-node.schema.json) and [`schema/source-manifest.schema.json`](schema/source-manifest.schema.json). State administrative-code publication is source-gated: [`data/manifests/state-administrative-codes.json`](data/manifests/state-administrative-codes.json) remains empty until each candidate source passes a live probe, count check, freshness check, and terms review. The research matrix and training profile are maintained in the private [`pioneer-model-training`](https://github.com/CourtGPT/pioneer-model-training) repository.
+
+See [`docs/awesome-legal-data/README.md`](docs/awesome-legal-data/README.md) for the maintained open legal-data catalog. Justia and other secondary sites may support discovery and citation cross-checks, but are never authoritative replacement text.
+
+State and territory statutory data is proprietary and remains outside this public repository. The code-only boundary in [`scripts/state-laws/`](scripts/state-laws/) can invoke approved private adapters, but the `.gitignore` rules and runner guard prevent private JSON/JSONL, databases, checkpoints, browser profiles, or credentials from entering this repository.
+
 ## Repository Structure
 
 ```text
 congress-tracker/
 ├── data/
 │   ├── resources/                  # Source-aligned Congress.gov JSON arrays
+│   ├── congress/119/catalog.json   # Resource-family map for the 119th Congress
 │   ├── derived/index.json          # Chronology and relationship index
+│   ├── federal-laws/us-code/       # OLRC title indexes plus native hierarchy tree
 │   └── metadata.json               # Source, Congress, counts, and metrics
 ├── scripts/
 │   ├── sync-resources.js           # Top-level Congress.gov collections
@@ -27,9 +35,11 @@ congress-tracker/
 │   ├── validate.js                 # Structural plus semantic validation
 │   ├── run-local-sync.sh           # Local publishing entry point
 │   ├── run-local-us-code-sync.sh   # Weekly OLRC publishing entry point
+│   ├── run-local-daily-publish.sh  # Daily local GitHub publisher safety net
 │   ├── sync-us-code.sh              # Download and parse the current OLRC release
 │   ├── install-local-scheduler.sh  # Install the macOS launchd agent
 │   └── backfill.js                 # Explicit historical bills/votes backfill
+├── scripts/state-laws/              # Code-only bridge; proprietary state data stays private
 ├── test/
 └── .github/workflows/update.yml   # Manual recovery workflow; not scheduled
 ```
@@ -39,6 +49,8 @@ congress-tracker/
 ### Source-aligned resources
 
 Every file in `data/resources/` is a non-empty JSON array from one Congress.gov collection. Records retain Congress.gov fields; the pipeline only canonicalizes object-key and record ordering. Examples include `bills.json`, `members.json`, `committees.json`, `house-votes.json`, `hearings.json`, and `bill-relations.json`.
+
+Congress.gov is resource-oriented rather than a statutory hierarchy, so those exports remain grouped by source family under `data/resources/`. Enacted laws are additionally split into individual files under `data/congress/119/legislation/laws/`; public and private laws use distinct filenames, so one changed law produces one focused JSON diff. Federal codified law is different: `data/federal-laws/us-code/tree/` mirrors the OLRC hierarchy with title/chapter/section directories. Each section `index.json` contains its nested subsections, paragraphs, subparagraphs, clauses, text, notes, hierarchy identifiers, and official OLRC URL. The title-level `title-*.json` files are compact indexes and do not duplicate section text.
 
 `bill-relations.json` contains normalized detail links with fields such as:
 
@@ -124,13 +136,13 @@ The canonical publisher is `scripts/run-local-sync.sh`. It:
 5. Runs tests, resource sync, incremental bill relations, index generation, and semantic verification.
 6. Commits and pushes only `data/` when generated data changed, unless `CONGRESS_DRY_RUN=1` is set.
 
-The macOS `launchd` user agents are the only recurring schedulers. Congress.gov runs hourly; the large OLRC U.S. Code snapshot runs weekly on Sunday at 01:00 local time. Both use the protected runtime clone and shared lock. Codex automation is not required. GitHub Actions is manual recovery only. Install the system agents with:
+The macOS `launchd` user agents are the only recurring schedulers. Congress.gov runs hourly; the daily publisher runs at 02:30 local time as a checksum/no-op safety net; the large OLRC U.S. Code snapshot runs weekly on Sunday at 01:00 local time. All use the protected runtime clone and shared lock. Codex automation is not required. GitHub Actions is manual recovery only. The federal hierarchy is tracked through Git LFS while each section remains an individual Git path. Install the system agents with:
 
 ```bash
 npm run scheduler:install
 ```
 
-The installer creates a dedicated runtime clone under `~/Library/Application Support/CourtGPT/congress-tracker-sync`, outside macOS Desktop privacy restrictions. The agents read their `0600` `.env.local`, write logs to `/tmp/courtgpt-congress-sync.log` and `/tmp/courtgpt-us-code-sync.log`, and push only validated data changes. Inspect them with `launchctl print gui/$(id -u)/com.courtgpt.congress-sync` and `launchctl print gui/$(id -u)/com.courtgpt.us-code-sync`.
+The installer creates a dedicated runtime clone under `~/Library/Application Support/CourtGPT/congress-tracker-sync`, outside macOS Desktop privacy restrictions. The agents read their `0600` `.env.local`, write logs to `/tmp/courtgpt-congress-sync.log`, `/tmp/courtgpt-us-code-sync.log`, and `/tmp/courtgpt-daily-legal-publish.log`, and push only validated data changes. Inspect them with `launchctl print gui/$(id -u)/com.courtgpt.congress-sync`, `launchctl print gui/$(id -u)/com.courtgpt.us-code-sync`, and `launchctl print gui/$(id -u)/com.courtgpt.daily-legal-publish`.
 
 ## Recovery
 

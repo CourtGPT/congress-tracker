@@ -1,0 +1,42 @@
+{
+  "lawId": "119-64",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-64",
+  "title": "Disaster Related Extension of Deadlines Act",
+  "bill": {
+    "type": "HR",
+    "number": "1491",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2025-12-26",
+    "text": "Became Public Law No: 119-64."
+  },
+  "updateDate": "2026-07-12",
+  "updateDateIncludingText": "2026-07-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1491?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-26",
+      "text": "Became Public Law No: 119-64."
+    },
+    "laws": [
+      {
+        "number": "119-64",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1491",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Disaster Related Extension of Deadlines Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1491?format=json"
+  }
+}

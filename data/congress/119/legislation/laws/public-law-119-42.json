@@ -1,0 +1,42 @@
+{
+  "lawId": "119-42",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-42",
+  "title": "Veterans’ Compensation Cost-of-Living Adjustment Act of 2025",
+  "bill": {
+    "type": "S",
+    "number": "2392",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2025-11-25",
+    "text": "Became Public Law No: 119-42."
+  },
+  "updateDate": "2026-05-18",
+  "updateDateIncludingText": "2026-05-18",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/2392?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-11-25",
+      "text": "Became Public Law No: 119-42."
+    },
+    "laws": [
+      {
+        "number": "119-42",
+        "type": "Public Law"
+      }
+    ],
+    "number": "2392",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Veterans’ Compensation Cost-of-Living Adjustment Act of 2025",
+    "type": "S",
+    "updateDate": "2026-05-18",
+    "updateDateIncludingText": "2026-05-18",
+    "url": "https://api.congress.gov/v3/bill/119/s/2392?format=json"
+  }
+}

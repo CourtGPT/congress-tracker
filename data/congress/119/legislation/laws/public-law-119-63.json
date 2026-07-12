@@ -1,0 +1,42 @@
+{
+  "lawId": "119-63",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-63",
+  "title": "Alaska Native Vietnam Era Veterans Land Allotment Extension Act of 2025",
+  "bill": {
+    "type": "HR",
+    "number": "410",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2025-12-26",
+    "text": "Became Public Law No: 119-63."
+  },
+  "updateDate": "2026-07-12",
+  "updateDateIncludingText": "2026-07-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/410?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-26",
+      "text": "Became Public Law No: 119-63."
+    },
+    "laws": [
+      {
+        "number": "119-63",
+        "type": "Public Law"
+      }
+    ],
+    "number": "410",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Alaska Native Vietnam Era Veterans Land Allotment Extension Act of 2025",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/410?format=json"
+  }
+}

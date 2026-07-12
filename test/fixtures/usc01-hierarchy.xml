@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uscDoc xmlns="http://xml.house.gov/schemas/uslm/1.0" identifier="/us/usc/t1">
+  <meta><docNumber>01</docNumber></meta>
+  <main>
+    <title identifier="/us/usc/t1">
+      <num value="1">1</num>
+      <heading>GENERAL PROVISIONS</heading>
+      <chapter identifier="/us/usc/t1/ch1">
+        <num value="1">1</num>
+        <heading>RULES OF CONSTRUCTION</heading>
+        <section identifier="/us/usc/t1/s1">
+          <num value="1">1</num>
+          <heading>Words denoting number, gender, and so forth</heading>
+          <content>Section text.</content>
+        </section>
+        <section identifier="/us/usc/t1/s2">
+          <num value="2">2</num>
+          <heading>Example section</heading>
+          <content>Section two.</content>
+          <subsection identifier="/us/usc/t1/s2/a">
+            <num value="a">a</num>
+            <content>Subsection a.</content>
+            <paragraph identifier="/us/usc/t1/s2/a/1">
+              <num value="1">1</num>
+              <content>Paragraph one.</content>
+            </paragraph>
+          </subsection>
+        </section>
+      </chapter>
+    </title>
+  </main>
+</uscDoc>

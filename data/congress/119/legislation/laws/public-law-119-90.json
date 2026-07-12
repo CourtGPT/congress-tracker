@@ -1,0 +1,42 @@
+{
+  "lawId": "119-90",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-90",
+  "title": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+  "bill": {
+    "type": "S",
+    "number": "1020",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2026-05-11",
+    "text": "Became Public Law No: 119-90."
+  },
+  "updateDate": "2026-06-16",
+  "updateDateIncludingText": "2026-06-16",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/1020?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-05-11",
+      "text": "Became Public Law No: 119-90."
+    },
+    "laws": [
+      {
+        "number": "119-90",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1020",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+    "type": "S",
+    "updateDate": "2026-06-16",
+    "updateDateIncludingText": "2026-06-16",
+    "url": "https://api.congress.gov/v3/bill/119/s/1020?format=json"
+  }
+}

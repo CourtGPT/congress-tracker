@@ -6,6 +6,8 @@ const { syncAll } = require('./sync-resources');
 const { syncBillDetail } = require('./sync-bill-detail');
 const { syncBillRelations } = require('./sync-bill-relations');
 const { verifyData } = require('./verify-data');
+const { splitCongressLaws } = require('./split-congress-laws');
+const { validateIndividualLaws } = require('./validate-individual-laws');
 
 function writeAtomic(filePath, value) {
   const temporaryPath = `${filePath}.${process.pid}.tmp`;
@@ -32,6 +34,10 @@ async function update() {
   const selectedResources = process.env.CONGRESS_RESOURCES
     ? new Set(process.env.CONGRESS_RESOURCES.split(',').map((name) => name.trim()).filter(Boolean))
     : null;
+  const laws = results.some(({ name }) => name === 'laws')
+    ? splitCongressLaws({ dataDir, congress })
+    : { count: 0, changed: 0, skipped: true };
+  const individualLawValidation = laws.skipped ? null : validateIndividualLaws(dataDir, congress);
   const metadataPath = path.join(dataDir, 'metadata.json');
   const previousMetadata = readMetadata(metadataPath);
   const billDetailMode = process.env.CONGRESS_BILL_DETAIL_MODE || 'hourly';
@@ -57,12 +63,12 @@ async function update() {
     lookbackHours: Number(process.env.CONGRESS_LOOKBACK_HOURS || 6),
     resources: snapshot.names,
     counts: { ...snapshot.counts, 'bills-detail': billDetail.detailFiles ?? countDetailFiles(dataDir) },
-    derived: { index: index.counts, billRelations: relations, billDetail, sync },
+    derived: { index: index.counts, billRelations: relations, billDetail, laws, sync },
   });
   const verification = verifyData({ dataDir, congress, selectedResources });
   if (verification.errors.length) throw new Error(`Semantic verification failed:\n${verification.errors.join('\n')}`);
   console.log(`Request metrics: ${getMetrics().requests} requests, ${getMetrics().retries} retries`);
-  return { results, billDetail, relations, index, verification };
+  return { results, laws, individualLawValidation, billDetail, relations, index, verification };
 }
 
 function readMetadata(metadataPath) {
@@ -81,7 +87,7 @@ function countDetailFiles(dataDir) {
 }
 
 if (require.main === module) {
-  update().then(({ results }) => console.log(`Updated ${results.length} Congress.gov resources`)).catch((error) => {
+  update().then(({ results, laws }) => console.log(`Updated ${results.length} Congress.gov resources and ${laws.count} individual laws`)).catch((error) => {
     console.error(error.message);
     process.exitCode = 1;
   });

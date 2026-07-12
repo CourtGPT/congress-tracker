@@ -1,0 +1,42 @@
+{
+  "lawId": "119-45",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-45",
+  "title": "Taiwan Assurance Implementation Act",
+  "bill": {
+    "type": "HR",
+    "number": "1512",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2025-12-02",
+    "text": "Became Public Law No: 119-45."
+  },
+  "updateDate": "2026-07-12",
+  "updateDateIncludingText": "2026-07-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1512?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-02",
+      "text": "Became Public Law No: 119-45."
+    },
+    "laws": [
+      {
+        "number": "119-45",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1512",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Taiwan Assurance Implementation Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1512?format=json"
+  }
+}

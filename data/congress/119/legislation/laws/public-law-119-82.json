@@ -1,0 +1,42 @@
+{
+  "lawId": "119-82",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-82",
+  "title": "Holocaust Expropriated Art Recovery Act of 2025",
+  "bill": {
+    "type": "S",
+    "number": "1884",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2026-04-13",
+    "text": "Became Public Law No: 119-82."
+  },
+  "updateDate": "2026-05-27",
+  "updateDateIncludingText": "2026-05-27",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/1884?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-04-13",
+      "text": "Became Public Law No: 119-82."
+    },
+    "laws": [
+      {
+        "number": "119-82",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1884",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Holocaust Expropriated Art Recovery Act of 2025",
+    "type": "S",
+    "updateDate": "2026-05-27",
+    "updateDateIncludingText": "2026-05-27",
+    "url": "https://api.congress.gov/v3/bill/119/s/1884?format=json"
+  }
+}

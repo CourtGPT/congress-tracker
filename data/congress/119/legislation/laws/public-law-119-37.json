@@ -1,0 +1,42 @@
+{
+  "lawId": "119-37",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-37",
+  "title": "Continuing Appropriations, Agriculture, Legislative Branch, Military Construction and Veterans Affairs, and Extensions Act, 2026",
+  "bill": {
+    "type": "HR",
+    "number": "5371",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2025-11-12",
+    "text": "Became Public Law No: 119-37."
+  },
+  "updateDate": "2026-07-12",
+  "updateDateIncludingText": "2026-07-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/5371?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-11-12",
+      "text": "Became Public Law No: 119-37."
+    },
+    "laws": [
+      {
+        "number": "119-37",
+        "type": "Public Law"
+      }
+    ],
+    "number": "5371",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Continuing Appropriations, Agriculture, Legislative Branch, Military Construction and Veterans Affairs, and Extensions Act, 2026",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/5371?format=json"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "lawId": "119-33",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-33",
+  "title": "PRO Veterans Act of 2025",
+  "bill": {
+    "type": "S",
+    "number": "423",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2025-08-14",
+    "text": "Became Public Law No: 119-33."
+  },
+  "updateDate": "2026-04-10",
+  "updateDateIncludingText": "2026-04-10",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/423?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-08-14",
+      "text": "Became Public Law No: 119-33."
+    },
+    "laws": [
+      {
+        "number": "119-33",
+        "type": "Public Law"
+      }
+    ],
+    "number": "423",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "PRO Veterans Act of 2025",
+    "type": "S",
+    "updateDate": "2026-04-10",
+    "updateDateIncludingText": "2026-04-10",
+    "url": "https://api.congress.gov/v3/bill/119/s/423?format=json"
+  }
+}

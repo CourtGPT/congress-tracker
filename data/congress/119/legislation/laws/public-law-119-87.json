@@ -1,0 +1,42 @@
+{
+  "lawId": "119-87",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-87",
+  "title": "A bill to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
+  "bill": {
+    "type": "S",
+    "number": "4465",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2026-04-30",
+    "text": "Became Public Law No: 119-87."
+  },
+  "updateDate": "2026-05-13",
+  "updateDateIncludingText": "2026-05-13",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/4465?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-04-30",
+      "text": "Became Public Law No: 119-87."
+    },
+    "laws": [
+      {
+        "number": "119-87",
+        "type": "Public Law"
+      }
+    ],
+    "number": "4465",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "A bill to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
+    "type": "S",
+    "updateDate": "2026-05-13",
+    "updateDateIncludingText": "2026-05-13",
+    "url": "https://api.congress.gov/v3/bill/119/s/4465?format=json"
+  }
+}

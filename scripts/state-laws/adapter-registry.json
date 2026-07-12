@@ -1,0 +1,27 @@
+{
+  "$schema": "https://courtgpt.github.io/legal-data-schemas/source-manifest.schema.json",
+  "purpose": "Code-only bridge to the private CourtGPT state-law scraper repository.",
+  "privateRepository": "CourtGPT/pioneer-model-training",
+  "privateRepositoryPathEnv": "PIONEER_LAW_REPO",
+  "privateOutputPathEnv": "STATE_LAWS_PRIVATE_OUTPUT_DIR",
+  "databasePolicy": "No state-law database connection is permitted from this public repository.",
+  "dataPolicy": "State-law JSONL/JSON, SQLite, PostgreSQL exports, checkpoints, browser profiles, and credentials remain private.",
+  "captchaPolicy": "No CAPTCHA bypass or solver service is part of the public runner.",
+  "adapters": [
+    {"jurisdiction":"alabama","privateScript":"scripts/alabama_crawler.py","source":"https://alison.legislature.state.al.us/code-of-alabama"},
+    {"jurisdiction":"alaska","privateScript":"scripts/alaska_crawler.py","source":"https://www.akleg.gov/basis/statutes.asp"},
+    {"jurisdiction":"arizona","privateScript":"scripts/arizona_crawler.py","source":"https://www.azleg.gov/arstitle/"},
+    {"jurisdiction":"california","privateScript":"scripts/california_crawler.py","source":"https://leginfo.legislature.ca.gov/faces/codes.xhtml"},
+    {"jurisdiction":"florida","privateScript":"scripts/florida_crawler.py","source":"https://www.leg.state.fl.us/statutes"},
+    {"jurisdiction":"texas","privateScript":"scripts/texas_crawler.py","source":"https://statutes.capitol.texas.gov"},
+    {"jurisdiction":"virginia","privateScript":"scripts/virginia_crawler.py","source":"https://law.lis.virginia.gov/vacode/"},
+    {"jurisdiction":"washington","privateScript":"scripts/washington_crawler.py","source":"https://app.leg.wa.gov/rcw/"},
+    {"jurisdiction":"wisconsin","privateScript":"scripts/wisconsin_crawler.py","source":"https://docs.legis.wisconsin.gov/statutes"},
+    {"jurisdiction":"wyoming","privateScript":"scripts/wyoming_crawler.py","source":"https://www.wyoleg.gov/StateStatutes"},
+    {"jurisdiction":"district_of_columbia","privateScript":"scripts/dc_crawler.py","source":"https://code.dccouncil.gov/dc/council/code"},
+    {"jurisdiction":"guam","privateScript":"scripts/guam_crawler.py","source":"https://col.guamcourts.gov/guam-code-annotated/guam-code-annotated"},
+    {"jurisdiction":"american_samoa","privateScript":"scripts/americansamoa_crawler.py","source":"https://asbar.org/legal-resources/code-annotated/code-annotated-by-title-and-chapter/"},
+    {"jurisdiction":"northern_mariana_islands","privateScript":"scripts/cnmi_crawler.py","source":"https://www.cnmilaw.org/cmc.php"}
+  ],
+  "registryNote": "The private repository remains the complete adapter registry. This public registry intentionally contains only scrubbed, official-source code paths; missing jurisdictions are not silently represented as complete."
+}

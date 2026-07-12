@@ -3852,6 +3852,123 @@
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/55"
   },
   {
+    "billId": "119:hr:77",
+    "memberId": "B001317",
+    "memberName": "Rep. Brecheen, Josh [R-OK-2]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/77?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/77/cosponsors"
+  },
+  {
+    "billId": "119:hr:77",
+    "memberId": "G000576",
+    "memberName": "Rep. Grothman, Glenn [R-WI-6]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/77?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/77/cosponsors"
+  },
+  {
+    "billId": "119:hr:77",
+    "memberId": "G000601",
+    "memberName": "Rep. Goldman, Craig [R-TX-12]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/77?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/77/cosponsors"
+  },
+  {
+    "billId": "119:hr:77",
+    "memberId": "G000603",
+    "memberName": "Rep. Gill, Brandon [R-TX-26]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/77?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/77/cosponsors"
+  },
+  {
+    "billId": "119:hr:77",
+    "memberId": "H001096",
+    "memberName": "Rep. Hageman, Harriet M. [R-WY-At Large]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/77?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/77/cosponsors"
+  },
+  {
+    "billId": "119:hr:77",
+    "memberId": "H001099",
+    "memberName": "Rep. Haridopolos, Mike [R-FL-8]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/77?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/77/cosponsors"
+  },
+  {
+    "billId": "119:hr:77",
+    "memberId": "H001100",
+    "memberName": "Rep. Hurd, Jeff [R-CO-3]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/77?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/77/cosponsors"
+  },
+  {
+    "billId": "119:hr:77",
+    "memberId": "L000578",
+    "memberName": "Rep. LaMalfa, Doug [R-CA-1]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/77?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/77/cosponsors"
+  },
+  {
+    "billId": "119:hr:77",
+    "memberId": "M001218",
+    "memberName": "Rep. McCormick, Richard [R-GA-7]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/77?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/77/cosponsors"
+  },
+  {
+    "billId": "119:hr:77",
+    "memberId": "M001219",
+    "memberName": "Del. Moylan, James C. [R-GU-At Large]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/77?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/77/cosponsors"
+  },
+  {
+    "billId": "119:hr:77",
+    "memberId": "O000175",
+    "memberName": "Rep. Ogles, Andrew [R-TN-5]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/77?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/77/cosponsors"
+  },
+  {
+    "billId": "119:hr:77",
+    "memberId": "S001228",
+    "memberName": "Rep. Schmidt, Derek [R-KS-2]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/77?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/77/cosponsors"
+  },
+  {
+    "billId": "119:hr:77",
+    "memberId": "B001302",
+    "memberName": "Rep. Biggs, Andy [R-AZ-5]",
+    "role": "sponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/77?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/77"
+  },
+  {
     "billId": "119:hr:78",
     "memberId": "A000372",
     "memberName": "Rep. Allen, Rick W. [R-GA-12]",
@@ -5758,6 +5875,150 @@
     "congress": 119,
     "billUrl": "https://api.congress.gov/v3/bill/119/hr/375?format=json",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/375"
+  },
+  {
+    "billId": "119:hr:776",
+    "memberId": "G000559",
+    "memberName": "Rep. Garamendi, John [D-CA-8]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/776?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/776/cosponsors"
+  },
+  {
+    "billId": "119:hr:776",
+    "memberId": "P000613",
+    "memberName": "Rep. Panetta, Jimmy [D-CA-19]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/776?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/776/cosponsors"
+  },
+  {
+    "billId": "119:hr:776",
+    "memberId": "V000129",
+    "memberName": "Rep. Valadao, David G. [R-CA-22]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/776?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/776/cosponsors"
+  },
+  {
+    "billId": "119:hr:776",
+    "memberId": "H001090",
+    "memberName": "Rep. Harder, Josh [D-CA-9]",
+    "role": "sponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/776?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/776"
+  },
+  {
+    "billId": "119:hr:787",
+    "memberId": "G000604",
+    "memberName": "Rep. Goodlander, Maggie [D-NH-2]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/787?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/787/cosponsors"
+  },
+  {
+    "billId": "119:hr:787",
+    "memberId": "T000488",
+    "memberName": "Rep. Thanedar, Shri [D-MI-13]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/787?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/787/cosponsors"
+  },
+  {
+    "billId": "119:hr:787",
+    "memberId": "T000491",
+    "memberName": "Rep. Tran, Derek [D-CA-45]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/787?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/787/cosponsors"
+  },
+  {
+    "billId": "119:hr:787",
+    "memberId": "L000598",
+    "memberName": "Rep. LaLota, Nick [R-NY-1]",
+    "role": "sponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/787?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/787"
+  },
+  {
+    "billId": "119:hr:788",
+    "memberId": "G000604",
+    "memberName": "Rep. Goodlander, Maggie [D-NH-2]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/788?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/788/cosponsors"
+  },
+  {
+    "billId": "119:hr:788",
+    "memberId": "M001234",
+    "memberName": "Rep. Morrison, Kelly [D-MN-3]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/788?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/788/cosponsors"
+  },
+  {
+    "billId": "119:hr:788",
+    "memberId": "T000488",
+    "memberName": "Rep. Thanedar, Shri [D-MI-13]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/788?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/788/cosponsors"
+  },
+  {
+    "billId": "119:hr:788",
+    "memberId": "L000598",
+    "memberName": "Rep. LaLota, Nick [R-NY-1]",
+    "role": "sponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/788?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/788"
+  },
+  {
+    "billId": "119:hr:789",
+    "memberId": "A000379",
+    "memberName": "Rep. Alford, Mark [R-MO-4]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/789?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/789/cosponsors"
+  },
+  {
+    "billId": "119:hr:789",
+    "memberId": "G000604",
+    "memberName": "Rep. Goodlander, Maggie [D-NH-2]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/789?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/789/cosponsors"
+  },
+  {
+    "billId": "119:hr:789",
+    "memberId": "M000687",
+    "memberName": "Rep. Mfume, Kweisi [D-MD-7]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/789?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/789/cosponsors"
+  },
+  {
+    "billId": "119:hr:789",
+    "memberId": "L000606",
+    "memberName": "Rep. Latimer, George [D-NY-16]",
+    "role": "sponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/789?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/789"
   },
   {
     "billId": "119:hr:804",
@@ -17989,6 +18250,186 @@
     "congress": 119,
     "billUrl": "https://api.congress.gov/v3/bill/119/hr/3857?format=json",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/3857"
+  },
+  {
+    "billId": "119:hr:7744",
+    "memberId": "C001053",
+    "memberName": "Rep. Cole, Tom [R-OK-4]",
+    "role": "sponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7744?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7744"
+  },
+  {
+    "billId": "119:hr:7757",
+    "memberId": "P000034",
+    "memberName": "Rep. Pallone, Frank [D-NJ-6]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7757?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7757/cosponsors"
+  },
+  {
+    "billId": "119:hr:7757",
+    "memberId": "G000558",
+    "memberName": "Rep. Guthrie, Brett [R-KY-2]",
+    "role": "sponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7757?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7757"
+  },
+  {
+    "billId": "119:hr:7831",
+    "memberId": "B000740",
+    "memberName": "Rep. Bice, Stephanie I. [R-OK-5]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7831?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7831/cosponsors"
+  },
+  {
+    "billId": "119:hr:7831",
+    "memberId": "H001096",
+    "memberName": "Rep. Hageman, Harriet M. [R-WY-At Large]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7831?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7831/cosponsors"
+  },
+  {
+    "billId": "119:hr:7831",
+    "memberId": "M001228",
+    "memberName": "Rep. Maloy, Celeste [R-UT-2]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7831?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7831/cosponsors"
+  },
+  {
+    "billId": "119:hr:7831",
+    "memberId": "K000403",
+    "memberName": "Rep. Kennedy, Mike [R-UT-3]",
+    "role": "sponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7831?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7831"
+  },
+  {
+    "billId": "119:hr:7892",
+    "memberId": "F000450",
+    "memberName": "Rep. Foxx, Virginia [R-NC-5]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7892?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7892/cosponsors"
+  },
+  {
+    "billId": "119:hr:7892",
+    "memberId": "G000576",
+    "memberName": "Rep. Grothman, Glenn [R-WI-6]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7892?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7892/cosponsors"
+  },
+  {
+    "billId": "119:hr:7892",
+    "memberId": "K000401",
+    "memberName": "Rep. Kiley, Kevin [R-CA-3]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7892?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7892/cosponsors"
+  },
+  {
+    "billId": "119:hr:7892",
+    "memberId": "O000019",
+    "memberName": "Rep. Obernolte, Jay [R-CA-23]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7892?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7892/cosponsors"
+  },
+  {
+    "billId": "119:hr:7892",
+    "memberId": "O000086",
+    "memberName": "Rep. Owens, Burgess [R-UT-4]",
+    "role": "sponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7892?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7892"
+  },
+  {
+    "billId": "119:hr:7959",
+    "memberId": "B001260",
+    "memberName": "Rep. Buchanan, Vern [R-FL-16]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7959?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7959/cosponsors"
+  },
+  {
+    "billId": "119:hr:7959",
+    "memberId": "M001205",
+    "memberName": "Rep. Miller, Carol D. [R-WV-1]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7959?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7959/cosponsors"
+  },
+  {
+    "billId": "119:hr:7959",
+    "memberId": "M001224",
+    "memberName": "Rep. Moran, Nathaniel [R-TX-1]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7959?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7959/cosponsors"
+  },
+  {
+    "billId": "119:hr:7959",
+    "memberId": "S001172",
+    "memberName": "Rep. Smith, Adrian [R-NE-3]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7959?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7959/cosponsors"
+  },
+  {
+    "billId": "119:hr:7959",
+    "memberId": "T000460",
+    "memberName": "Rep. Thompson, Mike [D-CA-4]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7959?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7959/cosponsors"
+  },
+  {
+    "billId": "119:hr:7959",
+    "memberId": "K000376",
+    "memberName": "Rep. Kelly, Mike [R-PA-16]",
+    "role": "sponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7959?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7959"
+  },
+  {
+    "billId": "119:hr:7971",
+    "memberId": "B001292",
+    "memberName": "Rep. Beyer, Donald S. [D-VA-8]",
+    "role": "cosponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7971?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7971/cosponsors"
+  },
+  {
+    "billId": "119:hr:7971",
+    "memberId": "S001183",
+    "memberName": "Rep. Schweikert, David [R-AZ-1]",
+    "role": "sponsor",
+    "congress": 119,
+    "billUrl": "https://api.congress.gov/v3/bill/119/hr/7971?format=json",
+    "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7971"
   },
   {
     "billId": "119:hr:8029",

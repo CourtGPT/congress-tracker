@@ -24,7 +24,7 @@
     "treaties"
   ],
   "counts": {
-    "bill-relations": 2164,
+    "bill-relations": 2213,
     "bills": 17335,
     "committee-meetings": 2568,
     "committee-prints": 1876,
@@ -33,7 +33,7 @@
     "congresses": 119,
     "daily-congressional-record": 5834,
     "hearings": 804,
-    "house-communications": 4217,
+    "house-communications": 4219,
     "house-requirements": 3226,
     "house-votes": 595,
     "laws": 102,
@@ -51,13 +51,13 @@
         "votes": 595,
         "hearings": 804
       },
-      "relationships": 2164,
+      "relationships": 2213,
       "timeline": 35254
     },
     "billRelations": {
-      "bills": 271,
-      "relations": 2164,
-      "fetched": 2051,
+      "bills": 282,
+      "relations": 2213,
+      "fetched": 2100,
       "skipped": false,
       "offset": 0
     }

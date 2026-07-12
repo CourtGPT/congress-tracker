@@ -170,27 +170,6 @@
   {
     "congress": 119,
     "latestAction": {
-      "actionDate": "2026-03-26",
-      "text": "Became Private Law No: 119-2."
-    },
-    "laws": [
-      {
-        "number": "119-2",
-        "type": "Private Law"
-      }
-    ],
-    "number": "7194",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Nicholas Dockery Medal of Honor Act",
-    "type": "HR",
-    "updateDate": "2026-04-10",
-    "updateDateIncludingText": "2026-04-10",
-    "url": "https://api.congress.gov/v3/bill/119/hr/7194?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
       "actionDate": "2025-12-18",
       "text": "Became Public Law No: 119-58."
     },
@@ -359,27 +338,6 @@
   {
     "congress": 119,
     "latestAction": {
-      "actionDate": "2026-04-30",
-      "text": "Became Public Law No: 119-86."
-    },
-    "laws": [
-      {
-        "number": "119-86",
-        "type": "Public Law"
-      }
-    ],
-    "number": "7147",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Homeland Security and Further Additional Continuing Appropriations Act, 2026.",
-    "type": "HR",
-    "updateDate": "2026-06-11",
-    "updateDateIncludingText": "2026-06-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/7147?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
       "actionDate": "2025-07-24",
       "text": "Became Public Law No: 119-30."
     },
@@ -502,27 +460,6 @@
     "updateDate": "2026-06-16",
     "updateDateIncludingText": "2026-06-16",
     "url": "https://api.congress.gov/v3/bill/119/sjres/80?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2026-01-23",
-      "text": "Became Public Law No: 119-74."
-    },
-    "laws": [
-      {
-        "number": "119-74",
-        "type": "Public Law"
-      }
-    ],
-    "number": "6938",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026",
-    "type": "HR",
-    "updateDate": "2026-06-19",
-    "updateDateIncludingText": "2026-06-19",
-    "url": "https://api.congress.gov/v3/bill/119/hr/6938?format=json"
   },
   {
     "congress": 119,
@@ -842,27 +779,6 @@
   {
     "congress": 119,
     "latestAction": {
-      "actionDate": "2026-02-03",
-      "text": "Became Public Law No: 119-75."
-    },
-    "laws": [
-      {
-        "number": "119-75",
-        "type": "Public Law"
-      }
-    ],
-    "number": "7148",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Consolidated Appropriations Act, 2026",
-    "type": "HR",
-    "updateDate": "2026-07-04",
-    "updateDateIncludingText": "2026-07-04",
-    "url": "https://api.congress.gov/v3/bill/119/hr/7148?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
       "actionDate": "2025-06-12",
       "text": "Became Public Law No: 119-18."
     },
@@ -905,258 +821,6 @@
   {
     "congress": 119,
     "latestAction": {
-      "actionDate": "2025-05-09",
-      "text": "Became Public Law No: 119-8."
-    },
-    "laws": [
-      {
-        "number": "119-8",
-        "type": "Public Law"
-      }
-    ],
-    "number": "42",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program for Appliance Standards: Certification Requirements, Labeling Requirements, and Enforcement Provisions for Certain Consumer Products and Commercial Equipment\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/42?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-05-23",
-      "text": "Became Public Law No: 119-13."
-    },
-    "laws": [
-      {
-        "number": "119-13",
-        "type": "Public Law"
-      }
-    ],
-    "number": "60",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Park Service relating to \"Glen Canyon National Recreation Area: Motor Vehicles\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/60?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-05-23",
-      "text": "Became Public Law No: 119-14."
-    },
-    "laws": [
-      {
-        "number": "119-14",
-        "type": "Public Law"
-      }
-    ],
-    "number": "61",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"National Emission Standards for Hazardous Air Pollutants: Rubber Tire Manufacturing\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/61?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-05-09",
-      "text": "Became Public Law No: 119-9."
-    },
-    "laws": [
-      {
-        "number": "119-9",
-        "type": "Public Law"
-      }
-    ],
-    "number": "75",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Office of Energy Efficiency and Renewable Energy, Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Commercial Refrigerators, Freezers, and Refrigerator-Freezers\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/75?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-06-12",
-      "text": "Became Public Law No: 119-15."
-    },
-    "laws": [
-      {
-        "number": "119-15",
-        "type": "Public Law"
-      }
-    ],
-    "number": "87",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Motor Vehicle and Engine Pollution Control Standards; Heavy-Duty Vehicle and Engine Emission Warranty and Maintenance Provisions; Advanced Clean Trucks; Zero Emission Airport Shuttle; Zero-Emission Power Train Certification; Waiver of Preemption; Notice of Decision\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/87?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-06-12",
-      "text": "Became Public Law No: 119-16."
-    },
-    "laws": [
-      {
-        "number": "119-16",
-        "type": "Public Law"
-      }
-    ],
-    "number": "88",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Motor Vehicle and Engine Pollution Control Standards; Advanced Clean Cars II; Waiver of Preemption; Notice of Decision\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/88?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-06-12",
-      "text": "Became Public Law No: 119-17."
-    },
-    "laws": [
-      {
-        "number": "119-17",
-        "type": "Public Law"
-      }
-    ],
-    "number": "89",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Providing congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Motor Vehicle and Engine and Nonroad Engine Pollution Control Standards; The \"Omnibus\" Low NOX Regulation; Waiver of Preemption; Notice of Decision\".",
-    "type": "HJRES",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hjres/89?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-12-19",
-      "text": "Became Public Law No: 119-61."
-    },
-    "laws": [
-      {
-        "number": "119-61",
-        "type": "Public Law"
-      }
-    ],
-    "number": "165",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Wounded Knee Massacre Memorial and Sacred Site Act",
-    "type": "HR",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hr/165?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2026-02-11",
-      "text": "By Senator Lee from Committee on Energy and Natural Resources filed written report. Report No. 119-109."
-    },
-    "laws": [
-      {
-        "number": "119-68",
-        "type": "Public Law"
-      }
-    ],
-    "number": "1043",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "La Paz County Solar Energy and Job Creation Act",
-    "type": "HR",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hr/1043?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-08-19",
-      "text": "Became Public Law No: 119-34."
-    },
-    "laws": [
-      {
-        "number": "119-34",
-        "type": "Public Law"
-      }
-    ],
-    "number": "1316",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Maintaining American Superiority by Improving Export Control Transparency Act",
-    "type": "HR",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hr/1316?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-12-26",
-      "text": "Became Public Law No: 119-64."
-    },
-    "laws": [
-      {
-        "number": "119-64",
-        "type": "Public Law"
-      }
-    ],
-    "number": "1491",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Disaster Related Extension of Deadlines Act",
-    "type": "HR",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hr/1491?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-12-02",
-      "text": "Became Public Law No: 119-45."
-    },
-    "laws": [
-      {
-        "number": "119-45",
-        "type": "Public Law"
-      }
-    ],
-    "number": "1512",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Taiwan Assurance Implementation Act",
-    "type": "HR",
-    "updateDate": "2026-07-10",
-    "updateDateIncludingText": "2026-07-10",
-    "url": "https://api.congress.gov/v3/bill/119/hr/1512?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
       "actionDate": "2025-12-18",
       "text": "Became Public Law No: 119-60."
     },
@@ -1174,48 +838,6 @@
     "updateDate": "2026-07-10",
     "updateDateIncludingText": "2026-07-10",
     "url": "https://api.congress.gov/v3/bill/119/s/1071?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-07-15",
-      "text": "Became Public Law No: 119-24."
-    },
-    "laws": [
-      {
-        "number": "119-24",
-        "type": "Public Law"
-      }
-    ],
-    "number": "618",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Apex Area Technical Corrections Act",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/618?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-12-01",
-      "text": "Became Public Law No: 119-43."
-    },
-    "laws": [
-      {
-        "number": "119-43",
-        "type": "Public Law"
-      }
-    ],
-    "number": "695",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Medal of Honor Act",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/695?format=json"
   },
   {
     "congress": 119,
@@ -1279,69 +901,6 @@
     "updateDate": "2026-07-11",
     "updateDateIncludingText": "2026-07-11",
     "url": "https://api.congress.gov/v3/bill/119/hr/998?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-07-30",
-      "text": "Became Public Law No: 119-31."
-    },
-    "laws": [
-      {
-        "number": "119-31",
-        "type": "Public Law"
-      }
-    ],
-    "number": "1815",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "VA Home Loan Program Reform Act",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/1815?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2026-01-20",
-      "text": "Became Public Law No: 119-71."
-    },
-    "laws": [
-      {
-        "number": "119-71",
-        "type": "Public Law"
-      }
-    ],
-    "number": "1823",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "VA Budget Shortfall Accountability Act",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/1823?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2026-03-26",
-      "text": "Became Public Law No: 119-81."
-    },
-    "laws": [
-      {
-        "number": "119-81",
-        "type": "Public Law"
-      }
-    ],
-    "number": "7211",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "To authorize the President to award the Medal of Honor to John W. Ripley for acts of valor during the Vietnam War, and for other purposes.",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/7211?format=json"
   },
   {
     "congress": 119,
@@ -1426,6 +985,153 @@
     "updateDate": "2026-07-12",
     "updateDateIncludingText": "2026-07-12",
     "url": "https://api.congress.gov/v3/bill/119/hjres/35?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-05-09",
+      "text": "Became Public Law No: 119-8."
+    },
+    "laws": [
+      {
+        "number": "119-8",
+        "type": "Public Law"
+      }
+    ],
+    "number": "42",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program for Appliance Standards: Certification Requirements, Labeling Requirements, and Enforcement Provisions for Certain Consumer Products and Commercial Equipment\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/42?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-05-23",
+      "text": "Became Public Law No: 119-13."
+    },
+    "laws": [
+      {
+        "number": "119-13",
+        "type": "Public Law"
+      }
+    ],
+    "number": "60",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Park Service relating to \"Glen Canyon National Recreation Area: Motor Vehicles\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/60?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-05-23",
+      "text": "Became Public Law No: 119-14."
+    },
+    "laws": [
+      {
+        "number": "119-14",
+        "type": "Public Law"
+      }
+    ],
+    "number": "61",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"National Emission Standards for Hazardous Air Pollutants: Rubber Tire Manufacturing\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/61?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-05-09",
+      "text": "Became Public Law No: 119-9."
+    },
+    "laws": [
+      {
+        "number": "119-9",
+        "type": "Public Law"
+      }
+    ],
+    "number": "75",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Office of Energy Efficiency and Renewable Energy, Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Commercial Refrigerators, Freezers, and Refrigerator-Freezers\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/75?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-06-12",
+      "text": "Became Public Law No: 119-15."
+    },
+    "laws": [
+      {
+        "number": "119-15",
+        "type": "Public Law"
+      }
+    ],
+    "number": "87",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Motor Vehicle and Engine Pollution Control Standards; Heavy-Duty Vehicle and Engine Emission Warranty and Maintenance Provisions; Advanced Clean Trucks; Zero Emission Airport Shuttle; Zero-Emission Power Train Certification; Waiver of Preemption; Notice of Decision\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/87?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-06-12",
+      "text": "Became Public Law No: 119-16."
+    },
+    "laws": [
+      {
+        "number": "119-16",
+        "type": "Public Law"
+      }
+    ],
+    "number": "88",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Motor Vehicle and Engine Pollution Control Standards; Advanced Clean Cars II; Waiver of Preemption; Notice of Decision\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/88?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-06-12",
+      "text": "Became Public Law No: 119-17."
+    },
+    "laws": [
+      {
+        "number": "119-17",
+        "type": "Public Law"
+      }
+    ],
+    "number": "89",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Providing congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Motor Vehicle and Engine and Nonroad Engine Pollution Control Standards; The \"Omnibus\" Low NOX Regulation; Waiver of Preemption; Notice of Decision\".",
+    "type": "HJRES",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hjres/89?format=json"
   },
   {
     "congress": 119,
@@ -1682,6 +1388,27 @@
   {
     "congress": 119,
     "latestAction": {
+      "actionDate": "2025-12-19",
+      "text": "Became Public Law No: 119-61."
+    },
+    "laws": [
+      {
+        "number": "119-61",
+        "type": "Public Law"
+      }
+    ],
+    "number": "165",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Wounded Knee Massacre Memorial and Sacred Site Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/165?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
       "actionDate": "2025-12-26",
       "text": "Became Public Law No: 119-62."
     },
@@ -1783,6 +1510,174 @@
     "updateDate": "2026-07-12",
     "updateDateIncludingText": "2026-07-12",
     "url": "https://api.congress.gov/v3/bill/119/hr/517?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-07-15",
+      "text": "Became Public Law No: 119-24."
+    },
+    "laws": [
+      {
+        "number": "119-24",
+        "type": "Public Law"
+      }
+    ],
+    "number": "618",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Apex Area Technical Corrections Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/618?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-01",
+      "text": "Became Public Law No: 119-43."
+    },
+    "laws": [
+      {
+        "number": "119-43",
+        "type": "Public Law"
+      }
+    ],
+    "number": "695",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Medal of Honor Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/695?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-02-11",
+      "text": "By Senator Lee from Committee on Energy and Natural Resources filed written report. Report No. 119-109."
+    },
+    "laws": [
+      {
+        "number": "119-68",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1043",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "La Paz County Solar Energy and Job Creation Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1043?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-08-19",
+      "text": "Became Public Law No: 119-34."
+    },
+    "laws": [
+      {
+        "number": "119-34",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1316",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Maintaining American Superiority by Improving Export Control Transparency Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1316?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-26",
+      "text": "Became Public Law No: 119-64."
+    },
+    "laws": [
+      {
+        "number": "119-64",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1491",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Disaster Related Extension of Deadlines Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1491?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-02",
+      "text": "Became Public Law No: 119-45."
+    },
+    "laws": [
+      {
+        "number": "119-45",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1512",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Taiwan Assurance Implementation Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1512?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-07-30",
+      "text": "Became Public Law No: 119-31."
+    },
+    "laws": [
+      {
+        "number": "119-31",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1815",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "VA Home Loan Program Reform Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1815?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-01-20",
+      "text": "Became Public Law No: 119-71."
+    },
+    "laws": [
+      {
+        "number": "119-71",
+        "type": "Public Law"
+      }
+    ],
+    "number": "1823",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "VA Budget Shortfall Accountability Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/1823?format=json"
   },
   {
     "congress": 119,
@@ -2119,6 +2014,111 @@
     "updateDate": "2026-07-12",
     "updateDateIncludingText": "2026-07-12",
     "url": "https://api.congress.gov/v3/bill/119/hr/5371?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-01-23",
+      "text": "Became Public Law No: 119-74."
+    },
+    "laws": [
+      {
+        "number": "119-74",
+        "type": "Public Law"
+      }
+    ],
+    "number": "6938",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/6938?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-04-30",
+      "text": "Became Public Law No: 119-86."
+    },
+    "laws": [
+      {
+        "number": "119-86",
+        "type": "Public Law"
+      }
+    ],
+    "number": "7147",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Homeland Security and Further Additional Continuing Appropriations Act, 2026.",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/7147?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-02-03",
+      "text": "Became Public Law No: 119-75."
+    },
+    "laws": [
+      {
+        "number": "119-75",
+        "type": "Public Law"
+      }
+    ],
+    "number": "7148",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Consolidated Appropriations Act, 2026",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/7148?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-03-26",
+      "text": "Became Private Law No: 119-2."
+    },
+    "laws": [
+      {
+        "number": "119-2",
+        "type": "Private Law"
+      }
+    ],
+    "number": "7194",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Nicholas Dockery Medal of Honor Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/7194?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-03-26",
+      "text": "Became Public Law No: 119-81."
+    },
+    "laws": [
+      {
+        "number": "119-81",
+        "type": "Public Law"
+      }
+    ],
+    "number": "7211",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "To authorize the President to award the Medal of Honor to John W. Ripley for acts of valor during the Vietnam War, and for other purposes.",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/7211?format=json"
   },
   {
     "congress": 119,

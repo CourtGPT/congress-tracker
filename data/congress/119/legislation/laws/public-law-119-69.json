@@ -1,0 +1,42 @@
+{
+  "lawId": "119-69",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-69",
+  "title": "Whole Milk for Healthy Kids Act of 2025",
+  "bill": {
+    "type": "S",
+    "number": "222",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2026-01-14",
+    "text": "Became Public Law No: 119-69."
+  },
+  "updateDate": "2026-06-16",
+  "updateDateIncludingText": "2026-06-16",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/222?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-01-14",
+      "text": "Became Public Law No: 119-69."
+    },
+    "laws": [
+      {
+        "number": "119-69",
+        "type": "Public Law"
+      }
+    ],
+    "number": "222",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Whole Milk for Healthy Kids Act of 2025",
+    "type": "S",
+    "updateDate": "2026-06-16",
+    "updateDateIncludingText": "2026-06-16",
+    "url": "https://api.congress.gov/v3/bill/119/s/222?format=json"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "lawId": "119-77",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-77",
+  "title": "Ending Improper Payments to Deceased People Act",
+  "bill": {
+    "type": "S",
+    "number": "269",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2026-02-10",
+    "text": "Became Public Law No: 119-77."
+  },
+  "updateDate": "2026-06-25",
+  "updateDateIncludingText": "2026-06-25",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/269?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-02-10",
+      "text": "Became Public Law No: 119-77."
+    },
+    "laws": [
+      {
+        "number": "119-77",
+        "type": "Public Law"
+      }
+    ],
+    "number": "269",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Ending Improper Payments to Deceased People Act",
+    "type": "S",
+    "updateDate": "2026-06-25",
+    "updateDateIncludingText": "2026-06-25",
+    "url": "https://api.congress.gov/v3/bill/119/s/269?format=json"
+  }
+}

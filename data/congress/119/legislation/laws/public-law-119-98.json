@@ -1,0 +1,42 @@
+{
+  "lawId": "119-98",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-98",
+  "title": "Secure America Act",
+  "bill": {
+    "type": "S",
+    "number": "2",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2026-06-10",
+    "text": "Became Public Law No: 119-98."
+  },
+  "updateDate": "2026-06-25",
+  "updateDateIncludingText": "2026-06-25",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/2?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-06-10",
+      "text": "Became Public Law No: 119-98."
+    },
+    "laws": [
+      {
+        "number": "119-98",
+        "type": "Public Law"
+      }
+    ],
+    "number": "2",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Secure America Act",
+    "type": "S",
+    "updateDate": "2026-06-25",
+    "updateDateIncludingText": "2026-06-25",
+    "url": "https://api.congress.gov/v3/bill/119/s/2?format=json"
+  }
+}

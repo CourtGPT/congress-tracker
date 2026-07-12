@@ -1,0 +1,42 @@
+{
+  "lawId": "119-55",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-55",
+  "title": "Montgomery GI Bill Selected Reserves Tuition Fairness Act of 2025",
+  "bill": {
+    "type": "HR",
+    "number": "983",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2025-12-12",
+    "text": "Became Public Law No: 119-55."
+  },
+  "updateDate": "2026-07-11",
+  "updateDateIncludingText": "2026-07-11",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/983?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-12",
+      "text": "Became Public Law No: 119-55."
+    },
+    "laws": [
+      {
+        "number": "119-55",
+        "type": "Public Law"
+      }
+    ],
+    "number": "983",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Montgomery GI Bill Selected Reserves Tuition Fairness Act of 2025",
+    "type": "HR",
+    "updateDate": "2026-07-11",
+    "updateDateIncludingText": "2026-07-11",
+    "url": "https://api.congress.gov/v3/bill/119/hr/983?format=json"
+  }
+}

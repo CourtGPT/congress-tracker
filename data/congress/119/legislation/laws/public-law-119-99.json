@@ -1,0 +1,42 @@
+{
+  "lawId": "119-99",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-99",
+  "title": "ARTIST Act",
+  "bill": {
+    "type": "S",
+    "number": "254",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2026-06-12",
+    "text": "Became Public Law No: 119-99."
+  },
+  "updateDate": "2026-06-22",
+  "updateDateIncludingText": "2026-06-22",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/254?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-06-12",
+      "text": "Became Public Law No: 119-99."
+    },
+    "laws": [
+      {
+        "number": "119-99",
+        "type": "Public Law"
+      }
+    ],
+    "number": "254",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "ARTIST Act",
+    "type": "S",
+    "updateDate": "2026-06-22",
+    "updateDateIncludingText": "2026-06-22",
+    "url": "https://api.congress.gov/v3/bill/119/s/254?format=json"
+  }
+}

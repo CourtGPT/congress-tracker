@@ -1,0 +1,42 @@
+{
+  "lawId": "119-97",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-97",
+  "title": "Fiscal Year 2025 Veterans Affairs Major Medical Facility Authorization Act",
+  "bill": {
+    "type": "S",
+    "number": "2393",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2026-06-09",
+    "text": "Became Public Law No: 119-97."
+  },
+  "updateDate": "2026-06-23",
+  "updateDateIncludingText": "2026-06-23",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/2393?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-06-09",
+      "text": "Became Public Law No: 119-97."
+    },
+    "laws": [
+      {
+        "number": "119-97",
+        "type": "Public Law"
+      }
+    ],
+    "number": "2393",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Fiscal Year 2025 Veterans Affairs Major Medical Facility Authorization Act",
+    "type": "S",
+    "updateDate": "2026-06-23",
+    "updateDateIncludingText": "2026-06-23",
+    "url": "https://api.congress.gov/v3/bill/119/s/2393?format=json"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "lawId": "119-26",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-26",
+  "title": "HALT Fentanyl Act",
+  "bill": {
+    "type": "S",
+    "number": "331",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2025-07-16",
+    "text": "Became Public Law No: 119-26."
+  },
+  "updateDate": "2026-03-12",
+  "updateDateIncludingText": "2026-03-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/331?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-07-16",
+      "text": "Became Public Law No: 119-26."
+    },
+    "laws": [
+      {
+        "number": "119-26",
+        "type": "Public Law"
+      }
+    ],
+    "number": "331",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "HALT Fentanyl Act",
+    "type": "S",
+    "updateDate": "2026-03-12",
+    "updateDateIncludingText": "2026-03-12",
+    "url": "https://api.congress.gov/v3/bill/119/s/331?format=json"
+  }
+}

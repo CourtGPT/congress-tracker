@@ -1,0 +1,42 @@
+{
+  "lawId": "119-12",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-12",
+  "title": "TAKE IT DOWN Act",
+  "bill": {
+    "type": "S",
+    "number": "146",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2025-05-19",
+    "text": "Became Public Law No: 119-12."
+  },
+  "updateDate": "2026-06-16",
+  "updateDateIncludingText": "2026-06-16",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/146?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-05-19",
+      "text": "Became Public Law No: 119-12."
+    },
+    "laws": [
+      {
+        "number": "119-12",
+        "type": "Public Law"
+      }
+    ],
+    "number": "146",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "TAKE IT DOWN Act",
+    "type": "S",
+    "updateDate": "2026-06-16",
+    "updateDateIncludingText": "2026-06-16",
+    "url": "https://api.congress.gov/v3/bill/119/s/146?format=json"
+  }
+}

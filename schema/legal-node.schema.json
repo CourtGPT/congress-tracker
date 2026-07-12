@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://courtgpt.github.io/legal-data-schemas/legal-node.schema.json",
+  "title": "CourtGPT canonical legal node",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "jurisdiction", "instrument", "year", "level", "label", "hierarchy", "breadcrumb", "source", "status", "quality"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "jurisdiction": {"type": "string", "minLength": 2},
+    "instrument": {"enum": ["constitution", "state_code", "administrative_code", "session_law", "public_law", "us_code", "regulation", "court_rule"]},
+    "year": {"type": "integer", "minimum": 1900, "maximum": 2100},
+    "level": {"type": "string", "minLength": 1},
+    "label": {"type": "string", "minLength": 1},
+    "title": {"type": ["string", "null"]},
+    "text": {"type": ["string", "null"]},
+    "children": {"type": "array", "items": {"$ref": "#"}},
+    "hierarchy": {"type": "object", "additionalProperties": {"type": ["string", "null"]}},
+    "breadcrumb": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "citation": {"type": ["string", "null"]},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authority", "url", "retrieved_at"],
+      "properties": {
+        "authority": {"enum": ["official", "official_mirror", "secondary", "unknown"]},
+        "url": {"type": ["string", "null"], "format": "uri-reference"},
+        "canonical_url": {"type": ["string", "null"], "format": "uri-reference"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "source_version": {"type": ["string", "null"]},
+        "effective_date": {"type": ["string", "null"], "format": "date"},
+        "checksum": {"type": ["string", "null"], "pattern": "^sha256:[a-f0-9]{64}$"},
+        "license": {"type": ["string", "null"]},
+        "terms_url": {"type": ["string", "null"], "format": "uri-reference"}
+      }
+    },
+    "status": {"enum": ["current", "historical", "repealed", "proposed", "blocked", "unverified"]},
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["content_present", "hierarchy_valid", "source_verified"],
+      "properties": {
+        "content_present": {"type": "boolean"},
+        "hierarchy_valid": {"type": "boolean"},
+        "source_verified": {"type": "boolean"},
+        "count_verified": {"type": "boolean"},
+        "duplicate_path": {"type": "boolean"},
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

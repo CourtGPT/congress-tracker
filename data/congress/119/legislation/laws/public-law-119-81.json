@@ -1,0 +1,42 @@
+{
+  "lawId": "119-81",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-81",
+  "title": "To authorize the President to award the Medal of Honor to John W. Ripley for acts of valor during the Vietnam War, and for other purposes.",
+  "bill": {
+    "type": "HR",
+    "number": "7211",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2026-03-26",
+    "text": "Became Public Law No: 119-81."
+  },
+  "updateDate": "2026-07-12",
+  "updateDateIncludingText": "2026-07-12",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7211?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-03-26",
+      "text": "Became Public Law No: 119-81."
+    },
+    "laws": [
+      {
+        "number": "119-81",
+        "type": "Public Law"
+      }
+    ],
+    "number": "7211",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "To authorize the President to award the Medal of Honor to John W. Ripley for acts of valor during the Vietnam War, and for other purposes.",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/7211?format=json"
+  }
+}

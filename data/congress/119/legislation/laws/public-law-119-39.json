@@ -1,0 +1,42 @@
+{
+  "lawId": "119-39",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-39",
+  "title": "Internal Revenue Service Math and Taxpayer Help Act",
+  "bill": {
+    "type": "HR",
+    "number": "998",
+    "originChamber": "House",
+    "originChamberCode": "H"
+  },
+  "latestAction": {
+    "actionDate": "2025-11-25",
+    "text": "Became Public Law No: 119-39."
+  },
+  "updateDate": "2026-07-11",
+  "updateDateIncludingText": "2026-07-11",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/998?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-11-25",
+      "text": "Became Public Law No: 119-39."
+    },
+    "laws": [
+      {
+        "number": "119-39",
+        "type": "Public Law"
+      }
+    ],
+    "number": "998",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Internal Revenue Service Math and Taxpayer Help Act",
+    "type": "HR",
+    "updateDate": "2026-07-11",
+    "updateDateIncludingText": "2026-07-11",
+    "url": "https://api.congress.gov/v3/bill/119/hr/998?format=json"
+  }
+}

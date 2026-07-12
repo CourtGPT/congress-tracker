@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "jurisdiction": "US",
+  "congress": 119,
+  "source": "Congress.gov API v3",
+  "layout": "resource-family",
+  "compatibilityRoot": "data/resources",
+  "description": "Congress.gov is organized by API resource families rather than statutory title/chapter hierarchy. This catalog provides the stable domain grouping without duplicating the JSON exports.",
+  "families": {
+    "legislation": ["bills", "laws", "amendments", "bill-relations"],
+    "people": ["members", "nominations"],
+    "committees": ["committees", "committee-reports", "committee-prints", "committee-meetings"],
+    "records": ["daily-congressional-record", "bound-congressional-record"],
+    "communications": ["house-communications", "senate-communications", "house-requirements"],
+    "oversight": ["hearings", "crs-reports", "house-votes", "treaties"],
+    "administration": ["congresses"]
+  },
+  "resourcePathPattern": "data/resources/{resource}.json",
+  "detailPathPattern": "data/resources/bills-detail/{congress}-{type}-{number}.json",
+  "ordering": "family, resource name, stable source identity",
+  "provenance": {
+    "officialApi": "https://api.congress.gov/",
+    "sourceUrlField": "url",
+    "retrievedAtField": "data/metadata.json"
+  }
+}

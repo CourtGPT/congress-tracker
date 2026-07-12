@@ -1,0 +1,42 @@
+{
+  "lawId": "119-67",
+  "lawType": "Public Law",
+  "congress": 119,
+  "number": "119-67",
+  "title": "Great Lakes Fishery Research Reauthorization Act",
+  "bill": {
+    "type": "S",
+    "number": "2878",
+    "originChamber": "Senate",
+    "originChamberCode": "S"
+  },
+  "latestAction": {
+    "actionDate": "2025-12-26",
+    "text": "Became Public Law No: 119-67."
+  },
+  "updateDate": "2026-06-26",
+  "updateDateIncludingText": "2026-06-26",
+  "sourceUrl": "https://api.congress.gov/v3/bill/119/s/2878?format=json",
+  "sourceResource": "Congress.gov API v3 / law",
+  "sourceRecord": {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-26",
+      "text": "Became Public Law No: 119-67."
+    },
+    "laws": [
+      {
+        "number": "119-67",
+        "type": "Public Law"
+      }
+    ],
+    "number": "2878",
+    "originChamber": "Senate",
+    "originChamberCode": "S",
+    "title": "Great Lakes Fishery Research Reauthorization Act",
+    "type": "S",
+    "updateDate": "2026-06-26",
+    "updateDateIncludingText": "2026-06-26",
+    "url": "https://api.congress.gov/v3/bill/119/s/2878?format=json"
+  }
+}

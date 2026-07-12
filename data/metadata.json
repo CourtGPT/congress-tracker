@@ -68,15 +68,15 @@
       "skipped": true
     },
     "billDetail": {
-      "mode": "full",
+      "mode": "hourly",
       "fetched": 0,
       "skipped": 0,
       "errors": 0,
       "errorSamples": [],
-      "candidates": 17335,
+      "candidates": 0,
       "processed": 0,
       "offset": 0,
-      "batchSize": 0,
+      "batchSize": 250,
       "rps": 4,
       "elapsedMs": 0,
       "detailFiles": 0,
@@ -91,7 +91,7 @@
       },
       "bills": {
         "count": 17335,
-        "fetched": 128,
+        "fetched": 116,
         "skipped": false
       },
       "amendments": {

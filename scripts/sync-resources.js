@@ -33,7 +33,10 @@ function lookbackDate(hours = DEFAULT_LOOKBACK_HOURS) {
   return new Date(Date.now() - hours * 60 * 60 * 1000).toISOString().replace(/\.\d{3}Z$/u, 'Z');
 }
 
-function resourceKey(record) {
+function resourceKey(record, resourceName = '') {
+  if (resourceName === 'committee-reports' && record.cmte_rpt_id !== undefined && record.cmte_rpt_id !== null) {
+    return `committee-report:${record.cmte_rpt_id}:${record.part ?? ''}`;
+  }
   return String(record.url || record.id || record.number || record.systemCode || record.name || JSON.stringify(record));
 }
 
@@ -59,9 +62,9 @@ function writeAtomic(outputPath, value) {
   fs.renameSync(temporaryPath, outputPath);
 }
 
-function mergeRecords(existing, incoming) {
-  const merged = new Map(existing.map((record) => [resourceKey(record), record]));
-  for (const record of incoming) merged.set(resourceKey(record), record);
+function mergeRecords(existing, incoming, resourceName = '') {
+  const merged = new Map(existing.map((record) => [resourceKey(record, resourceName), record]));
+  for (const record of incoming) merged.set(resourceKey(record, resourceName), record);
   return stableSort([...merged.values()], ['updateDate', 'url', 'id', 'number']);
 }
 
@@ -89,7 +92,7 @@ async function syncResource(config, { congress, apiKey, fetchImpl = fetch, mode 
     ? records.filter((record) => record.congress === undefined || String(record.congress) === String(congress))
     : records;
   if (!scopedRecords.length && !existing.length) throw new Error(`Congress.gov returned no records for ${config.name}`);
-  const merged = mergeRecords(existing, scopedRecords);
+  const merged = mergeRecords(existing, scopedRecords, config.name);
   writeAtomic(outputPath, merged.map(canonical));
   return { name: config.name, count: merged.length, fetched: scopedRecords.length, skipped: false };
 }

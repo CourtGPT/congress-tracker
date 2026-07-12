@@ -126,7 +126,7 @@ The macOS `launchd` user agent is the only recurring scheduler. Codex automation
 npm run scheduler:install
 ```
 
-The agent runs at load and every hour, reads `.env.local`, writes logs to `/tmp/courtgpt-congress-sync.log` and `/tmp/courtgpt-congress-sync.error.log`, and pushes only validated data changes. Inspect it with `launchctl print gui/$(id -u)/com.courtgpt.congress-sync`.
+The installer creates a dedicated runtime clone under `~/Library/Application Support/CourtGPT/congress-tracker-sync`, outside macOS Desktop privacy restrictions. The agent runs at load and every hour from that clone, reads its `0600` `.env.local`, writes logs to `/tmp/courtgpt-congress-sync.log` and `/tmp/courtgpt-congress-sync.error.log`, and pushes only validated data changes. Inspect it with `launchctl print gui/$(id -u)/com.courtgpt.congress-sync`.
 
 ## Recovery
 

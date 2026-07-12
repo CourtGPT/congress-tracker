@@ -7,10 +7,10 @@
   <key>ProgramArguments</key>
   <array>
     <string>/bin/bash</string>
-    <string>/Users/d/Desktop/monorepo/public-repos/congress-tracker/scripts/run-local-sync.sh</string>
+    <string>/Users/d/Library/Application Support/CourtGPT/congress-tracker-sync/repo/scripts/run-local-sync.sh</string>
   </array>
   <key>WorkingDirectory</key>
-  <string>/Users/d/Desktop/monorepo/public-repos/congress-tracker</string>
+  <string>/Users/d/Library/Application Support/CourtGPT/congress-tracker-sync/repo</string>
   <key>EnvironmentVariables</key>
   <dict>
     <key>PATH</key>

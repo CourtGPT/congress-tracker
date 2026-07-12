@@ -10676,6 +10676,17 @@
       "name": "Executive Communication"
     },
     "congress": 119,
+    "number": 977,
+    "updateDate": "2026-04-19",
+    "url": "https://api.congress.gov/v3/house-communication/119/ec/977?format=json"
+  },
+  {
+    "chamber": "House",
+    "communicationType": {
+      "code": "EC",
+      "name": "Executive Communication"
+    },
+    "congress": 119,
     "number": 978,
     "updateDate": "2026-04-19",
     "url": "https://api.congress.gov/v3/house-communication/119/ec/978?format=json"
@@ -18885,6 +18896,17 @@
     "number": 1725,
     "updateDate": "2026-04-19",
     "url": "https://api.congress.gov/v3/house-communication/119/ec/1725?format=json"
+  },
+  {
+    "chamber": "House",
+    "communicationType": {
+      "code": "EC",
+      "name": "Executive Communication"
+    },
+    "congress": 119,
+    "number": 1726,
+    "updateDate": "2026-04-19",
+    "url": "https://api.congress.gov/v3/house-communication/119/ec/1726?format=json"
   },
   {
     "chamber": "House",

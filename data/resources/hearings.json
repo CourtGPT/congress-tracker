@@ -5943,7 +5943,7 @@
     "congress": 119,
     "jacketNumber": 1,
     "number": 307,
-    "updateDate": "2026-07-11T22:51:18Z",
+    "updateDate": "2026-07-12T01:21:19Z",
     "url": "https://api.congress.gov/v3/hearing/119/senate/1"
   },
   {
@@ -5951,7 +5951,7 @@
     "congress": 119,
     "jacketNumber": 62935,
     "number": 307,
-    "updateDate": "2026-07-11T22:51:18Z",
+    "updateDate": "2026-07-12T01:21:19Z",
     "url": "https://api.congress.gov/v3/hearing/119/senate/62935"
   },
   {
@@ -5959,7 +5959,7 @@
     "congress": 119,
     "jacketNumber": 63836,
     "number": 416,
-    "updateDate": "2026-07-11T22:51:18Z",
+    "updateDate": "2026-07-12T01:21:19Z",
     "url": "https://api.congress.gov/v3/hearing/119/senate/63836"
   }
 ]

@@ -1,0 +1,18 @@
+{
+  "source": "CourtGPT federal legislative data",
+  "publicLaws": {
+    "path": "data/resources/laws.json",
+    "source": "Congress.gov API v3",
+    "description": "Enacted public-law records for the configured Congress"
+  },
+  "usCode": {
+    "path": "data/federal-laws/us-code",
+    "metadata": "data/federal-laws/us-code/metadata.json",
+    "source": "Office of the Law Revision Counsel",
+    "sourceUrl": "https://uscode.house.gov/download/download.shtml",
+    "releasePoint": "119-100",
+    "titleCount": 58,
+    "sectionCount": 66025
+  },
+  "note": "Public laws and codified U.S. Code are intentionally stored as separate source families."
+}

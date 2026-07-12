@@ -48,7 +48,7 @@ fi
 echo "[sync] pulling origin/main"
 git pull --ff-only origin main
 
-if [[ -z "${CONGRESS_RESOURCES:-}" && "${CONGRESS_SYNC_MODE}" == "hourly" && ( ! -f data/metadata.json || ! -f data/resources/members.json || ! -f data/derived/index.json ) ]]; then
+if [[ -z "${CONGRESS_RESOURCES:-}" && "${CONGRESS_SYNC_MODE}" == "hourly" && ( ! -f data/metadata.json || ! -f data/resources/members.json || ! -f data/derived/index.json || ! -f data/resources/amendments.json || ! -f data/resources/crs-reports.json || ! -f data/resources/bound-congressional-record.json ) ]]; then
   echo "Incomplete snapshot found; running the one-time full bootstrap"
   export CONGRESS_SYNC_MODE=full
 fi

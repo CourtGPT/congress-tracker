@@ -1,0 +1,11 @@
+{
+  "source": "Office of the Law Revision Counsel",
+  "sourceUrl": "https://uscode.house.gov/download/download.shtml",
+  "archiveUrl": "https://uscode.house.gov/download/releasepoints/us/pl/119/100/xml_uscAll@119-100.zip",
+  "releasePoint": "119-100",
+  "publicLaw": "Public Law 119-100",
+  "releaseDate": "06/26/2026",
+  "titleCount": 58,
+  "sectionCount": 66025,
+  "parser": "scripts/parse-xml.js"
+}

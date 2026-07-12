@@ -3,7 +3,7 @@ const path = require('path');
 const { stableSort } = require('./lib/congress-api');
 
 const DEFAULT_DATA_DIR = path.join(__dirname, '..', 'data');
-const ALLOWED_RELATION_TYPES = new Set(['sponsored', 'cosponsored', 'referred_to', 'reported_by', 'scheduled_for', 'considered_in', 'voted_on']);
+const ALLOWED_RELATION_TYPES = new Set(['sponsored', 'cosponsored', 'referred_to', 'reported_by', 'scheduled_for', 'considered_in', 'voted_on', 'related_to', 'subject_of']);
 
 function readResource(dataDir, name) {
   const filePath = path.join(dataDir, 'resources', `${name}.json`);
@@ -11,6 +11,41 @@ function readResource(dataDir, name) {
   const value = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   if (!Array.isArray(value)) throw new Error(`${filePath} must contain a JSON array`);
   return value;
+}
+
+function readBillDetail(billId, dataDir) {
+  const filePath = path.join(dataDir, 'resources', 'bills-detail', `${billId}.json`);
+  if (!fs.existsSync(filePath)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  } catch {
+    return null;
+  }
+}
+
+function readAllBillDetails(dataDir) {
+  const dir = path.join(dataDir, 'resources', 'bills-detail');
+  if (!fs.existsSync(dir)) return new Map();
+  const result = new Map();
+  for (const file of fs.readdirSync(dir)) {
+    if (!file.endsWith('.json')) continue;
+    try {
+      const value = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
+      if (value && value.billId) result.set(value.billId, value);
+    } catch {
+      continue;
+    }
+  }
+  return result;
+}
+
+function billDetailId(record) {
+  if (!record) return null;
+  const congress = record.congress;
+  const type = String(record.typeCode || record.type || '').toLowerCase();
+  const number = String(record.number || '').trim();
+  if (!congress || !type || !number) return null;
+  return `${congress}-${type}-${number}`;
 }
 
 function writeAtomic(filePath, value) {
@@ -73,7 +108,8 @@ function buildIndex({ dataDir = DEFAULT_DATA_DIR, congress = Number(process.env.
   const votes = readResource(dataDir, 'house-votes');
   const hearings = readResource(dataDir, 'hearings');
   const billRelations = readResource(dataDir, 'bill-relations');
-  const entities = { members: {}, bills: {}, committees: {}, votes: {}, hearings: {} };
+  const billDetails = readAllBillDetails(dataDir);
+  const entities = { members: {}, bills: {}, committees: {}, votes: {}, hearings: {}, billDetail: {} };
   const relationships = [];
   const timeline = [];
 
@@ -96,28 +132,79 @@ function buildIndex({ dataDir = DEFAULT_DATA_DIR, congress = Number(process.env.
   for (const bill of bills) {
     const identity = billIdentity(bill);
     if (!identity) continue;
+    const detailId = billDetailId({ ...bill, typeCode: identity.type }) || `${identity.congress}-${identity.type}-${identity.number}`;
+    const detail = billDetails.get(detailId) || null;
+    const sponsorCount = detail ? detail.sponsors.length : 0;
+    const cosponsorCount = detail && detail.cosponsors ? detail.cosponsors.count : 0;
+    const actionCount = detail ? detail.actions.count : 0;
+    const latestActionText = detail?.latestAction?.text || bill.latestAction?.text || null;
+    const latestActionDate = isoDate(detail?.latestAction?.actionDate || bill.latestAction?.actionDate);
     entities.bills[identity.billId] = {
       id: identity.billId,
       billNumber: `${identity.type.toUpperCase()} ${identity.number}`,
       congress: identity.congress,
       type: identity.type.toUpperCase(),
       number: identity.number,
-      title: bill.title || null,
-      chamber: bill.originChamber || null,
-      introducedDate: isoDate(bill.introducedDate || bill.introductionDate),
-      latestActionDate: isoDate(bill.latestAction?.actionDate),
-      latestAction: bill.latestAction?.text || null,
-      sourceUrl: sourceUrl(bill),
+      title: bill.title || detail?.title || null,
+      chamber: bill.originChamber || detail?.originChamber || null,
+      introducedDate: isoDate(bill.introducedDate || bill.introductionDate || detail?.introducedDate),
+      latestActionDate,
+      latestAction: latestActionText,
+      sponsorCount,
+      cosponsorCount,
+      actionCount,
+      policyArea: detail?.policyArea?.name || null,
+      subjectCount: detail?.subjects?.legislativeSubjects?.length || 0,
+      relatedBillCount: detail?.relatedBills?.count || 0,
+      sourceUrl: sourceUrl(bill) || detail?.sourceUrl || null,
     };
-    addTimeline(timeline, { date: bill.introducedDate || bill.introductionDate, type: 'introduced', subjectId: identity.billId, title: bill.title || null, sourceUrl: sourceUrl(bill) });
-    addTimeline(timeline, { date: bill.updateDate, type: 'updated', subjectId: identity.billId, title: bill.title || null, sourceUrl: sourceUrl(bill) });
-    addTimeline(timeline, { date: bill.latestAction?.actionDate, type: 'action', subjectId: identity.billId, title: bill.latestAction?.text || null, sourceUrl: sourceUrl(bill) });
-    for (const committee of Array.isArray(bill.committees) ? bill.committees : []) {
-      const id = committeeId(committee);
-      if (!id) continue;
-      entities.committees[id] ||= { id, name: committee.name || null, chamber: committee.chamber || null, congress: committee.congress ?? identity.congress, sourceUrl: sourceUrl(committee) };
-      relationships.push({ type: 'referred_to', from: identity.billId, to: id, congress: identity.congress, sourceUrl: sourceUrl(committee) || sourceUrl(bill) });
+    if (detail) {
+      entities.billDetail[detailId] = {
+        id: detailId,
+        billId: detailId,
+        updatedAt: detail.updateDate || null,
+        sponsorCount: detail.sponsors.length,
+        cosponsorCount: detail.cosponsors.count,
+        committeeCount: detail.committees.count,
+        actionCount: detail.actions.count,
+        summaryCount: detail.summaries.count,
+        textVersionCount: detail.textVersions.count,
+      };
+      for (const sponsor of detail.sponsors) {
+        if (!sponsor?.bioguideId) continue;
+        relationships.push({ type: 'sponsored', from: sponsor.bioguideId, to: detailId, congress: identity.congress, sourceUrl: sponsor.sourceUrl || detail.sourceUrl });
+      }
+      for (const cosponsor of detail.cosponsors.items) {
+        if (!cosponsor?.bioguideId) continue;
+        relationships.push({ type: 'cosponsored', from: cosponsor.bioguideId, to: detailId, congress: identity.congress, sourceUrl: detail.sourceUrl });
+      }
+      for (const committee of detail.committees.items) {
+        const id = committee.systemCode || committeeId(committee);
+        if (!id) continue;
+        entities.committees[id] ||= { id, name: committee.name || null, chamber: committee.chamber || null, congress: committee.congress ?? identity.congress, sourceUrl: committee.url || null };
+        relationships.push({ type: 'referred_to', from: detailId, to: id, congress: identity.congress, sourceUrl: committee.url || detail.sourceUrl });
+      }
+      for (const related of detail.relatedBills.items) {
+        const relatedId = `${related.congress}-${related.type}-${related.number}`;
+        relationships.push({ type: 'related_to', from: detailId, to: relatedId, congress: identity.congress, sourceUrl: related.url || detail.sourceUrl });
+      }
+      for (const action of detail.actions.items) {
+        addTimeline(timeline, { date: action.actionDate, type: 'action', subjectId: detailId, title: action.text || null, sourceUrl: detail.sourceUrl });
+      }
+      if (detail.subjects?.policyArea?.name) {
+        relationships.push({ type: 'subject_of', from: detailId, to: `policy:${detail.subjects.policyArea.name}`, congress: identity.congress, sourceUrl: detail.sourceUrl });
+      }
+    } else {
+      for (const committee of Array.isArray(bill.committees) ? bill.committees : []) {
+        const id = committeeId(committee);
+        if (!id) continue;
+        entities.committees[id] ||= { id, name: committee.name || null, chamber: committee.chamber || null, congress: committee.congress ?? identity.congress, sourceUrl: sourceUrl(committee) };
+        relationships.push({ type: 'referred_to', from: identity.billId, to: id, congress: identity.congress, sourceUrl: sourceUrl(committee) || sourceUrl(bill) });
+      }
     }
+    addTimeline(timeline, { date: bill.introducedDate || bill.introductionDate || detail?.introducedDate, type: 'introduced', subjectId: identity.billId, title: bill.title || detail?.title || null, sourceUrl: sourceUrl(bill) || detail?.sourceUrl || null });
+    addTimeline(timeline, { date: bill.updateDate || detail?.updateDate, type: 'updated', subjectId: identity.billId, title: bill.title || detail?.title || null, sourceUrl: sourceUrl(bill) || detail?.sourceUrl || null });
+    addTimeline(timeline, { date: bill.latestAction?.actionDate || detail?.latestAction?.actionDate, type: 'action', subjectId: identity.billId, title: bill.latestAction?.text || detail?.latestAction?.text || null, sourceUrl: sourceUrl(bill) || detail?.sourceUrl || null });
   }
 
   for (const committee of committees) {
@@ -179,4 +266,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { ALLOWED_RELATION_TYPES, billIdentity, buildIndex, isoDate, memberId };
+module.exports = { ALLOWED_RELATION_TYPES, billDetailId, billIdentity, buildIndex, isoDate, memberId, readAllBillDetails, readBillDetail };

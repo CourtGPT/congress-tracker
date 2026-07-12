@@ -1,0 +1,14 @@
+{
+  "status": "planned",
+  "sourceAuthority": "United States House of Representatives / GovInfo",
+  "sourceCatalogUrl": "https://www.govinfo.gov/bulkdata",
+  "candidateCollections": ["BILLS", "STATUTE", "USCODE"],
+  "documentTypes": ["bills", "resolutions", "amendments", "roll-call-votes", "committee-reports"],
+  "requiredBeforeAutomation": [
+    "Select one authoritative bulk/catalog endpoint for each document type",
+    "Verify archive layout and stable document identifiers",
+    "Record applicable public-domain and provenance terms",
+    "Add a representative XML fixture from each selected schema"
+  ],
+  "note": "No House document feed is published as canonical data until the source catalog and XML fixtures are verified. Congress.gov collections remain the current legislative source of record."
+}

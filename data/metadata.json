@@ -5,13 +5,16 @@
   "congress": 119,
   "lookbackHours": 6,
   "resources": [
+    "amendments",
     "bill-relations",
     "bills",
+    "bound-congressional-record",
     "committee-meetings",
     "committee-prints",
     "committee-reports",
     "committees",
     "congresses",
+    "crs-reports",
     "daily-congressional-record",
     "hearings",
     "house-communications",
@@ -24,13 +27,16 @@
     "treaties"
   ],
   "counts": {
+    "amendments": 6788,
     "bill-relations": 2213,
     "bills": 17335,
+    "bound-congressional-record": 20229,
     "committee-meetings": 2568,
     "committee-prints": 1876,
     "committee-reports": 20206,
     "committees": 817,
     "congresses": 119,
+    "crs-reports": 13944,
     "daily-congressional-record": 5834,
     "hearings": 804,
     "house-communications": 4219,
@@ -40,7 +46,8 @@
     "members": 2693,
     "nominations": 1879,
     "senate-communications": 4046,
-    "treaties": 1
+    "treaties": 1,
+    "bills-detail": 0
   },
   "derived": {
     "index": {
@@ -49,7 +56,8 @@
         "bills": 17335,
         "committees": 817,
         "votes": 595,
-        "hearings": 804
+        "hearings": 804,
+        "billDetail": 0
       },
       "relationships": 2213,
       "timeline": 35254
@@ -58,6 +66,119 @@
       "bills": 0,
       "relations": 2213,
       "skipped": true
+    },
+    "billDetail": {
+      "mode": "full",
+      "fetched": 0,
+      "skipped": 0,
+      "errors": 0,
+      "errorSamples": [],
+      "candidates": 17335,
+      "processed": 0,
+      "offset": 0,
+      "batchSize": 0,
+      "rps": 4,
+      "elapsedMs": 0,
+      "detailFiles": 0,
+      "requests": 94,
+      "retries": 0
+    },
+    "sync": {
+      "bound-congressional-record": {
+        "count": 20229,
+        "fetched": null,
+        "skipped": true
+      },
+      "bills": {
+        "count": 17335,
+        "fetched": 128,
+        "skipped": false
+      },
+      "amendments": {
+        "count": 6788,
+        "fetched": 0,
+        "skipped": false
+      },
+      "laws": {
+        "count": 102,
+        "fetched": 102,
+        "skipped": false
+      },
+      "congresses": {
+        "count": 119,
+        "fetched": null,
+        "skipped": true
+      },
+      "members": {
+        "count": 2693,
+        "fetched": 0,
+        "skipped": false
+      },
+      "house-votes": {
+        "count": 595,
+        "fetched": 595,
+        "skipped": false
+      },
+      "committees": {
+        "count": 817,
+        "fetched": 0,
+        "skipped": false
+      },
+      "committee-reports": {
+        "count": 20206,
+        "fetched": 0,
+        "skipped": false
+      },
+      "committee-prints": {
+        "count": 1876,
+        "fetched": 0,
+        "skipped": false
+      },
+      "committee-meetings": {
+        "count": 2568,
+        "fetched": 2568,
+        "skipped": false
+      },
+      "hearings": {
+        "count": 804,
+        "fetched": 806,
+        "skipped": false
+      },
+      "daily-congressional-record": {
+        "count": 5834,
+        "fetched": 5834,
+        "skipped": false
+      },
+      "crs-reports": {
+        "count": 13944,
+        "fetched": 0,
+        "skipped": false
+      },
+      "house-communications": {
+        "count": 4219,
+        "fetched": 4219,
+        "skipped": false
+      },
+      "house-requirements": {
+        "count": 3226,
+        "fetched": null,
+        "skipped": true
+      },
+      "senate-communications": {
+        "count": 4046,
+        "fetched": 4077,
+        "skipped": false
+      },
+      "nominations": {
+        "count": 1879,
+        "fetched": 0,
+        "skipped": false
+      },
+      "treaties": {
+        "count": 1,
+        "fetched": 0,
+        "skipped": false
+      }
     }
   }
 }

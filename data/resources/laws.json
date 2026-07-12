@@ -338,48 +338,6 @@
   {
     "congress": 119,
     "latestAction": {
-      "actionDate": "2025-11-19",
-      "text": "Became Public Law No: 119-38."
-    },
-    "laws": [
-      {
-        "number": "119-38",
-        "type": "Public Law"
-      }
-    ],
-    "number": "4405",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Epstein Files Transparency Act",
-    "type": "HR",
-    "updateDate": "2026-06-02",
-    "updateDateIncludingText": "2026-06-02",
-    "url": "https://api.congress.gov/v3/bill/119/hr/4405?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2026-01-23",
-      "text": "Became Public Law No: 119-73."
-    },
-    "laws": [
-      {
-        "number": "119-73",
-        "type": "Public Law"
-      }
-    ],
-    "number": "4323",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Trafficking Survivors Relief Act",
-    "type": "HR",
-    "updateDate": "2026-06-09",
-    "updateDateIncludingText": "2026-06-09",
-    "url": "https://api.congress.gov/v3/bill/119/hr/4323?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
       "actionDate": "2025-11-25",
       "text": "Became Public Law No: 119-41."
     },
@@ -439,27 +397,6 @@
     "updateDate": "2026-06-15",
     "updateDateIncludingText": "2026-06-15",
     "url": "https://api.congress.gov/v3/bill/119/s/1596?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-11-12",
-      "text": "Became Public Law No: 119-37."
-    },
-    "laws": [
-      {
-        "number": "119-37",
-        "type": "Public Law"
-      }
-    ],
-    "number": "5371",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Continuing Appropriations, Agriculture, Legislative Branch, Military Construction and Veterans Affairs, and Extensions Act, 2026",
-    "type": "HR",
-    "updateDate": "2026-06-16",
-    "updateDateIncludingText": "2026-06-16",
-    "url": "https://api.congress.gov/v3/bill/119/hr/5371?format=json"
   },
   {
     "congress": 119,
@@ -1241,132 +1178,6 @@
   {
     "congress": 119,
     "latestAction": {
-      "actionDate": "2025-07-24",
-      "text": "Became Public Law No: 119-28."
-    },
-    "laws": [
-      {
-        "number": "119-28",
-        "type": "Public Law"
-      }
-    ],
-    "number": "4",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Rescissions Act of 2025",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/4?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-07-07",
-      "text": "Became Public Law No: 119-22."
-    },
-    "laws": [
-      {
-        "number": "119-22",
-        "type": "Public Law"
-      }
-    ],
-    "number": "42",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Alaska Native Settlement Trust Eligibility Act",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/42?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-07-07",
-      "text": "Became Public Law No: 119-23."
-    },
-    "laws": [
-      {
-        "number": "119-23",
-        "type": "Public Law"
-      }
-    ],
-    "number": "43",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Alaska Native Village Municipal Lands Restoration Act of 2025",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/43?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-12-26",
-      "text": "Became Public Law No: 119-63."
-    },
-    "laws": [
-      {
-        "number": "119-63",
-        "type": "Public Law"
-      }
-    ],
-    "number": "410",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Alaska Native Vietnam Era Veterans Land Allotment Extension Act of 2025",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/410?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-12-12",
-      "text": "Became Public Law No: 119-53."
-    },
-    "laws": [
-      {
-        "number": "119-53",
-        "type": "Public Law"
-      }
-    ],
-    "number": "452",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Miracle on Ice Congressional Gold Medal Act",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/452?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2025-07-24",
-      "text": "Became Public Law No: 119-29."
-    },
-    "laws": [
-      {
-        "number": "119-29",
-        "type": "Public Law"
-      }
-    ],
-    "number": "517",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "Filing Relief for Natural Disasters Act",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/517?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
       "actionDate": "2025-07-15",
       "text": "Became Public Law No: 119-24."
     },
@@ -1510,27 +1321,6 @@
     "updateDate": "2026-07-11",
     "updateDateIncludingText": "2026-07-11",
     "url": "https://api.congress.gov/v3/bill/119/hr/1823?format=json"
-  },
-  {
-    "congress": 119,
-    "latestAction": {
-      "actionDate": "2026-01-20",
-      "text": "Became Public Law No: 119-72."
-    },
-    "laws": [
-      {
-        "number": "119-72",
-        "type": "Public Law"
-      }
-    ],
-    "number": "4446",
-    "originChamber": "House",
-    "originChamberCode": "H",
-    "title": "FAST VETS Act",
-    "type": "HR",
-    "updateDate": "2026-07-11",
-    "updateDateIncludingText": "2026-07-11",
-    "url": "https://api.congress.gov/v3/bill/119/hr/4446?format=json"
   },
   {
     "congress": 119,
@@ -1829,6 +1619,69 @@
   {
     "congress": 119,
     "latestAction": {
+      "actionDate": "2025-07-24",
+      "text": "Became Public Law No: 119-28."
+    },
+    "laws": [
+      {
+        "number": "119-28",
+        "type": "Public Law"
+      }
+    ],
+    "number": "4",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Rescissions Act of 2025",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/4?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-07-07",
+      "text": "Became Public Law No: 119-22."
+    },
+    "laws": [
+      {
+        "number": "119-22",
+        "type": "Public Law"
+      }
+    ],
+    "number": "42",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Alaska Native Settlement Trust Eligibility Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/42?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-07-07",
+      "text": "Became Public Law No: 119-23."
+    },
+    "laws": [
+      {
+        "number": "119-23",
+        "type": "Public Law"
+      }
+    ],
+    "number": "43",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Alaska Native Village Municipal Lands Restoration Act of 2025",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/43?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
       "actionDate": "2025-12-26",
       "text": "Became Public Law No: 119-62."
     },
@@ -1867,6 +1720,69 @@
     "updateDate": "2026-07-12",
     "updateDateIncludingText": "2026-07-12",
     "url": "https://api.congress.gov/v3/bill/119/hr/224?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-26",
+      "text": "Became Public Law No: 119-63."
+    },
+    "laws": [
+      {
+        "number": "119-63",
+        "type": "Public Law"
+      }
+    ],
+    "number": "410",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Alaska Native Vietnam Era Veterans Land Allotment Extension Act of 2025",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/410?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-12-12",
+      "text": "Became Public Law No: 119-53."
+    },
+    "laws": [
+      {
+        "number": "119-53",
+        "type": "Public Law"
+      }
+    ],
+    "number": "452",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Miracle on Ice Congressional Gold Medal Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/452?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-07-24",
+      "text": "Became Public Law No: 119-29."
+    },
+    "laws": [
+      {
+        "number": "119-29",
+        "type": "Public Law"
+      }
+    ],
+    "number": "517",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Filing Relief for Natural Disasters Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/517?format=json"
   },
   {
     "congress": 119,
@@ -2119,6 +2035,90 @@
     "updateDate": "2026-07-12",
     "updateDateIncludingText": "2026-07-12",
     "url": "https://api.congress.gov/v3/bill/119/hr/3497?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-01-23",
+      "text": "Became Public Law No: 119-73."
+    },
+    "laws": [
+      {
+        "number": "119-73",
+        "type": "Public Law"
+      }
+    ],
+    "number": "4323",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Trafficking Survivors Relief Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/4323?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-11-19",
+      "text": "Became Public Law No: 119-38."
+    },
+    "laws": [
+      {
+        "number": "119-38",
+        "type": "Public Law"
+      }
+    ],
+    "number": "4405",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Epstein Files Transparency Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/4405?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2026-01-20",
+      "text": "Became Public Law No: 119-72."
+    },
+    "laws": [
+      {
+        "number": "119-72",
+        "type": "Public Law"
+      }
+    ],
+    "number": "4446",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "FAST VETS Act",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/4446?format=json"
+  },
+  {
+    "congress": 119,
+    "latestAction": {
+      "actionDate": "2025-11-12",
+      "text": "Became Public Law No: 119-37."
+    },
+    "laws": [
+      {
+        "number": "119-37",
+        "type": "Public Law"
+      }
+    ],
+    "number": "5371",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "title": "Continuing Appropriations, Agriculture, Legislative Branch, Military Construction and Veterans Affairs, and Extensions Act, 2026",
+    "type": "HR",
+    "updateDate": "2026-07-12",
+    "updateDateIncludingText": "2026-07-12",
+    "url": "https://api.congress.gov/v3/bill/119/hr/5371?format=json"
   },
   {
     "congress": 119,
